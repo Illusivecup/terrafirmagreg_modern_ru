@@ -14,6 +14,10 @@
 | `tfg-server.service` | Systemd-сервис: автозапуск после перезагрузки VPS |
 | `docker-compose.yml` | Вариант Б — запуск через Docker |
 
+**Друзьям (игрокам):** инструкция по установке клиента — в ветке [`client`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/tree/client), сами клиентские архивы — в [релизе client-0.13.17](https://github.com/Illusivecup/terrafirmagreg_modern_ru/releases/tag/client-0.13.17). Шейдеры в клиент уже встроены.
+
+**Java на VPS:** нужна строго **Java 17** для MC 1.20.1 — `install.sh` ставит её сам (OpenJDK 17 из репозиториев Ubuntu). В варианте с Docker отдельная Java не нужна вообще (внутри образа itzg своя). Docker для этого не нужен и отдельным требованием не является: Ubuntu + `install.sh` — основной путь, Docker — альтернатива.
+
 ---
 
 ## 1. Какой тариф Beget нужен
