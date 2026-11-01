@@ -14,11 +14,11 @@
 | `tfg-server.service` | Systemd-сервис: автозапуск после перезагрузки VPS |
 | `docker-compose.yml` | Вариант Б — запуск через Docker |
 
-**Друзьям (игрокам):** инструкция по установке клиента — в ветке [`client`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/tree/client), сами клиентские архивы — в [релизе client-0.13.17](https://github.com/Illusivecup/terrafirmagreg_modern_ru/releases/tag/client-0.13.17). Шейдеры в клиент уже встроены.
+**Друзьям (игрокам):** играем через TLauncher. Готовый клиент — архив [`TFG-Modern-0.13.17-TLauncher.zip`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/releases/download/client-0.13.17/TFG-Modern-0.13.17-TLauncher.zip) из [релиза client-0.13.17](https://github.com/Illusivecup/terrafirmagreg_modern_ru/releases/tag/client-0.13.17): установил Forge 1.20.1-47.4.13 в TLauncher, распаковал архив в `%appdata%` — и играешь. Полный разбор — в ветке [`client`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/tree/client). Шейдеры, ресурспаки и русский язык уже встроены.
 
 **Java на VPS:** нужна строго **Java 17** для MC 1.20.1 — `install.sh` ставит её сам (OpenJDK 17 из репозиториев Ubuntu). В варианте с Docker отдельная Java не нужна вообще (внутри образа itzg своя). Docker для этого не нужен и отдельным требованием не является: Ubuntu + `install.sh` — основной путь, Docker — альтернатива.
 
-**Игра через TLauncher:** сервер по умолчанию ставится в **offline-режиме** (`MODE=offline`) — пускает TLauncher и оффлайн-ники (`online-mode=false`, `enforce-secure-profile=false`). Плата за это — обязательный вайтлист, который включается принудительно: добавь ник каждого друга (`./cmd.sh "whitelist add Ник"`), иначе на сервер никто не зайдёт, а если вайтлист выключить — под твой IP сможет войти кто угодно под любым ником. Для игры только по лицензии ставь сервер командой `MODE=licensed RAM=8G bash install.sh`. Инструкция клиенту TLauncher — в ветке [`client`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/tree/client), раздел «Способ 4 — TLauncher».
+**Игра через TLauncher:** сервер по умолчанию ставится в **offline-режиме** (`MODE=offline`) — пускает TLauncher и оффлайн-ники (`online-mode=false`, `enforce-secure-profile=false`). Плата за это — обязательный вайтлист, который включается принудительно: добавь ник каждого друга (`./cmd.sh "whitelist add Ник"`), иначе на сервер никто не зайдёт, а если вайтлист выключить — под твой IP сможет войти кто угодно под любым ником. Для игры только по лицензии ставь сервер командой `MODE=licensed RAM=8G bash install.sh`. Полный разбор установки клиента через TLauncher — в ветке [`client`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/tree/client).
 
 ---
 
