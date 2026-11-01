@@ -1,0 +1,13 @@
+{
+  "gui.jei.category.recipe.crashed": "Рецепт вызвал сбой. Подробности в логах клиента.",
+  "gui.jei.category.tagInformation": "Теги: %s",
+  "gui.jei.category.tagInformation.block": "Теги блоков",
+  "gui.jei.category.tagInformation.fluid": "Теги жидкостей",
+  "gui.jei.category.tagInformation.item": "Теги предметов",
+  "jei.tooltip.item.search.aliases": "Псевдонимы поиска:",
+  "jei.tooltip.liquid.flowing": "%s (текучий)",
+  "jei.tooltip.lookupHistory.disable": "Скрыть историю поиска JEI",
+  "jei.tooltip.lookupHistory.enable": "Показать историю поиска JEI",
+  "jei.tooltip.lookupHistory.usage": "Показывает список ингредиентов, недавно использованных для поиска рецептов.",
+  "jei.tooltip.show.all.recipes.hotkey": "Нажмите «%s», чтобы показать все рецепты."
+}

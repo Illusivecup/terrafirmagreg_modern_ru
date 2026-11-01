@@ -1,0 +1,15 @@
+{
+  "entity.jellies.jellie": "Джелли",
+  "entity.jellies.jellie.female": "Джелли",
+  "entity.jellies.jellie.male": "Джелли",
+  "item.jellies.jellie.slime_ball.glowberry": "Светоягодный сгусток слизи",
+  "item.jellies.jellie.slime_ball.latex": "Латексный сгусток слизи",
+  "item.jellies.jellie.slime_ball.plant": "Растительный сгусток слизи",
+  "jellies.jade.product.jellie": "Продукт готов!",
+  "jellies.tooltip.jellie.variant.glowberry": "Вариант: светоягодный",
+  "jellies.tooltip.jellie.variant.ice": "Вариант: ледяной",
+  "jellies.tooltip.jellie.variant.latex": "Вариант: ледяной",
+  "jellies.tooltip.jellie.variant.lava": "Вариант: лавовый",
+  "jellies.tooltip.jellie.variant.plant": "Вариант: растительный",
+  "jellies.tooltip.jellie.variant.spring": "Вариант: родниковый"
+}
