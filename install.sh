@@ -17,6 +17,8 @@
 #
 # Переменные (необязательные):
 #   RAM=8G            сколько памяти отдать серверу (см. таблицу в README)
+#   MODE=offline      режим входа: offline (TLauncher/оффлайн-ники, по умолчанию)
+#                     или licensed (только лицензионные аккаунты Microsoft)
 #   INSTALL_DIR=/opt/tfg   каталог сервера
 #   RUN_USER=minecraft     системный пользователь
 ###############################################################################
@@ -62,7 +64,7 @@ su -s /bin/bash "${RUN_USER}" -c "cd '${INSTALL_DIR}' && \
     curl -fL -o forge-installer.jar 'https://maven.minecraftforge.net/net/minecraftforge/forge/${MC_VERSION}-${FORGE_VERSION}/forge-${MC_VERSION}-${FORGE_VERSION}-installer.jar' && \
     java -jar forge-installer.jar --installServer && rm -f forge-installer.jar"
 
-echo "==> [5/7] EULA и server.properties..."
+echo "==> [5/7] EULA, server.properties, режим входа..."
 cat > "${INSTALL_DIR}/eula.txt" <<'EOF'
 # Принимая это, владелец сервера соглашается с EULA Minecraft (https://aka.ms/MinecraftEULA)
 eula=true
@@ -70,6 +72,19 @@ EOF
 # Подстройка под компанию из 5 человек
 sed -i 's/^max-players=.*/max-players=10/'        "${INSTALL_DIR}/server.properties" || true
 sed -i 's/^simulation-distance=.*/simulation-distance=6/' "${INSTALL_DIR}/server.properties" || true
+
+# Режим входа: MODE=offline (по умолчанию — TLauncher и оффлайн-ники)
+# или MODE=licensed (только лицензия). В offline вайтлист включается принудительно!
+if [ "${MODE:-offline}" = "licensed" ]; then
+    echo "    Режим входа: LICENSED (online-mode=true) — только лицензионные аккаунты."
+else
+    sed -i 's/^online-mode=.*/online-mode=false/'             "${INSTALL_DIR}/server.properties" || true
+    sed -i 's/^enforce-secure-profile=.*/enforce-secure-profile=false/' "${INSTALL_DIR}/server.properties" || true
+    sed -i 's/^white-list=.*/white-list=true/'                "${INSTALL_DIR}/server.properties" || true
+    echo "    Режим входа: OFFLINE (TLauncher). Вайтлист ВКЛЮЧЁН принудительно:"
+    echo "      добавь ник каждого друга:  cd ${INSTALL_DIR} && ./cmd.sh 'whitelist add Ник'"
+    echo "      без добавления в вайтлист на сервер зайти НЕ сможет никто."
+fi
 
 echo "==> [6/7] Скрипты управления..."
 install -m 0755 "${SRC_DIR}/start.sh"  "${INSTALL_DIR}/start.sh"

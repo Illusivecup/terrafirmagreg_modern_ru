@@ -18,6 +18,8 @@
 
 **Java на VPS:** нужна строго **Java 17** для MC 1.20.1 — `install.sh` ставит её сам (OpenJDK 17 из репозиториев Ubuntu). В варианте с Docker отдельная Java не нужна вообще (внутри образа itzg своя). Docker для этого не нужен и отдельным требованием не является: Ubuntu + `install.sh` — основной путь, Docker — альтернатива.
 
+**Игра через TLauncher:** сервер по умолчанию ставится в **offline-режиме** (`MODE=offline`) — пускает TLauncher и оффлайн-ники (`online-mode=false`, `enforce-secure-profile=false`). Плата за это — обязательный вайтлист, который включается принудительно: добавь ник каждого друга (`./cmd.sh "whitelist add Ник"`), иначе на сервер никто не зайдёт, а если вайтлист выключить — под твой IP сможет войти кто угодно под любым ником. Для игры только по лицензии ставь сервер командой `MODE=licensed RAM=8G bash install.sh`. Инструкция клиенту TLauncher — в ветке [`client`](https://github.com/Illusivecup/terrafirmagreg_modern_ru/tree/client), раздел «Способ 4 — TLauncher».
+
 ---
 
 ## 1. Какой тариф Beget нужен
@@ -152,6 +154,7 @@ docker compose logs -f
 - **Обычный хостинг Beget подойдёт?** Нет, только VPS (нужен root, Java и открытый порт).
 - **Порт закрыт / не подключиться?** Проверь `ufw status` (должен быть `25565/tcp ALLOW`), а также что клиент 0.13.17 и сервер запущен (`Done` в логе).
 - **Голосовой чат?** В сборке есть Simple Voice Chat — UDP-порт 24454 уже открыт скриптом.
-- **Пиратские клиенты?** По умолчанию `online-mode=true` (только лицензия). На пиратках играть не получится — это правильно и безопасно.
+- **Играем только через TLauncher — так можно?** Да: `install.sh` по умолчанию ставит offline-режим (`online-mode=false`, `enforce-secure-profile=false`) и принудительно включает вайтлист. Сразу после старта добавь ники всех друзей: `./cmd.sh "whitelist add Ник"`. Держи IP в секрете и никому, кроме своих, не давай — в offline-режиме любой знающий адрес может попытаться войти под чужим ником. Скины игрокам TLauncher подставит своей системой. Если сервер уже стоит в лицензионном режиме, включи offline вручную: `sed -i 's/^online-mode=.*/online-mode=false/' /opt/tfg/server.properties && sed -i 's/^enforce-secure-profile=.*/enforce-secure-profile=false/' /opt/tfg/server.properties && sed -i 's/^white-list=.*/white-list=true/' /opt/tfg/server.properties && systemctl restart tfg-server`. Учти: прогресс игроков привязан к нику (offline-UUID), при будущем переходе на лицензию инвентарь и права по UUID сбросятся.
+- **Вернуть только лицензию?** Переустанови с `MODE=licensed bash install.sh` или вручную: `online-mode=true`, `enforce-secure-profile=true`, `white-list=false` в `/opt/tfg/server.properties`, затем `systemctl restart tfg-server`.
 - **Хочу домен вместо IP?** Заведи домен, добавь A-запись на IP VPS, либо SRV-запись `_minecraft._tcp` с портом 25565.
 - **Сервер жрёт всё и лагает?** Проверь, что `RAM` не больше памяти VPS минус 2 ГБ; снизь `view-distance` до 6 в `server.properties`; посмотри `screen -r tfg` на предмет TPS (`/forge tps` из консоли).
