@@ -107,6 +107,15 @@ sed -i 's/^white-list=.*/white-list=true/' /opt/tfg/server.properties
 systemctl restart tfg-server
 ```
 
+**Текущее состояние сервера — TFG RU v2 (02.11.2026):**
+
+- `keepInventory=true` — вещи после смерти сохраняются;
+- телепорты включены (мод FTB Essentials 2001.2.4 уже в сборке): `/sethome` `/home` `/back` `/tpa` `/rtp` `/spawn` `/warp` — доступны всем игрокам без настройки;
+- MOTD: `[TFG RU v2] TerraFirmaGreg Modern 0.13.17`;
+- маркер версии: `/opt/tfg/TFG-RU-VERSION.txt`;
+- глава квестов «IV — Безумное напряжение» и ~250 строк интерфейса переведены (см. папку `translation-fix/` в ветке `client`); бэкап английской IV-главы: `iv__insane_voltage.snbt.bak-en`;
+- swap 6 ГБ добавлен как защита от OOM (`/swapfile`, swappiness=10).
+
 ## 4. Бэкапы и восстановление
 
 - **Автоматически:** каждый день в 04:00 `backup.sh` складывает мир + конфиги в `/opt/tfg-backups` (хранит 7 копий).
