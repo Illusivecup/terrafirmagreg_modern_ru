@@ -1,0 +1,46 @@
+# Вариант Б: запуск через Docker (itzg/minecraft-server).
+# Официальный способ из репозитория TerraFirmaGreg, только адрес архива — свой.
+#
+# Установка Docker на Ubuntu VPS:
+#   curl -fsSL https://get.docker.com | sh
+# Запуск:
+#   docker compose up -d
+# Логи:
+#   docker compose logs -f
+# Консоль:
+#   docker attach terrafirmagreg-modern   (выйти: Ctrl+P, затем Ctrl+Q)
+#
+# Если репозиторий приватный — архив скачается с официального релиза
+# (адрес ниже уже на него). Хочешь качать из своего репо — сделай его
+# публичным или подставь ссылку с токеном (не рекомендуется).
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    container_name: terrafirmagreg-modern
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+      - "24454:24454/udp" # Simple Voice Chat
+    environment:
+      EULA: "true"
+      ENABLE_RCON: "false"
+      GUI: "false"
+      MEMORY: 8G
+
+      TYPE: forge
+      VERSION: 1.20.1
+      FORGE_VERSION: 47.4.13
+      SKIP_GENERIC_PACK_UPDATE_CHECK: "true"
+      OVERRIDE_SERVER_PROPERTIES: "false"
+
+      GENERIC_PACKS: TerraFirmaGreg-Modern-0.13.17-serverpack
+      GENERIC_PACKS_SUFFIX: .zip
+      GENERIC_PACKS_PREFIX: https://github.com/TerraFirmaGreg-Team/Modpack-Modern/releases/download/0.13.17/
+      # Свой mirror (работает только если репозиторий публичный):
+      # GENERIC_PACKS_PREFIX: https://github.com/Illusivecup/terrafirmagreg_modern_ru/releases/download/server-0.13.17/
+
+    volumes:
+      - ./data:/data
+      - ./backups:/backups

@@ -1,0 +1,18 @@
+[Unit]
+Description=TerraFirmaGreg Modern 0.13.17 (MC 1.20.1, Forge 47.4.13)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=__RUN_USER__
+Group=__RUN_USER__
+Environment=RAM=__RAM__
+WorkingDirectory=__INSTALL_DIR__
+ExecStart=/usr/bin/screen -dmS tfg __INSTALL_DIR__/start.sh
+ExecStop=/bin/sh -c 'screen -S tfg -p 0 -X stuff "$(printf "stop\r")"'
+RemainAfterExit=yes
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
