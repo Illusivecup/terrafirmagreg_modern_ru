@@ -1,0 +1,74 @@
+{
+  "name": "Производство Шоколада и конфет",
+  "category": "tfg:cooking",
+  "icon": "firmalife:textures/item/food/dark_chocolate.png",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Приготовление шоколада$() состоит из нескольких этапов и призвано погрузить вас в процесс приготовления пищи.$(br)Шоколадные изделия содержат $(l:cooking/food_and_water#grain)зерновые$() и $(l:cooking/food_and_water#dairy)молочные$() продукты, а также обладают $(l:cooking/food_and_water#sugary_transient_effect)сладким$() вкусом, что делает их отличным дополнением к блюдам."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Чтобы начать производство шоколада, какао-бобы нужно сначала $(thing)обжарить$() в $(l:cooking/cooking_methods#oven)духовке$(), чтобы получить $(thing)обжаренные какао-бобы$(). Затем с помощью $(thing)ножа$() измельчите обжаренные бобы, чтобы получить $(thing)какао-порошок$() и $(thing)какао-масло$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l:cooking/mixing_bowl)Миска для смешивания$() используется для смешивания какао-порошка, сливочного масла и подсластителя (сахара или мёда) для получения $(thing)шоколадных смесей$(). Соотношение какао-масла и порошка определяет, какой шоколад получится:$(br)$(li)1 порошок, 1 масло, 1 подсластитель: молочный шоколад$()$(li)2 порошка, 1 подсластитель: тёмный шоколад$()$(li)2 масла, 1 подсластитель: белый шоколад$()"
+    },
+    {
+      "type": "tfg:drying_recipe",
+      "recipe": "firmalife:drying/dark_chocolate",
+      "text": "Наконец, шоколад сушат на $(l:cooking/decay#drying)сушильном коврике$(), чтобы получить $(thing)шоколад$()."
+    },
+    {
+      "title": "Литьё Шоколада",
+      "type": "patchouli:text",
+      "text": "Шоколад бывает не только в скучных плитках! Растопи $(thing)белый$(), $(thing)молочный$() или $(thing)тёмный$() шоколад в $(thing)сосуде$() или $(thing)тигле$(), а затем залей его в форму, чтобы получить шоколадные изделия.\n\nСуществует три вида шоколадных изделий: $(thing)сердечки$(), $(thing)колокольчики$() и $(thing)ножи$(). Каждое из них получается путём заливки шоколада в соответствующую форму."
+    },
+    {
+      "type": "tfg:knapping_recipe",
+      "recipe": "tfcchannelcasting:clay_knapping/unfired_heart_mold",
+      "text": "Лепка $(thing)формы «Сердце»$(), используемой для создания шоколадных $(thing)сердец$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Шоколадные сладости дают ту же питательную ценность, что и шоколадные плитки, но съедаются быстрее. Однако, если эти сладости приготовлены в определённое время года, они получают особое свойство, удваивающее их питательность. $(thing)Шоколадные сердца$() получают свойство $(thing)«Романтичное»$() в феврале, $(thing)шоколадные колокольчики$() — свойство $(thing)«Праздничное»$() в декабре, а $(thing)шоколадные ножики$() — свойство $(thing)«Жуткое»$() в октябре."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Кроме того, сладости можно $(thing)начинять$(), получая дополнительные бонусы. Сладости с начинкой из $(thing)джема$() дают дополнительное питание категории $(thing)Фрукты$(). Сладости с начинкой из $(thing)алкоголя$() дают положительные эффекты зелий."
+    },
+    {
+      "type": "tfg:sealed_barrel_recipe",
+      "recipe": "tfcchannelcasting:barrel/fill_with_sweet_liquor",
+      "text": "Поедание шоколада с начинкой из $(thing)сладкого ликёра$() даёт эффект скорости."
+    },
+    {
+      "type": "tfg:sealed_barrel_recipe",
+      "recipe": "tfcchannelcasting:barrel/fill_with_strong_liquor",
+      "text": "Поедание шоколада с начинкой из $(thing)крепкого ликёра$() даёт сопротивление урону."
+    },
+    {
+      "type": "tfg:sealed_barrel_recipe",
+      "recipe": "tfcchannelcasting:barrel/fill_with_whiskey",
+      "text": "Поедание шоколада с начинкой из $(thing)виски$() даёт спешку."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+            "tfg:cooking/alcohol",
+            "tfg:cooking/jam",
+            "tfg:the_world/wild_fruits"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 11,
+  "extra_recipe_mappings": {
+    "tag:firmalife:foods/chocolate": 0,
+    "tag:firmalife:chocolate_blends": 2,
+    "tag:tfcchannelcasting:foods/chocolate_sweet": 6
+  }
+}

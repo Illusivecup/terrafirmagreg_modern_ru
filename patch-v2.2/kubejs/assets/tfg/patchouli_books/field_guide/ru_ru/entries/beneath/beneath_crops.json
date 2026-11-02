@@ -1,0 +1,627 @@
+{
+	"name": "Культуры Бездны",
+	"category": "tfg:beneath",
+	"icon": "tfg:textures/item/cassava_product.png",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"title": "Подземные культуры",
+			"text": "$(thing)Бездна$() может быть суровой средой, но там всё же можно найти культуры. Культуры Бездны невероятно устойчивы и могут расти в условиях экстремальной жары, что делает их полезными для выживания под землёй и на поверхности."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Культуры в Подземелье ведут себя так же, как культуры на поверхности; у них есть требования к влажности, температуре и питательным веществам. Их даже можно сажать в $(thing)Теплицах.$()$(br2)Важный аспект при выращивании культур в Подземелье заключается в том, что культурам требуется уровень освещения 12, который не обеспечивается естественным светом Подземелья. Чтобы решить эту проблему, можно использовать $(l:agriculture/aqueducts)лавовые акведуки$() или любой другой доступный источник света."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Содержит",
+			"text": "$(li)$(l:beneath/beneath_crops#cassava)Маниок$()$(li)$(l:beneath/beneath_crops#peanut)Арахис$()$(li)$(l:beneath/beneath_crops#beans)Чернитная Фасоль$()$(li)$(l:beneath/beneath_crops#ghost_pepper)Призрачный Перец$()$(li)$(l:beneath/beneath_crops#cotton)Хлопок$()"
+		},
+		{
+			"type": "patchouli:text",
+			"text": ""
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "cassava",
+			"title": "Маниок",
+			"text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 10 - 80 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 70 - 100 %$(br)$(bold)Питательные вещества$(): Азот$(br2)Кассаву можно есть для получения $(thing)овощной$() питательности, хотя её лучше $(thing)приготовить$() перед употреблением.$(br)"
+		},
+		{
+			"type": "tfg:multimultiblock",
+			"multiblocks": [
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:cassava[age=0]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:cassava[age=1]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:cassava[age=2]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:cassava[age=3]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:cassava[age=4]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:cassava[age=5]",
+						"Z": "tfc:farmland/loam"
+					}
+				}
+			],
+			"text": "$(thing)Дикие призрачные перцы$() растут между 203 и 80 высотой.",
+			"enable_visualize": false
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "peanut",
+			"title": "Арахис",
+			"text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 10 - 80 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 20 - 80 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Арахис можно есть для $(thing)овощной$() и $(thing)белковой$() питательности"
+		},
+		{
+			"type": "tfg:multimultiblock",
+			"multiblocks": [
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:peanut[age=0]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:peanut[age=1]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:peanut[age=2]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:peanut[age=3]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:peanut[age=4]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:peanut[age=5]",
+						"Z": "tfc:farmland/loam"
+					}
+				}
+			],
+			"text": "$(thing)Дикий арахис$() растёт между 203 и 80 высотой.",
+			"enable_visualize": false
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "beans",
+			"title": "Чёрные бобы",
+			"text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 10 - 80 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 20 - 80 %$(br)$(bold)Питательные вещества$(): Калий$(br2)Бобы из чёрного камня можно есть для получения $(thing)овощной$() и $(thing)белковой$() питательности. Однако их сначала нужно приготовить!"
+		},
+		{
+			"type": "tfg:multimultiblock",
+			"multiblocks": [
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:beans[age=0]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:beans[age=1]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:beans[age=2]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:beans[age=3]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:beans[age=4]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:beans[age=5]",
+						"Z": "tfc:farmland/loam"
+					}
+				}
+			],
+			"text": "$(thing)Дикая Чернитная фасоль$() растёт между 158 и 32 высотой.",
+			"enable_visualize": false
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "ghost_pepper",
+			"title": "Призрачный Перец",
+			"text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 10 - 80 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 20 - 80 %$(br)$(bold)Питательные вещества$(): Азот$(br2)Призрачный перец можно есть для получения $(thing)овощной$() питательности. Также это популярная закуска среди жителей Подземелья."
+		},
+		{
+			"type": "tfg:multimultiblock",
+			"multiblocks": [
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:ghost_pepper[age=0]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:ghost_pepper[age=1]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:ghost_pepper[age=2]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:ghost_pepper[age=3]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:ghost_pepper[age=4]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"Y": "tfg:ghost_pepper[age=5]",
+						"Z": "tfc:farmland/loam"
+					}
+				}
+			],
+			"text": "$(thing)Дикий Призрачный перец$() растет между 158 и 32 высотой.",
+			"enable_visualize": false
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "cotton",
+			"text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 10 - 80 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 40 - 100 %$(br)$(bold)Удобрение$(): Азот$(br2)Хлопок — это культура высотой в два блока. Семена хлопка можно высадить на обработанную землю; растение вырастает до двух блоков в высоту и дает $(item)Хлопковые Коробочки$() которые можно переработать в $(thing)Хлопковую Нить$() или $(thing)Ткань$().",
+			"title": "Хлопок"
+		},
+		{
+			"type": "tfg:multimultiblock",
+			"multiblocks": [
+				{
+					"pattern": [
+						[
+							"X"
+						],
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"X": "minecraft:air",
+						"Y": "tfg:cotton[age=0,part=bottom]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"X"
+						],
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"X": "minecraft:air",
+						"Y": "tfg:cotton[age=1,part=bottom]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"X"
+						],
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"X": "tfg:cotton[age=2,part=top]",
+						"Y": "tfg:cotton[age=2,part=bottom]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"X"
+						],
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"X": "tfg:cotton[age=3,part=top]",
+						"Y": "tfg:cotton[age=3,part=bottom]",
+						"Z": "tfc:farmland/loam"
+					}
+				},
+				{
+					"pattern": [
+						[
+							"X"
+						],
+						[
+							"Y"
+						],
+						[
+							"Z"
+						],
+						[
+							"0"
+						]
+					],
+					"mapping": {
+						"X": "tfg:cotton[age=4,part=top]",
+						"Y": "tfg:cotton[age=4,part=bottom]",
+						"Z": "tfc:farmland/loam"
+					}
+				}
+			],
+			"text": "$(thing)Дикий хлопок$() растет между 158 и 32 высотой."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:the_world/climate",
+				"tfg:the_world/wild_crops",
+				"tfg:beneath/beneath",
+				"tfg:beneath/beneath_wild_fruits",
+				"tfg:beneath/beneath_tree_index"
+			]
+		}
+	],
+	"read_by_default": true,
+	"extra_recipe_mappings": {
+		"tfg:cassava_seeds": 4,
+		"tfg:cassava_product": 4,
+		"tfg:peanut_seeds": 6,
+		"tfg:peanut_product": 6,
+		"tfg:beans_seeds": 8,
+		"tfg:beans_product": 8,
+		"tfg:ghost_pepper_seeds": 10,
+		"beneath:ghost_pepper": 10,
+		"tfg:cotton_seeds": 12,
+		"tfg:cotton_product": 12
+	}
+}

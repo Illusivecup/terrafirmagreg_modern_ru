@@ -1,0 +1,122 @@
+{
+	"name": "Личное хранилище",
+	"category": "tfg:logistics",
+	"icon": "sophisticatedbackpacks:backpack",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "$(li)$(bold)$(l:logistics/personal_storage#small_vessel)Малые сосуды$()$(li)$(bold)$(l:logistics/personal_storage#large_vessel)Большие сосуды$()$(li)$(bold)$(l:logistics/personal_storage#straw_basket)Соломенная корзина$()$(li)$(bold)$(l:logistics/personal_storage#leather_sack)Кожаный мешок$()$(li)$(bold)$(l:logistics/personal_storage#ore_sack)Рудный мешок$()$(li)$(bold)$(l:logistics/personal_storage#seed_pouch)Семенной мешочек$()$(li)$(bold)$(l:logistics/personal_storage#frame_pack)Рюкзак$()$(li)$(bold)$(l:logistics/personal_storage#quiver)Колчан$()$(li)$(bold)$(l:logistics/personal_storage#backpack)Рюкзаки$()$(li)$(bold)$(l:logistics/personal_storage#tool_belt)Инструментальный пояс$()",
+			"title": "Каталог",
+			"anchor": "index"
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "intro",
+			"title": "Introduction",
+			"text": "Существует множество $(item)контейнеров для предметов$(), которые помогут облегчить нагрузку на ваш инвентарь во время игры. При выборе между ними следует учитывать несколько важных характеристик.$(li)$(thing)Количество слотов$(): Количество слотов в контейнере.$(li)$(thing)Ёмкость слота$(): Количество предметов, которые может поместиться в один слот.$(li)$(thing)Разрешённый размер$(): Какой максимальный $(l:game_mechanics/size_and_weight)TFC-размер$() разрешён для предметов в слотах."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "$(li)$(thing)Подбор предметов$(): Может ли контейнер подбирать предметы с земли. Переключается с $(item)$(k:key.sneak)-$(k:key.use)$() или $(item)$(k:sns.key.pickup)$().$(li)$(thing)Уничтожение предметов$(): Может ли контейнер уничтожать излишние подобранные предметы. Переключается $(item)$(k:key.sneak)-$(k:key.attack)$() на слотах.$(li)$(thing)Взаимодействие с инвентарём$(): Можно ли вставлять и извлекать предметы, нажимая на стек, как в TFC-сосудах или ванильных связках.$(li)$(thing)Ограничения$(): Какие типы предметов разрешены внутри."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "small_vessel",
+			"title": "Малые сосуды",
+			"item": "tag:tfc:fired_vessels",
+			"text": "$(bold)Ячейки$(): 4$(br)$(bold)Размер стопки$(): 16$(br)$(bold)Максимальный размер$(): Маленький$(br)$(bold)Подбор предметов$(): $(c)Ложь$()$(br)$(bold)Уничтожение ячеек$(): $(c)Ложь$()$(br)$(bold)Ограничение$(): N/A"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "large_vessel",
+			"title": "Большие сосуды",
+			"item": "tag:tfc:fired_large_vessels",
+			"text": "$(bold)Ячейки$(): 9$(br)$(bold)Размер стопки$(): 64$(br)$(bold)Максимальный размер$(): Нормальный$(br)$(bold)Подбор предметов$(): $(c)Ложь$()$(br)$(bold)Уничтожение ячеек$(): $(c)Ложь$()$(br)$(bold)Ограничение$(): N/A"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "straw_basket",
+			"title": "Соломенная корзина",
+			"item": "sns:straw_basket",
+			"text": "$(bold)Ячейки$(): 4$(br)$(bold)Размер стопки$(): 16$(br)$(bold)Максимальный размер$(): Маленький$(br)$(bold)Подбор предметов$(): $(2)Истина$()$(br)$(bold)Уничтожение ячеек$(): $(c)Ложь$()$(br)$(bold)Ограничение$(): N/A"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "leather_sack",
+			"title": "Кожаный мешок",
+			"item": "sns:leather_sack",
+			"text": "$(bold)Ячейки$(): 4$(br)$(bold)Размер стопки$(): 64$(br)$(bold)Максимальный размер$(): Нормальный$(br)$(bold)Подбор предметов$(): $(2)Истина$()$(br)$(bold)Уничтожение ячеек$(): $(2)Истина$()$(br)$(bold)Ограничение$(): N/A"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "ore_sack",
+			"title": "Рудный мешок",
+			"item": "sns:ore_sack",
+			"text": "$(bold)Ячейки$(): 9$(br)$(bold)Размер стопки$(): 512$(br)$(bold)Максимальный размер$(): Маленький$(br)$(bold)Подбор предметов$(): $(2)Истина$()$(br)$(bold)Уничтожение ячеек$(): $(2)Истина$()$(br)$(bold)Ограничение$(): $(6)$(t:#sns:allowed_in_ore_sack)Необработанный камень, Руда, Самоцветы, Глина$()"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "seed_pouch",
+			"title": "Семенной мешочек",
+			"item": "sns:seed_pouch",
+			"text": "$(bold)Ячейки$(): 27$(br)$(bold)Размер стопки$(): 128$(br)$(bold)Максимальный размер$(): Маленький$(br)$(bold)Подбор предметов$(): $(2)Истина$()$(br)$(bold)Уничтожение ячеек$(): $(c)Ложь$()$(br)$(bold)Ограничение$(): $(6)$(t:#sns:allowed_in_seed_pouch)Семена, Саженцы, Кустарники$()"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "frame_pack",
+			"title": "Рюкзак",
+			"item": "sns:frame_pack",
+			"text": "$(bold)Ячейки$(): 18$(br)$(bold)Размер стопки$(): 64$(br)$(bold)Максимальный размер$(): Очень большой$(br)$(bold)Подбор предметов$(): $(2)Истина$()$(br)$(bold)Уничтожение ячеек$(): $(2)Истина$()$(br)$(bold)Ограничение$(): N/A"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "quiver",
+			"title": "Quiver",
+			"item": "sns:quiver",
+			"text": "$(bold)Ячейки$(): 8$(br)$(bold)Размер стопки$(): 32$(br)$(bold)Максимальный размер$(): Очень большой$(br)$(bold)Подбор предметов$(): $(2)Истина$()$(br)$(bold)Уничтожение ячеек$(): $(c)Ложь$()$(br)$(bold)Ограничение$(): $(6)$(t:#sns:allowed_in_quiver)Стрелы, Дротики$()"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "backpack",
+			"title": "Backpacks",
+			"item": "sophisticatedbackpacks:backpack,sophisticatedbackpacks:iron_backpack,sophisticatedbackpacks:gold_backpack,sophisticatedbackpacks:diamond_backpack,sophisticatedbackpacks:netherite_backpack",
+			"text": "$(bold)Слоты$(): 36-120$(br)$(bold)Размер стека$(): 64-128$(br)$(bold)Максимальный размер$(): Очень большой$(br)$(bold)Подбор предметов$(): С улучшениями$(br)$(bold)Уничтожение предметов$(): С улучшениями$(br)$(bold)Ограничения$(): N/A"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "tool_belt",
+			"title": "Инструментальный пояс",
+			"item": "toolbelt:belt,toolbelt:pouch",
+			"text": "$(item)Ремень инструментов$() — особый предмет. Он начинается всего с 2 слотов, но может быть улучшен с помощью сумок до 9 слотов. После того как вы наденете его в $(l:craftsmanship/clothing#curios)слот для аксессуаров на поясе$(), вы сможете получить доступ к любому из этих предметов в круговом меню, удерживая $(item)$(k:key.toolbelt.open)$(), что делает его идеальным для быстрой смены инструментов."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:craftsmanship/metallurgy",
+				"tfg:craftsmanship/pottery",
+				"tfg:craftsmanship/sewing_table",
+				"tfg:agriculture/leather_making",
+				"tfg:agriculture/weaving",
+				"tfg:logistics/exploration_gear"
+			]
+		}
+	],
+	"read_by_default": true,
+	"extra_recipe_mappings": {
+		"sns:straw_basket": 5,
+		"sns:leather_sack": 6,
+		"sns:ore_sack": 7,
+		"sns:seed_pouch": 8,
+		"sns:frame_pack": 9,
+		"sns:quiver": 10,
+		"sophisticatedbackpacks:backpack": 11,
+		"sophisticatedbackpacks:iron_backpack": 11,
+		"sophisticatedbackpacks:gold_backpack": 11,
+		"sophisticatedbackpacks:diamond_backpack": 11,
+		"sophisticatedbackpacks:netherite_backpack": 11,
+		"toolbelt:belt": 12,
+		"toolbelt:pouch": 12
+	}
+}

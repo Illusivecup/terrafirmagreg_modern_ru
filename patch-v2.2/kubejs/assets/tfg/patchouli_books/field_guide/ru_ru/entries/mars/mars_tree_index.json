@@ -1,0 +1,82 @@
+{
+	"name": "Каталог марсианских грибов",
+	"category": "tfg:mars",
+	"icon": "tfg:saplings/aeronos",
+	"read_by_default": true,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "Это список всех гигантских грибов на Марсе и в каких климатах они растут.$(br2)Ищете определённый тип грибного ствола для украшения базы? Это поможет вам его найти. Список отсортирован алфавитно по типу ствола."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Содержит",
+			"anchor": "index",
+			"text": "$(li)$(bold)Крупные грибы$()$(li2)$(l:mars/mars_tree_index#aeronos)Аэронос$()$(li2)$(l:mars/mars_tree_index#alphacene)Альфацен$()$(li2)$(l:mars/mars_tree_index#crimson)Багровый$()$(li2)$(l:mars/mars_tree_index#glacian)Глацианский$()$(li2)$(l:mars/mars_tree_index#strophar)Строфар$()$(li2)$(l:mars/mars_tree_index#warped)Искажённый$()$(li)$(bold)$(l:mars/mars_tree_index#iodine)Иод$()"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Аэронос",
+			"anchor": "aeronos",
+			"item": "ad_astra:aeronos_stem",
+			"text": "$(bold)Гриб Аэронос$()$(br)$(thing)Температура$(): -100°C и выше$(br)Чаще встречается на востоке.$(br)$(thing)Дней роста$(): 7"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Альфанценовый",
+			"anchor": "alphacene",
+			"item": "species:alphacene_mushroom_block",
+			"text": "$(bold)Alphacene Mushroom$()$(br)$(thing)Temperature$(): -85°C и выше$(br)Появляется и на Востоке, и на Западе.$(br)$(thing)Growth Days$(): 3$(br2)Alphacene Mushroom Blocks можно комбинировать с $(l:mars/mars_crops#bulbkin)Bulbkin Chunks$() для получения $(item)Glowstone Dust$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Багряный",
+			"anchor": "crimson",
+			"item": "tag:tfc:crimson_logs",
+			"text": "$(bold)Crimson Mushroom$()$(br)$(thing)Temperature$(): -109 — -13°C$(br)Чаще появляется на Востоке.$(br)$(thing)Growth Days$(): 6$(br2)$(bold)Совет:$() Хотите похвастаться? Можно построить $(l:logistics/boats#canoe)canoe$() из Crimson Stems."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Гласиан",
+			"anchor": "glacian",
+			"item": "tag:ad_astra:glacian_logs",
+			"text": "$(bold)Глацианский гриб$()$(br)$(thing)Температура$(): -107°C и ниже$(br)Встречается как на востоке, так и на западе.$(br)$(thing)Дней роста$(): 9"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Строфаровый",
+			"anchor": "strophar",
+			"item": "ad_astra:strophar_stem",
+			"text": "$(bold)Гриб Строфар$()$(br)$(thing)Температура$(): -100°C и выше$(br)Чаще встречается на западе.$(br)$(thing)Дней роста$(): 7"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Искажённый",
+			"anchor": "warped",
+			"item": "tag:tfc:warped_logs",
+			"text": "$(bold)Warped Mushroom$()$(br)$(thing)Temperature$(): -109 — -13°C$(br)Чаще появляется на Западе.$(br)$(thing)Growth Days$(): 6$(br2)$(bold)Совет:$() Хотите похвастаться? Можно построить $(l:logistics/boats#rowboat)Rowboat$() или $(l:logistics/boats#sloop)Sloop$() из Warped Stems."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tag:forge:dusts/iodine",
+			"title": "Iodine",
+			"anchor": "iodine",
+			"text": "$(l:mars/mars_tree_index#crimson)Crimson$() и $(l:mars/mars_tree_index#warped)Warped$() Грибы можно добывать сок для получения $(4)Crimsene$() и $(3)Warpane$() соответственно.$(br2)Вам понадобятся оба для начала производства $(thing)Iodine$(), но они часто не растут в одном месте, поэтому возможно придётся немного попутешествовать. Вы также можете получить саженцы от соответствующих $(l:mars/mars_fauna#endermen)Endermen$()."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Смешайте Crimsene и Warpane, вместе с некоторым Криптоном из дистилляции марсианского воздуха (он используется в цикле) и теплом от вашей $(l:mars/fission)Fission Reactor$(), и вы получите $(item)Iodine$()!$(br2)Этот процесс медленный, но на данный момент вам не понадобится его много, и на дальнейших планетах появятся лучшие способы получения Иода."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:mars/mars",
+				"tfg:the_world/earth_tree_index",
+				"tfg:beneath/beneath_tree_index",
+				"tfg:agriculture/tree_tapping"
+			]
+		}
+	]
+}

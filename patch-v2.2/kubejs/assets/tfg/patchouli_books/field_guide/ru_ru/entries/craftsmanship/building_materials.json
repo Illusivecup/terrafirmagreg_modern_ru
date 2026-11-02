@@ -1,0 +1,325 @@
+{
+  "name": "Строительные материалы",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:wattle/white",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(l:craftsmanship/building_materials#primitive_materials)Примитивные материалы$()$(li2)$(l:craftsmanship/building_materials#thatch)Соломенная крыша$()$(li2)$(l:craftsmanship/building_materials#mud_bricks)Глиняные кирпичи$()$(li2)$(l:craftsmanship/building_materials#wattle_and_daub)Латань и обмазка$()$(li)$(bold)$(l:craftsmanship/building_materials#advanced_materials)Продвинутые материалы$()$(li2)$(l:craftsmanship/building_materials#alabaster)Алебастр$()$(li2)$(l:craftsmanship/building_materials#bricks_and_mortar)Кирпичи и раствор$()$(li)$(bold)$(l:craftsmanship/building_materials#block_interactions)Взаимодействие с блоками$()$(li)$(bold)$(l:craftsmanship/building_materials#roof_building)Строительство крыш$()$(li)$(bold)$(l:craftsmanship/building_materials#modern)Современные материалы$()",
+      "title": "Каталог",
+      "anchor": "index"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "primitive_materials",
+      "title": "Первичные материалы",
+      "text": "На ранних стадиях игры строительство может быть затруднено, так как многие прочные строительные блоки требуют металлических инструментов для получения. Однако есть несколько строительных блоков, которые можно получить, используя только каменные инструменты.$(br2)Более $(l:craftsmanship/building_materials#advanced_materials)продвинутые строительные блоки$() становятся доступны с металлическими инструментами."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "thatch",
+      "text": "С помощью $(l:craftsmanship/sticks_and_stones)Каменного ножа$() можно получить $(thing)солому$(), ломая растительные блоки. Эту солому можно использовать для создания очень простого строительного материала: $(thing)соломенной крыши$(). Соломенная крыша — это лёгкий блок, на который не действует гравитация, однако игроки и другие существа могут проходить сквозь него! При необходимости его можно обратно превратить в $(thing)солому$().",
+      "title": "Thatch"
+    },
+    {
+      "type": "patchouli:crafting",
+      "anchor": "mud_bricks",
+      "recipe": "tfc:crafting/soil/loam_drying_bricks",
+      "title": "Глиняные кирпичи",
+      "text": "$(thing)Грязь$() можно найти на земле, под некоторыми водоёмами, в низменных заболоченных местностях или прямо сделать, бросив землю в воду с помощью $(item)$(k:key.drop)$(). С небольшим количеством $(thing)Соломы$() её можно скрафтить в $()Мокрые Грязевые Кирпичи$()."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Их можно разместить на земле в сухом месте, и через день они затвердеют в $(thing)Саманные кирпичи$().",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:drying_bricks/loam[count=4,dried=false]",
+            "Y": "tfc:grass/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:drying_bricks/loam[count=4,dried=true]",
+            "Y": "tfc:grass/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/soil/loam_mud_bricks",
+      "title": "Глиняные кирпичи",
+      "text": "Эти высушенные глиняные кирпичи можно затем использовать для создания $(thing)блоков из глиняных кирпичей$(). При желании из них также можно сделать $(thing)ступени$(), $(thing)плиты$() или $(thing)стены$(). Блоки из глиняных кирпичей можно добывать лопатами."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "wattle_and_daub",
+      "text": "$(thing)Латань$() и $(thing)обмазка$() — это универсальный строительный и декоративный блок.$(br)$(thing)Латань$() можно создать и разместить, однако он ломкий и позволяет игрокам и мобам проходить сквозь него. Его можно укрепить, добавив $(thing)обмазку$(), чтобы сделать его прочным.$(br)Чтобы сделать $(thing)латань$() прочным, сначала нужно сплести его, для чего необходимо добавить в конструкцию палки.",
+      "title": "Дом из грязи и палок"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/wattle_weave.png"
+      ],
+      "text": "Требуется четыре палки, чтобы $(thing)заплести$() обрешётку.",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "В любое время палки можно добавить по каждой диагонали, а также сверху и снизу. Возьмите в руку одну $(thing)Палку$() и нажмите $(item)$(k:key.use)$(), чтобы добавить её. Изменяйте часть обрешётки, к которой добавляете палку, выбирая соответствующую часть грани блока."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/wattle_add_stick.png"
+      ],
+      "text": "Добавление палок к обрешётке.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/wattle_add_daub.png"
+      ],
+      "text": "Использование $(thing)Глиняно-соломенной смеси на $(thing)Заплетённой обрешётке$() создаёт твёрдый блок.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/wattle_stained.png"
+      ],
+      "text": "Её можно $(thing)окрасить$() с помощью $(thing)краски$().",
+      "border": true
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Процесс глинобитной кладки.",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle[woven=true]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle[woven=true,left=true]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle[woven=true,left=true,right=true]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle[woven=true,left=true,right=true,top=true]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle[woven=true,left=true,right=true,top=true,bottom=true]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle/unstained[left=true,right=true,top=true,bottom=true]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "W"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "W": "tfc:wattle/white[left=true,right=true,top=true,bottom=true]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "advanced_materials",
+      "title": "Продвинутые материалы",
+      "text": "Помимо $(l:craftsmanship/building_materials#primitive_materials)примитивных строительных материалов$() каменного века, получение металлических инструментов позволяет строить из более продвинутых материалов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfc:alabaster_brick,tfc:alabaster/raw,tfc:alabaster/bricks,tfc:alabaster/polished",
+      "anchor": "alabaster",
+      "text": "Алебастр — это строительный блок, сделанный из $(thing)гипса$(). Алебастр можно создать напрямую из гипса, однако более эффективно это делать, запечатав немного гипса с 100 mB $(thing)известковой воды$() в $(l:craftsmanship/barrels#limewater)бочке$().",
+      "title": "Алебастр"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tag:tfc:colored_raw_alabaster,tag:tfc:colored_bricks_alabaster,tag:tfc:colored_polished_alabaster",
+      "anchor": "alabaster_decor",
+      "text": "Алебастр можно $(thing)окрасить$() в любой цвет, поместив его в $(l:craftsmanship/barrels)бочку$() с красителем. Из необработанных блоков алебастра также можно $(l:craftsmanship/chisel)обтесать$() $(thing)полированный алебастр$() с помощью режима $(thing)Гладко$() или создать из них ступени, плиты или стены.",
+      "title": "Декоративный алебастр"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "bricks_and_mortar",
+      "item": "tag:forge:stone_bricks",
+      "text": "$(thing)Кирпичи$() можно сделать, используя $(l:craftsmanship/chisel)зубило$() на отдельных породах. Для создания прочного строительного блока потребуется $(thing)строительный раствор$().$(br2)Раствор можно сделать, добавив $(thing)песок$() в бочку с $(l:craftsmanship/barrels#limewater)известковой водой$().",
+      "title": "Кирпичи и строительный раствор"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Также можно создавать другие декоративные каменные блоки, такие как $(thing)потрескавшиеся кирпичи$() и $(thing)резной камень$(). $(thing)Замшелые$() каменные блоки можно получить, разместив булыжник или кирпичи под водой рядом с уже замшелыми кирпичами или булыжником. Мох начнет распространяться на соседние блоки."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "block_interactions",
+      "title": "Взаимодействие с блоками",
+      "text": "Существует множество взаимодействий в мире, которые могут упростить строительство:$(li)Покрывать блоки мхом, используя $(item)$(k:key.sneak)-$(k:key.use)$() с $(l:agriculture/composting#green_compost)зелёными компонентами$().$(li)Трескать кирпичи, используя $(item)$(k:key.sneak)-$(k:key.use)$() с $(thing)молотом$().$(li)Заглаживать кирпичи, используя $(item)$(k:key.sneak)-$(k:key.use)$() с $(thing)шкуркой$().$(br)Все взаимодействия можно просмотреть во вкладке модификаций блоков в $(emi)."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "roof_building",
+      "title": "Строительство крыш",
+      "text": "Строительство крыш с модом $(bold)Roads and Roofs$() начинается с каркаса. $(thing)Блоки каркаса крыши$() можно создать из пиломатериалов и палок, а также сделать из них ступени и плиты. Эти блоки используются для очертания формы крыши и являются отправной точкой для всех крыш."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Как только каркасы крыши на месте, их можно $(item)$(k:key.use)$() с любым $(t:#rnr:shingles)$(6)крышным материалом$() для создания соответствующей крыши. Типы крыш включают соломенную, созданную добавлением соломы на каркас крыши, а также терракотовую черепицу, деревянные гонты и многое другое.$(br2)Крыши необходимы, чтобы ваши машины оставались сухими! Подумайте о бедных машинах..."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Крыша из соломы",
+      "images": [
+        "rnr:textures/gui/book/thatching.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "modern",
+      "title": "Современные материалы",
+      "text": "Ищете что-то более современное?$(br)$(li)$(thing)GregTech$() имеет некоторые бетонные блоки и металлические уголки, которые также дают $(l:logistics/roads)бонус к скорости передвижения$(). У него также есть большое количество цветных ламп и листовых металлических блоков.$(li)$(thing)Create Deco$() имеет некоторые металлические мостки, окна, листовой металл, светильники и кирпичи многих цветов."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(item)Балки$(), $(item)Ригели$() и $(item)Фермы$() отлично подходят для промышленных опор.$(li)Заботитесь о безопасности? $(thing)GregTech$(), $(thing)Create Deco$() и $(thing)Modern Markings$() имеют различные знаки опасности и украшения.$(li)$(thing)Ad Astra$() имеет много футуристичных блоков, таких как двери 3x3, дополнительные источники света и другие металлические блоки.$(li)$(thing)Create: Steam 'n' Rails$() имеет $(item)Локометал$() для огромного выбора цветных металлических блоков."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:agriculture/aqueducts",
+        "tfg:craftsmanship/barrels",
+        "tfg:craftsmanship/chisel",
+        "tfg:the_world/geology",
+        "tfg:logistics/roads",
+        "tfg:craftsmanship/building_tools"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 20,
+  "extra_recipe_mappings": {
+    "tfc:thatch": 2,
+    "tag:tfc:mud_bricks": 5,
+    "tfc:wattle": 6,
+    "tfc:daub": 6,
+    "tfc:alabaster_brick": 14,
+    "tfc:alabaster/raw": 14,
+    "tfc:alabaster/bricks": 14,
+    "tfc:alabaster/polished": 14,
+    "tag:tfc:colored_raw_alabaster": 15,
+    "tag:tfc:colored_bricks_alabaster": 15,
+    "tag:tfc:colored_polished_alabaster": 15,
+    "tag:rnr:roof_blocks": 19,
+    "tag:rnr:shingles": 19
+  }
+}

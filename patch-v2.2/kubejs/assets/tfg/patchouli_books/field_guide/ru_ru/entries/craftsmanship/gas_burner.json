@@ -1,0 +1,247 @@
+{
+  "name": "Газовая горелка",
+  "category": "tfg:craftsmanship",
+  "icon": "tfg:gas_burner",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "title": "Газовая горелка",
+      "text": "$(thing)Газовая горелка$() — устройство, которое может сжигать жидкости и газы, такие как $(thing)Нефть$(), $(l:cooking/alcohol)Спирт$() и $(thing)Нефтяное топливо$() для генерации $(l:game_mechanics/heating)Тепла$().$(br)В отличие от других источников тепла, максимальная температура горелки может быть установлена с помощью $(l:craftsmanship/gas_burner#redstone)Редстоуна$(). Это позволяет более точно контролировать $(l:cooking/cooking_methods)Приготовление$() пищи и $(l:craftsmanship/crucible)Плавку$().$(br)Газовая горелка не нагревается от потока воздуха от $(l:craftsmanship/charcoal_forge#bellows)Воздуходувки$()."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "tfg:gas_burner[lit=true]"
+        }
+      },
+      "name": "Газовая горелка",
+      "text": "$(thing)Газовые горелки$() будут указывать свой максимальный температурный уровень через индикатор на одной из сторон.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "redstone",
+      "title": "Управление редстоуном",
+      "text": "Это устройство имеет множество функций, которые можно контролировать с помощью $(bold)$(c)Redstone$():$(li)Подача сигнала силой $(3)15$() $(italic)зажигает$() горелку.$(li)Убрать все редстоун-сигналы, чтобы $(italic)погасить$() горелку.$(li)$(italic)Максимальную температуру$() горелки можно установить, подав редстоун с силой сигнала между $(3)3-14$().$(li)Выход компаратора покажет текущий уровень $(italic)топлива$()."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "functions",
+      "title": "Functions",
+      "text": "Газовые горелки могут автоматически подаваться с помощью $(thing)Жидкостных труб$() или вручную с помощью $(item)$(k:key.use)$(), удерживая контейнер с жидкостью.$(br)В их интерфейсе будет отображаться:$(li)Уровень тепла с индикатором максимальной установленной температуры.$(li)Индикатор прогресса пламени, который показывает оставшееся время, и температуру сгорания топлива при наведении.$(li)Топливный бак со слотами для вёдра для заливки/сливания."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "У горелок много полезных применений. Вы можете использовать их для любого устройства, которое может получать тепло снизу, такого как $(l:craftsmanship/crucible)тигли$(), $(l:cooking/cooking_methods#grill)грили$(), $(l:cooking/cooking_methods#pot)котлы$() и $(l:cooking/cooking_methods#top_oven)печи$(), а также для любых механических машин Create, которым требуется источник тепла."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "Y"
+          ],
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "tfg:gas_burner[lit=true]",
+          "Y": "tfc:crucible"
+        }
+      },
+      "name": "",
+      "text": "$(thing)Газовая горелка$() с тиглем",
+      "enable_visualize": false
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "firmalife:stovetop_grill"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "firmalife:stovetop_pot"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "firmalife:cured_stone_oven_top"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "firmalife:vat"
+          }
+        }
+      ],
+      "name": "",
+      "text": "$(thing)Газовая горелка$() с кухонной утварью.",
+      "enable_visualize": false
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "Z"
+            ],
+            [
+              " "
+            ],
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "create:basin",
+            "Z": "greate:steel_mechanical_press"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Z"
+            ],
+            [
+              " "
+            ],
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "create:basin",
+            "Z": "greate:steel_mechanical_mixer"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Z"
+            ],
+            [
+              " "
+            ],
+            [
+              "Y"
+            ],
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:gas_burner[lit=true]",
+            "Y": "create:basin",
+            "Z": "vintageimprovements:vacuum_chamber"
+          }
+        }
+      ],
+      "name": "",
+      "text": "$(thing)Газовая горелка$() с механическими машинами.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/pottery",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/charcoal_forge",
+        "tfg:craftsmanship/crucible",
+        "tfg:cooking/alcohol",
+        "tfg:cooking/cooking_methods",
+        "tfg:logistics/redstone_devices",
+        "tfg:game_mechanics/heating"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 11,
+  "extra_recipe_mappings": {
+    "tfg:gas_burner": 2
+  }
+}

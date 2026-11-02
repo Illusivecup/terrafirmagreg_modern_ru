@@ -1,0 +1,54 @@
+{
+  "name": "Chisels",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:metal/chisel/wrought_iron",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Зубила — это инструмент для создания декоративных форм других блоков, включая плиты и ступени. Чтобы начать, вам понадобится $(thing)Зубило$() и любой тип $(thing)Молота$(). Зубила должны отливаться в формах или коваться на $(l:craftsmanship/anvils)Наковальне$(). Чтобы начать резку, держите зубило в основной руке, а молот — в次要ной, и наведитесь на блок в мире."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Если вы можете долбить этот блок, будет показан $(c)красный контур$() блока, который будет долблен, в зависимости от выбранного $(thing)Режима$() долота.$(br2)У долота есть три режима, которые можно переключать, используя $(item)$(k:tfc.key.cycle_chisel_mode)$(): $(thing)плита$(), $(thing)ступенька$() и $(thing)шлифовка$(). Индикатор вашего режима долота должен появиться рядом с панелью быстрого доступа."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Нажмите $(item)$(k:key.use)$(), чтобы превратить блок в форму, выделенную красным. Если вы выдолбили плиту, половина блока, который вы долбили, отвалится, и вы сможете ее подобрать. Измените ориентацию вашего игрока и мыши, чтобы изменить ориентацию выдолбленного блока. Как правило, ориентация выдолбленного блока будет такой же, как если бы вы разместили его в этой ориентации самостоятельно."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/chisel_block.png",
+        "tfc:textures/gui/book/tutorial/chisel_stair.png",
+        "tfc:textures/gui/book/tutorial/chisel_slab.png"
+      ],
+      "text": "$(bold)Слайд-шоу с обучением:$() Три режима резьбы зубилом, которые можно использовать на блоке $(thing)Сырого известняка$().",
+      "border": true
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/rock/marble_smooth",
+      "text": "Долото также может использоваться в некоторых рецептах крафта как сокращение для больших количеств."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Осторожно! Резьба зубилом в шахте небезопасна. Каждый раз, когда вы используете зубило, есть шанс $(l:game_mechanics/mining#supports)Обрушения$()."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:craftsmanship/quern",
+        "tfg:craftsmanship/anvils",
+        "tfg:craftsmanship/pottery"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 16,
+  "extra_recipe_mappings": {
+    "tag:tfc:chisels": 0
+  }
+}

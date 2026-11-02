@@ -1,0 +1,264 @@
+{
+	"name": "Марсиская фауна",
+	"category": "tfg:mars",
+	"icon": "minecraft:textures/item/sniffer_egg.png",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"title": "Марсиская фауна",
+			"text": "$(item)Марс$() — это планета с окружением, наиболее похожим на Землю, с широким разнообразием животных, с которыми можно $(l:agriculture/animal_husbandry)взаимодействовать$() и $(l:mars/mars_crops)культурами$(), чтобы кормить их (и себя)... за исключением огромной пустыни, где почти ничего не живёт.$(br2)Марс — это $(thing)Холодная$() планета, что означает, что животные с Горячих или Умеренных планет normally выживут."
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "index",
+			"title": "Contents",
+			"text": "$(li)$(bold)$(l:mars/mars_fauna#sandworm)Песчаный червь$()$(li)$(bold)Приручаемые$()$(li2)$(l:mars/mars_fauna#sniffer)Черва$()$(li2)$(l:mars/mars_fauna#wraptor)Враптор$()$(li2)$(l:mars/mars_fauna#glacian_sheep)Глацианская овца$()$(li2)$(l:mars/mars_fauna#snatcher)Хвата$()$(li2)$(l:mars/mars_fauna#charger)Рывун$()$(li2)$(l:mars/mars_fauna#soarer)Паритель$()$(li2)$(l:mars/mars_fauna#pentetic_jellie)Пентетический джелли$()$(br2)$(o)(Продолжение на следующей странице...)$()"
+		},
+		{
+			"type": "patchouli:text",
+			"text": "$(li)$(bold)Дикие$()$(li2)$(l:mars/mars_fauna#eater)Едач$()$(li2)$(l:mars/mars_fauna#cruncher)Хрустач$()$(li2)$(l:mars/mars_fauna#glider)Глайдер$()$(li2)$(l:mars/mars_fauna#crusher)Дробитель$()$(li2)$(l:mars/mars_fauna#springling)Прыгун$()$(li2)$(l:mars/mars_fauna#goober)Губер$()$(li2)$(l:mars/mars_fauna#walker)Ходун$()$(li2)$(l:mars/mars_fauna#raider)Грабитель$()$(li2)$(l:mars/mars_fauna#toxlacanth)Токсолакант$()$(li2)$(l:mars/mars_fauna#stackatick)Стакатик$()$(li)$(bold)Монстры$()$(li2)$(l:mars/mars_fauna#quake)Трясин$()$(li2)$(l:mars/mars_fauna#endermen)Эндермены$()$(li2)$(l:mars/mars_fauna#skeletal_raptor)Скелетный враптор$()"
+		},
+		{
+			"type": "patchouli:image",
+			"images": [
+				"tfg:textures/gui/field_guide/sandworm.png"
+			],
+			"border": true,
+			"anchor": "sandworm",
+			"title": "Песчаный червь",
+			"text": "$(thing)Песчаные черви$() реагируют на любые движения игрока по земле. Именно из-за них в пустыне почти ничего больше не живёт.$(br)"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "ШАЙ-ХУЛУД",
+			"item": "sandworm_mod:sandworm_tooth,sandworm_mod:thumper",
+			"text": "$(thing)Песчаный червь$() больше похож на экологическую опасность, чем на босса, которого нужно убить, поэтому лучший способ выжить в его присутствии — бежать! Если вам удастся достаточно раз ударить его голову $(thing)взрывным уроном$(), он оставит вас в покое... на некоторое время."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "К счастью, Песчаный червь может наносить урон только сущностям, но не постройкам, и его привлекает только $(thing)движение игрока по земле$(), поэтому любой способ держаться над землёй не вызовет его гнева. Атмосфера слишком разрежена для самолётов и дельтапланов, но есть $(l:mars/mars_fauna#soarer)другие способы$()..."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Sniffers",
+			"text": "$(thing)Снифферы$() — приручаемые животные, обитающие при температурах от -30 до -102°C. Для откладывания яиц им требуется $(item)Большое гнездо$(), а их можно стричь для получения $(item)Снифферовых пучков$(). Их яйца можно приготовить или переработать для получения $(item)Сливок$(). Они едят любые марсианские культуры.",
+			"anchor": "sniffer"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "tfg:sniffer{NoAI:1b,birth:-100000000L,oldDay:9223372036854775807L,geneticSize:16}",
+			"scale": 0.45,
+			"name": " ",
+			"text": "Нюхач."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Wraptors",
+			"text": "$(thing)Рапторы$() — приручаемые животные, обитающие при температурах от -15 до -100°C. Для откладывания яиц им требуется $(item)Большое гнездо$(), а их можно стричь для получения $(item)Рапторьих перьев$(). Их яйца можно приготовить или переработать для получения $(item)Рапторьего сахара$(). Они едят любые марсианские культуры.",
+			"anchor": "wraptor"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "tfg:wraptor{NoAI:1b,birth:-100000000L,oldDay:9223372036854775807L,geneticSize:16}",
+			"scale": 0.8,
+			"name": " ",
+			"text": "Ираптор."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Глацианская овца",
+			"text": "Предпочитая extremely cold environments below -108°C, $(thing)Glacian Sheep$() являются одомашниваемыми животными. Их можно стричь для получения $(item)Glacian Wool$() — превосходного изолятора. Они питаются любыми марсианскими культурами.$(br2)Нужно транспортировать их на большое расстояние? Используйте $(item)AE2 Spatial Storage Cell$() для их переноса в кармане.",
+			"anchor": "glacian_sheep"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "tfg:glacian_ram{NoAI:1b,birth:-100000000L,oldDay:9223372036854775807L,geneticSize:16}",
+			"scale": 0.7,
+			"name": " ",
+			"text": "Гласианский(ая) баран/овца."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Snatcher",
+			"text": "$(thing)Snatchers$() — пассивные животные, которые любят красть ваши вещи! Атакуйте их, чтобы вернуть предметы, или кормите $(item)Raw Fish$() для приручения.$(br2)После приручения вы можете носить их на спине и экипировать деревянным сундуком. Нажмите $(k:key.wan_ancient_beasts.special_ability)$(), чтобы бросить их, и они украдут содержимое ближайшего сундука и принесут вам.",
+			"anchor": "snatcher"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:snatcher{NoAI:1b}",
+			"scale": 0.35,
+			"name": " ",
+			"text": "A snatcher."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Charger",
+			"anchor": "charger",
+			"text": "$(thing)Крушители$() — полунейтральные животные. Ты можешь приручить их $(item)любой марсианской культурой$(), чтобы использовать их в качестве боевого питомца.$(br2)Нажми $(k:key.wan_ancient_beasts.special_ability)$() для атаки головой или зажми $(item)Пробел$() для атаки с рывка.$(br2)Их также можно экипировать $(item)окрашиваемой броней$()."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:charger{NoAI:1b}",
+			"scale": 0.45,
+			"name": " ",
+			"text": "Крушители естественные соперники $(thing)Рейдеров$(). Они будут атаковать друг друга, если увидят"
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Пархатель",
+			"anchor": "soarer",
+			"text": "$(thing)Soarers$() — пассивные животные, встречающиеся при температуре выше -106°C. Вы можете приручить их с помощью $(item)Raw Fish$() и использовать в качестве летающего верхового животного.$(br2)Однако они не могут лететь вечно, что показывается иконками крыльев в левом верхнем углу, и им периодически необходимо приземляться. (Вы можете покормить их сырой рыбой для ускорения восстановления.)$(br2)Они отличный вариант для дальних путешествий и не惹 Sandworm'а тоже!"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:soarer{NoAI:1b}",
+			"scale": 0.4,
+			"offset": 1,
+			"name": " "
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Сёрфер",
+			"anchor": "surfer",
+			"text": "$(thing)Surfers$() — полуводные пассивные животные. Вы можете приручить их, подкравшись к ним, когда они лежат на берегу, и покормив $(item)raw fish$(). После приручения вы можете экипировать их седлом для быстрого плавания под водой.$(br2)Это может показаться не очень полезным на Марсе, но помните, что вы можете транспортировать существ через AE2 Spatial Storage Disks, и в будущем появится определённый океанический ледяной луна..."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:surfer{NoAI:1b}",
+			"scale": 0.4,
+			"offset": 0.2,
+			"name": " ",
+			"text": "Сёрферы бывают разных цветов."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "jellies:pentetic{NoAI:1b}",
+			"scale": 0.6,
+			"name": "Пентетический джелли",
+			"anchor": "pentetic_jellie",
+			"text": "$(thing)Пентетические$() $(l:agriculture/jellies)Джелли$() появляются в марси биомах $(item)Глубокая пустыня$() и $(item)Марсианские горы$(). Они пассивно поглощают радиацию от игроков."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:eater{NoAI:1b}",
+			"scale": 0.5,
+			"name": "Eater",
+			"anchor": "eater",
+			"text": "Верхний хищник, $(thing)Едачи$() — это враждебные животные, встречающиеся при температуре выше -109°C. Если вам удастся убить одного, их можно съесть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:cruncher{NoAI:1b}",
+			"scale": 0.7,
+			"name": "Cruncher",
+			"anchor": "cruncher",
+			"text": "$(thing)Хрустики$() — территориальные хищники-$(item)мини-боссы$(). Кормите их мясом, чтобы остановить регенерацию. Их также можно есть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:glider{NoAI:1b}",
+			"scale": 0.4,
+			"offset": 0.2,
+			"name": "Glider",
+			"anchor": "glider",
+			"text": "Несмотря на своё название, $(thing)Gliders$() нельзя приручить или использовать верхом. Они пассивны и обитают в областях с температурой выше -105°C. Они любят музыку и их можно съесть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:crusher{NoAI:1b}",
+			"scale": 0.5,
+			"offset": 0.5,
+			"name": "Crusher",
+			"anchor": "crusher",
+			"text": "$(thing)Crushers$() — полуагрессивные животные, обитающие стадами в областях с температурой выше -100°C. Их можно убивать ради мяса и жёстких шипов."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:springling{NoAI:1b}",
+			"scale": 0.9,
+			"name": "Springling",
+			"anchor": "springling",
+			"text": "$(thing)Springlings$() — дикие животные, встречающиеся при температуре выше -108°C. Кормление их $(item)Saplings$() позволит вам ездить на них и вытягивать их чрезвычайно длинные шеи. Их также можно съесть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:goober{NoAI:1b}",
+			"scale": 0.6,
+			"name": "Goober",
+			"anchor": "goober",
+			"text": "$(thing)Слюпики$() — ленивые дикие животные, встречающиеся при температуре выше -109°C. Они пассивны и их можно есть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:walker{NoAI:1b}",
+			"scale": 0.6,
+			"offset": 2.2,
+			"name": "Walker",
+			"anchor": "walker",
+			"text": "$(thing)Гигантские ходоки$() обитают в областях с температурой выше -97°C. Они пассивны и их можно есть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:raider{NoAI:1b}",
+			"scale": 0.5,
+			"name": "Raider",
+			"anchor": "raider",
+			"text": "$(thing)Raiders$() — враждебные животные, встречающиеся при температуре выше -109°C. У них есть естественная конкуренция с $(thing)Chargers$(). Вы можете сделать их нейтральными, покормив $(item)Raw Meat$()."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "wan_ancient_beasts:toxlacanth{NoAI:1b}",
+			"scale": 0.35,
+			"name": "Toxlacanth",
+			"anchor": "toxlacanth",
+			"text": "$(thing)Токсаканты$() — водные животные. Рекомендуется убивать их на расстоянии и готовить мясо перед употреблением."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:stackatick{NoAI:1b}",
+			"scale": 0.4,
+			"name": "Stackatick",
+			"anchor": "stackatick",
+			"text": "Одно из немногих животных, способных выжить в марсианской пустыне, $(thing)Stackaticks$() — пассивные животные-жертвы. Их также можно съесть."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:quake{NoAI:1b}",
+			"scale": 0.8,
+			"name": "Quake",
+			"anchor": "quake",
+			"text": "$(thing)Quakes$() способны поглощать большое количество урона, прежде чем выпустить его обратно волной. Дождитесь их перезарядки, чтобы атаковать!"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "endermanoverhaul:badlands_enderman{NoAI:1b}",
+			"scale": 0.8,
+			"name": "Endermen",
+			"anchor": "endermen",
+			"text": "Марс имеет свой собственный вид эндерменов. Все они пассивные, кроме тех, что встречаются под землёй."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "ad_astra:martian_raptor{NoAI:1b}",
+			"scale": 0.8,
+			"name": "Скелетный хищник",
+			"anchor": "skeletal_raptor",
+			"text": "Нежить-динозавр. Их можно найти под землёй."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:mars/mars",
+				"tfg:mars/mars_equipment",
+				"tfg:the_world/wild_animals",
+				"tfg:agriculture/animal_husbandry",
+				"tfg:agriculture/jellies",
+				"tfg:the_moon/moon_fauna",
+				"tfg:beneath/beneath_fauna"
+			]
+		}
+	],
+	"read_by_default": true
+}

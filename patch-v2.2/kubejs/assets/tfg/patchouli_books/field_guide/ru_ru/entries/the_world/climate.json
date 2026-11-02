@@ -1,0 +1,115 @@
+{
+  "name": "Климатология Земли",
+  "category": "tfg:the_world",
+  "icon": "tfg:textures/gui/field_guide/icons/climatology.png",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "text": "В $(tfg) климат и время — очень важные факторы, влияющие на ваш опыт. $(l:the_world/climate#seasons)Времена года$() сменяются циклически, влияя на погоду, рост культур и вашу температуру. Прежде чем решиться на поселение, внимательно изучите климат и географию вашего региона."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Каталог",
+      "anchor": "index",
+      "text": "$(li)$(bold)$(l:the_world/climate#calendar)Calendar$()$(li2)$(l:the_world/climate#seasons)Seasons$()$(li)$(bold)$(l:the_world/climate#climate)Climate$()$(li2)$(l:the_world/climate#temperature)Temperature$()$(li2)$(l:the_world/climate#rainfall)Rainfall$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Calendar",
+      "anchor": "calendar",
+      "text": "$(thing)Календарь$() можно просмотреть в любое время, нажав $(item)$(k:key.inventory)$() и перейдя на вкладку календаря. Важно отметить, что эффекты времён года меняются при пересечении экватора, например, в точке $(thing)Z=10000$()."
+    },
+    {
+      "type": "patchouli:image",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/screens/calendar_screen.png"
+      ],
+      "text": "Экран календаря, показывающий $(thing)Время года$(), $(thing)День$() и $(thing)Дату$().",
+      "border": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "seasons",
+      "title": "Seasons",
+      "text": "В TerraFirmaCraft есть четыре времени года, и погода с климатом меняются вместе с ними! Каждое время года делится на $(thing)Раннее$(), $(thing)Среднее$() и $(thing)Позднее$() месяцы. Четыре времени года:$(br)$(li)$(bold)Весна$(): март - май$(li)$(bold)Лето$(): июнь - август$(li)$(bold)Осень$(): сентябрь - ноябрь$(li)$(bold)Зима$(): декабрь - февраль"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Текущее время года влияет на температуру региона, осадки (дождь или снег) и окружающую среду, например, на изменение цвета листвы и многое другое. Внимательно следите за вкладкой календаря — это будет полезно!"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "climate",
+      "text": "Ещё одна вкладка на основном экране инвентаря — $(thing)Климат$(). Здесь показана информация о текущем месте$(li)Первая строка показывает общий $(l:https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification)Климат$().$(li)Вторая строка показывает $(l:the_world/climate#temperature)Среднегодовую температуру$().$(li)Третья строка показывает $(l:the_world/climate#rainfall)Среднегодовое количество осадков$().$(li)И последняя строка показывает $(l:the_world/climate#temperature)Текущую локальную температуру$().",
+      "title": "Climate"
+    },
+    {
+      "type": "patchouli:image",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/screens/climate_screen.png"
+      ],
+      "text": "Экран климата",
+      "border": false
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Temperature",
+      "anchor": "temperature",
+      "text": "Текущая температура в TerraFirmaCraft зависит от нескольких факторов:$(br)$(li)Во-первых, регион, особенно широта, играет самую большую роль и регистрируется как $(thing)Средняя температура$().$(li)Во-вторых, текущее время года влияет на температуру.$(li)В-третьих, температура может меняться ото дня ко дню, а также в течение часа.$(li)Наконец, температура меняется с изменением высоты."
+    },
+    {
+      "type": "patchouli:image",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/maps/temperature_map.png"
+      ],
+      "text": "Карта площадью 65,5 км², отображающая циклы температуры при движении на север/юг.$(br)$(#001cfc)◼$(#00b9fc)◼$(#62fc92)◼$(#e1fc12)◼$(#fc7800)◼$(#cf0000)◼$() -20°C → 30°C",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "rainfall",
+      "text": "Количество осадков — ещё один климатический показатель, который может варьироваться в зависимости от места в мире и определяет рост флоры.$(br2)Осадки — один из основных факторов $(l:agriculture/growing_crops#hydration)Влажности$(), которая точно измеряет, насколько влажна почва в данном месте, и используется $(l:agriculture/growing_crops)Культурами$(), $(l:the_world/wild_fruits#fruit_trees)Фруктовыми деревьями$() и $(l:the_world/wild_fruits#tall_bushes)Ягодными кустарниками$() для определения возможности роста.",
+      "title": "Годовое количество осадков"
+    },
+    {
+      "type": "patchouli:image",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/maps/rainfall_map.png"
+      ],
+      "text": "Карта площадью 65,5 км², отображающая циклы осадков при движении на восток/запад.$(br)$(#800302)◼$(#fc5600)◼$(#fcbe4e)◼$(#a6be4e)◼$(#1268ac)◼$(#76b6f6)◼$() 0мм → 500мм",
+      "border": true
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:the_world/wild_fruits",
+        "tfg:the_world/wild_crops",
+        "tfg:the_world/flora",
+        "tfg:agriculture/growing_crops",
+        "tfg:craftsmanship/pottery"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 1
+}

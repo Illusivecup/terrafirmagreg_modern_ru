@@ -1,0 +1,363 @@
+{
+  "name": "Добыча и обрушения",
+  "icon": "tfc:textures/item/metal/pickaxe/wrought_iron.png",
+  "category": "tfg:game_mechanics",
+  "priority": true,
+  "sortnum": 2,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "index",
+      "text": "$(li)$(bold)$(l:game_mechanics/mining#tools)Инструменты$()$(li)$(bold)$(l:game_mechanics/mining#collapses)Обрушения$()$(li2)$(l:game_mechanics/mining#gravity)Гравитация$()$(li)$(bold)$(l:game_mechanics/mining#supports)Опорные балки$()$(li2)$(l:game_mechanics/mining#higher_tiers)Балки более высокого уровня$()$(li)$(bold)$(l:game_mechanics/mining#explosives)Взрывчатка$()$(li)$(bold)$(l:game_mechanics/mining#processing)Обогащение руды$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "title": "Introduction",
+      "text": "Как только вы $(l:craftsmanship/metallurgy)найдёте$() жилу руды, вы можете начать её разработку для получения ресурсов. Однако есть некоторые отличия от базового Minecraft, о которых следует знать при добыче. Например, $(l:game_mechanics/mining#collapses)обрушения$(), $(l:game_mechanics/mining#supports)опоры$(), $(l:game_mechanics/hazards)опасные материалы$() и $(l:game_mechanics/mining#processing)обработка$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "tools",
+      "title": "Tools",
+      "item": "tag:tfc:pickaxes,tag:forge:tools/mining_hammers",
+      "text": "Прежде чем начать, вы должны подготовить правильное оборудование для работы. Вам понадобится $(thing)кирка$() или $(thing)молоток$() для добычи руд. Молоток имеет преимущество: он может разбивать блоки в области 3x3 за один раз.$(br2)Обычный $(thing)молот$() также может разбивать каменные блоки, но не будет руды. Однако он всё ещё может быть полезен для $(l:craftsmanship/anvils#raw_rock)извлечения$() необработанного камня."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "collapses",
+      "text": "В $(tfg) необработанная порода нестабильна и подвержена $(thing)обрушениям$(). Многие каменные блоки, включая $(thing)необработанную породу$(), $(thing)руду$() и $(thing)шипы$(), могут обрушиться на вас при определённых условиях.$(br2)$(thing)Опорные балки$() можно использовать для предотвращения обрушений.$(br)Когда блоки $(thing)руды$() обрушиваются, они деградируют в булыжник.",
+      "title": "Collapses"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Обвалы могут произойти, когда игрок $(thing)добывает любую сырую породу$(), которая находится рядом со $(thing)неукрепленной сырой породой$(). Однако, как только обвал начался, даже ранее $(thing)укрепленная$() порода может начать обрушиваться.$(br2)Порода на потолке пещер $(thing)поддерживается естественным образом$(). Любая сырая порода с твердым блоком под ней также $(thing)укреплена$(). В качестве альтернативы, $(thing)опоры$() могут поддерживать широкую область сразу."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "gravity",
+      "title": "Gravity",
+      "text": "Земля, трава, глина, гравий, булыжник и песок также подвержены воздействию гравитации. Однако, в отличие от блоков с гравитацией из ванильной игры, эти блоки скатываются по склонам и не могут быть сложены в стопку высотой более одного блока без опорных блоков вокруг. $(l:craftsmanship/panning)Добыча руд$() также осыпается, но не теряет в качестве."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tag:tfc:support_beams",
+      "anchor": "supports",
+      "title": "Опорные балки",
+      "text": "$(thing)Опорные балки$() можноecraftать из брёвен или камня.$(br2)Размещение $(thing)опорной балки$() на блоке создаёт колонну высотой до трёх блоков. Под ними должен быть прочный блок, чтобы они оставались вертикально.$(br)$(thing)Горизонтальные$() балки можно размещать между двумя $(thing)вертикальными$() балками, находящимися в пределах пяти блоков друг от друга, как показано на схеме выше."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "$(bold)СОВЕТ$(): Можно использовать деревянные вертикальные опорные балки с горизонтальными опорными балками более высокого качества, например, из бетона.",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "   ",
+              "CRD",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ],
+            [
+              "   ",
+              "   ",
+              "   "
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:rock/raw/andesite",
+            "R": "air",
+            "C": "air",
+            "D": "air",
+            "V": "air",
+            "W": "air",
+            "G": "tfc:rock/raw/andesite"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              "CRD",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ],
+            [
+              "   ",
+              "   ",
+              "   "
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:rock/raw/andesite",
+            "R": "air",
+            "C": "tfc:wood/vertical_support/oak",
+            "D": "air",
+            "V": "tfc:wood/vertical_support/oak",
+            "W": "air",
+            "G": "tfc:rock/raw/andesite"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              "CRD",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ],
+            [
+              "   ",
+              "   ",
+              "   "
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:rock/raw/andesite",
+            "R": "air",
+            "C": "tfc:wood/vertical_support/oak",
+            "D": "tfc:wood/vertical_support/oak",
+            "V": "tfc:wood/vertical_support/oak",
+            "W": "tfc:wood/vertical_support/oak",
+            "G": "tfc:rock/raw/andesite"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              "CRD",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ],
+            [
+              "   ",
+              "   ",
+              "   "
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:rock/raw/andesite",
+            "R": "tfc:wood/horizontal_support/oak[north=true,south=true]",
+            "C": "tfc:wood/vertical_support/oak[south=true]",
+            "D": "tfc:wood/vertical_support/oak[north=true]",
+            "V": "tfc:wood/vertical_support/oak",
+            "W": "tfc:wood/vertical_support/oak",
+            "G": "tfc:rock/raw/andesite"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              "CRD",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "   ",
+              "V W",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ],
+            [
+              "   ",
+              "   ",
+              "   "
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:rock/raw/andesite",
+            "R": "tfc:wood/horizontal_support/oak[north=true,south=true]",
+            "C": "tfc:wood/vertical_support/oak[south=true]",
+            "D": "tfc:wood/vertical_support/oak[north=true]",
+            "V": "tfc:wood/vertical_support/oak",
+            "W": "tfc:wood/vertical_support/oak",
+            "G": "tfc:rock/raw/andesite"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Только $(thing)$(bold)горизонтальные опорные балки$() заставляют соседние блоки быть $(thing)поддерживаемыми$(). Любой блок в области $(bold)9 x 5 x 9$() с центром в горизонтальной опорной балке считается $(thing)поддерживаемым$().$(br2)Помимо поддержки опорными балками, скала может поддерживаться просто наличием под ней твёрдого блока, например, другой скалы. Однако важно отметить, что $(thing)не твёрдые блоки$(), такие как $(thing)ступени$() и $(thing)плиты$(), а также $(thing)гладкий камень$(), $(bold)не$() считаются поддерживающими."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Защищаемая область",
+      "anchor": "support_3d",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/supports/support_3d.png"
+      ],
+      "text": "Защищаемая область опоры центрируется на горизонтальной опорной балке. Вертикальные опоры не влияют на это.",
+      "border": false
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Диапазон блоков",
+      "anchor": "block_range",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/supports/support_2d.png"
+      ],
+      "text": "При добыче у каждого блока есть собственная проверка диапазона для обрушений, до 7x7x7, показанная красной/жёлтой областью с центром на камне.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Условие выполнения",
+      "anchor": "pass_condition",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/supports/support_2d_pass.png"
+      ],
+      "text": "При добыче выделенного блока обрушение невозможно, так как всё свободное пространство (жёлтая область) защищено опорой (зелёная область).",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Условие провала",
+      "anchor": "fail_condition",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/supports/support_2d_fail.png"
+      ],
+      "text": "Однако, когда есть неподдерживаемые блоки вне области опоры, добыча выделенного блока может вызвать обрушение, даже если сам он поддерживается.",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Помимо базовых $(thing)деревянных и каменных опорных балок$(), $(tfg_short) также добавляет более высокоуровневые опорные балки, включая $(thing)бетонные опорные балки$(), $(thing)стальные опорные балки$() и $(thing)армированные бетонные опорные балки$(). Самый высокий уровень опор поддерживает область $(bold)33 x 13 x 33$() блоков с центром на горизонтальной опорной балке!$(br)Область поддержки можно увидеть в подсказке опорных балок.",
+      "title": "Более высокий уровень",
+      "anchor": "higher_tiers"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "support_tips",
+      "text": "Наконец, важно знать, что $(l:craftsmanship/chisel)обработка зубилом$() может вызывать обрушения так же легко, как и добыча, когда она выполняется на любом $(thing)сыром камне$(), который может вызвать обрушение рядом.$(br2)Если у вас всё ещё возникают проблемы с обрушениями, посмотрите это $(l:https://youtu.be/1KgwEexxGNI)руководство$().",
+      "title": "Tips"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Взрывчатка",
+      "anchor": "explosives",
+      "item": "tfc:powderkeg,minecraft:tnt,gtceu:powderbarrel,gtceu:dynamite",
+      "text": "В $(tfg_short) существует несколько видов взрывчатых веществ для различных целей.$(li)$(bold)TNT$(): Средний по размеру взрыв.$(li)$(bold)Динамит$(): Бросаемый взрывчатый веществом малой мощности.$(li)$(bold)Порохная бочка$(): Крупный взрыв.$(li)$(bold)Порохная бочка$(): Extremely powerful explosive at full strength. Scales with the quantity of stored gunpowder."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Базовое обогащение руды",
+      "anchor": "processing",
+      "item": "tag:forge:crushed_ores",
+      "text": "Всегда обогащайте руды для получения большего выхода. Этот процесс можно начать очень рано.$(br)Первый шаг — использование $(l:craftsmanship/quern)жернова$() для дробления руды. Этот шаг в будущем можно автоматизировать с помощью улучшенных машин, таких как $(thing)жернов$(), $(thing)дробильное колесо$(), $(thing)массер$() и $(thing)ковальный молот$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Очищенная пыль",
+      "anchor": "purifying",
+      "item": "tag:forge:pure_dusts",
+      "text": "Чтобы ваши дроблёные руды давали ещё больше mB, сначала поместите их в сетку крафта вместе с $(thing)молотом$() для получения $(thing)неочищенной пыли$(). Чтобы очистить пыль, бросьте её в воду или в бочку с водой.$(br)Эта конечная пыль может дать примерно в $(bold)4 раза$() больше металла при плавлении по сравнению с сырой рудой."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/barrels",
+        "tfg:craftsmanship/anvils",
+        "tfg:craftsmanship/quern",
+        "tfg:craftsmanship/panning"
+      ]
+    }
+  ],
+  "extra_recipe_mappings": {
+    "tag:minecraft:pickaxes": 2,
+    "tag:forge:tools/mining_hammers": 2,
+    "tag:forge:tools/drills": 2,
+    "tag:tfc:support_beams": 6,
+    "tfc:powderkeg": 15,
+    "minecraft:tnt": 15,
+    "gtceu:powderbarrel": 15,
+    "gtceu:dynamite": 15
+  }
+}

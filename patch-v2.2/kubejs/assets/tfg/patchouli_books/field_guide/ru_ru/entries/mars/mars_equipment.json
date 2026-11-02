@@ -1,0 +1,94 @@
+{
+	"name": "Марсиское снаряжение",
+	"category": "tfg:mars",
+	"icon": "tfg:certus_mechanism",
+	"read_by_default": true,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "$(li)$(bold)Оружие ближнего боя$()$(li2)$(l:mars/mars_equipment#nano_saber)Нано-сабля$()$(li)$(bold)$(l:mars/mars_equipment#ev_guns)Оружие$()$(li2)$(l:mars/mars_equipment#cannon)Полевое орудие для стрельбы с плеча$()$(li2)$(l:mars/mars_equipment#rifles)Продвинутые винтовки$()$(li2)$(l:mars/mars_equipment#grenades)Гранатомёт$()$(li2)$(l:mars/mars_equipment#shotguns)Продвинутые дробовики$()$(li2)$(l:mars/mars_equipment#pistols)Продвинутые пистолеты и пистолеты-пулемёты$()$(li)$(bold)Броня$()$(li2)$(l:mars/mars_equipment#space_suit)Вольфрамокосмический скафандр$()$(li)$(bold)Щиты$()$(li2)$(l:mars/mars_equipment#reinforced_shield)Укреплённый щит$()$(li2)$(l:mars/mars_equipment#corrupted_shield)Испорченный щит$()$(li2)$(l:mars/mars_equipment#ricoshield)Рико-щит$()"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "gtceu:nano_saber",
+			"anchor": "nano_saber",
+			"text": "$(item)Нано-сабля$() — это мощное оружие ближнего боя, которое вы сможете разблокировать, достигнув поздней стадии $(5)EV$(). Просто используйте $(item)$(k:key.sneak) + $(k:key.use)$() для активации режима $(thing)bzzzzz$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tfg:certus_mechanism",
+			"anchor": "ev_guns",
+			"text": "$(item)Механизм Цертуса$() используется для создания оружия $(5)EV$()-уровня. Многие из этих видов оружия используют боеприпасы, требующие Кварца Цертуса. Луна содержит огромные его жилы, или вы можете настроить бесконечное поставки через $(l:the_moon/moon_biomes#harvester)Лунный реголит$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tacz:modern_kinetic_gun{GunId:\"create_armorer:cannon_40mm_salamander\"},tacz:ammo{AmmoId:\"create_armorer:40mmhe\"}",
+			"title": "Ручное полевое орудие",
+			"anchor": "cannon",
+			"text": "Ходить с танковой пушкой? Это оружие медленное, тяжелое, но обладает разрушительной силой."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tacz:ammo{AmmoId:\"applied_armorer:hard_core_quartz_bullet\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:moritz_rifle_ar77\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:moritz_sniper_semi_k30\"}",
+			"title": "Продвинутые винтовки",
+			"anchor": "rifles",
+			"text": "Если вы не знаете, что выбрать, эти оружие — хороший сбалансированный вариант."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tacz:ammo{AmmoId:\"applied_armorer:fluix_infused_grenade\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:moritz_gernade_gl3\"}",
+			"title": "Гранатомёт",
+			"anchor": "grenades",
+			"text": "Если вам приходится сражаться с большими группами врагов одновременно, это может быть вашим решением."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tacz:ammo{AmmoId:\"applied_armorer:cluster_quartz_bullet\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:moritz_shotgun_sg914\"}",
+			"title": "Продвинутые дробовики",
+			"anchor": "shotguns",
+			"text": "Отлично для уничтожения целей в упор."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tacz:ammo{AmmoId:\"applied_armorer:etched_quartz_bullet\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:niklas_smg_freedom\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:niklas_pistol_double_win_win\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:niklas_pistol_semi_pride\"},tacz:modern_kinetic_gun{GunId:\"applied_armorer:niklas_pistol_semi_right\"}",
+			"title": "Продвинутые пистолеты и пистолеты-пулемёты",
+			"anchor": "pistols",
+			"text": "Хотите стрелять быстро? Эти оружия идеальны."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "ad_astra:netherite_space_helmet,ad_astra:netherite_space_suit,ad_astra:netherite_space_pants,ad_astra:netherite_space_boots",
+			"title": "Вольфрамовый скафандр",
+			"anchor": "space_suit",
+			"text": "С этим следующим космическим скафандром вы сможете выживать как в $(b)самых холодных$(), так и в $(c)самых горячих$() условиях, которые может предложить космос! Он будет необходим, чтобы вы не сгорели мгновенно, как только ступите на $(6)Венеру$() и $(5)Меркурий$().$(br)В качестве бонуса он также предоставляет дополнительную броню и запас воздуха!"
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shaped/reinforced_shield_from_shield",
+			"anchor": "reinforced_shield",
+			"text": "$(item)Укреплённый щит$() наносит урон атакующим, как зачарование Шипы в обычном Minecraft. Материалы для его крафта можно найти у $(l:mars/mars_fauna#cruncher)Хрумхвостов$() и $(l:mars/mars_fauna#eater)Едоков$()."
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shaped/corrupted_shield",
+			"anchor": "corrupted_shield",
+			"text": "$(item)Испорченный щит$() случайным образом телепортирует атакующих, что может быть полезно для того, чтобы держать их подальше от вас... но он также может телепортировать их за вашу спину. Зубья можно получить от $(l:mars/mars_fauna#endermen)Пещерных Эндерменов$() под поверхностью Марса."
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shaped/ricoshield",
+			"anchor": "ricoshield",
+			"text": "$(item)Рико-щит$() поглощает определённое количество урона, после чего выпускает ударную волну, наносящую урон всему остальному поблизости. $(item)Кинетическое ядро$() можно найти как редкий дроп от $(l:mars/mars_fauna#quake)враждебных големов$() в марсианских пещерах."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:mars/mars",
+				"tfg:mars/mars_fauna",
+				"tfg:logistics/exploration_gear"
+			]
+		}
+	]
+}

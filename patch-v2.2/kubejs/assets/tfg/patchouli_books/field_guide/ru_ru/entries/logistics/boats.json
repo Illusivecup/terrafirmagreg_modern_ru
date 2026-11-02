@@ -1,0 +1,632 @@
+{
+  "name": "Лодки",
+  "category": "tfg:logistics",
+  "icon": "firmaciv:textures/item/rowboat_icon_only.png",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(l:logistics/boats#intro)Информация о мореплавании$()$(li2)$(l:logistics/boats#customization)Кастомизация$()$(li2)$(l:logistics/boats#boat_items)Лодки как предметы$()$(li2)$(l:logistics/boats#animals)Перевозка животных$()$(li2)$(l:logistics/boats#paddles)Весла как орудия гребли$()$(li2)$(l:logistics/boats#cleats)Кнехты & и ликтросы$()$(li2)$(l:logistics/boats#anchors)Якоря & и брашпили$()$(li2)$(l:logistics/boats#sails)Паруса$()$(li2)$(l:logistics/boats#sailing)Управление судном$()$(li2)$(l:logistics/boats#painting)Декорирование и & окрашивание парусов $()$(li2)$(l:logistics/boats#damage)Повреждения & и ремонт$()",
+      "title": "Каталог",
+      "anchor": "index"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(l:logistics/boats#watercraft)Судно$()$(li2)$(l:logistics/boats#kayak)Каяк$()$(li2)$(l:logistics/boats#canoe)Выдолбленное каноэ$()$(li2)$(l:logistics/boats#rowboat)Гребная Лодка $()$(li2)$(l:logistics/boats#sloop)Шлюп$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "title": "Вступление",
+      "text": "Создание и использование лодки может оказаться сложнее, чем вы привыкли, но нет ничего лучше, чем построить идеальное судно и отправиться в открытые моря. Внимательно прочитайте это руководство и узнайте все тонкости резьбы, крафта, сооружения, гребли, управления и кастомизации лодки по своему усмотрению."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "firmaciv:textures/gui/book/boats.png"
+      ],
+      "border": true,
+      "text": "Путешествовать по миру или просто по своей местности часто лучше всего осуществлять по судоходным водным путям."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Кастомизация",
+      "anchor": "customization",
+      "text": "На лодки можно устанавливать блоки! Как и при размещении блока на суше, нажмите $(item)$(k:key.use)$(), удерживая сундук, наковальню или верстак, чтобы добавить его на лодку. Нажмите $(item)$(k:key.use)$(), чтобы получить к нему доступ. Если вы не можете разместить блок в определенном месте, вероятно, это место пилота! Вы не сможете управлять лодкой, если на пути стоит блок! Вы можете убрать блоки, разбив их, как обычно."
+    },
+    {
+      "type": "patchouli:image",
+      "border": true,
+      "images": [
+        "firmaciv:textures/gui/book/customization.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Лодки как предметы",
+      "anchor": "boat_items",
+      "text": "Их не существует! Кроме каяка: если вы разобьете лодку, из нее выпадут только некоторые детали! Это значит, что вам понадобится каяк, если вы хотите перевезти лодку по суше, а еще вам, возможно, придется построить причал для более крупных судов."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "firmaciv:textures/gui/book/items.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Перевозка животных",
+      "anchor": "animals",
+      "text": "Как и всегда, вы можете перевозить животных на лодках! Однако имейте в виду, что крупные животные, например лошади, поместятся только в достаточно большие лодки. Если животное плывёт в лодке и мешает вам, просто присядьте и нажмите $(item)$(k:key.use)$(), чтобы высадить его из лодки. Через два дня животные начинают беспокоиться и через три дня сами покидают лодку."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Управление",
+      "images": [
+        "firmaciv:textures/gui/book/piloting.png"
+      ],
+      "text": "Каждая лодка имеет специальное сиденье, на котором нужно сидеть, чтобы управлять лодкой."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Вёсла ",
+      "anchor": "paddles",
+      "text": "Если вам кажется, что ваша лодка движется слишком медленно, проверьте, правильно ли вы держите весло, а если для вашей лодки нужны весла, убедитесь, что они вставлены в уключины.  В некоторых лодках несколько игроков могут грести, чтобы лодка двигалась быстрее."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "firmaciv:textures/gui/book/paddles.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Кнехт & и поводки",
+      "anchor": "cleats",
+      "text": "На большинстве лодок есть как минимум один кнехт.  К нему можно прикрепить трос и использовать его, чтобы подтянуть лодку к берегу или поднять ее на сваю.  Трос также можно использовать, чтобы прикрепить лодку к забору, а если прикрепить к забору два кнехта, то можно будет легко пришвартовать более крупные лодки.  Вам наверняка захочется использовать тросы, чтобы лодки не уносило течением!"
+    },
+    {
+      "type": "patchouli:image",
+      "border": true,
+      "images": [
+        "firmaciv:textures/gui/book/leads.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Якоря и брашпили",
+      "anchor": "anchors",
+      "text": "На больших лодках есть якоря, с помощью которых можно полностью остановить судно при условии, что якорь зацепился за дно и паруса не подняты. Лодка все равно будет поворачиваться по ветру, пока стоит на якоре. Найдите значок якоря на брашпиле (якорной лебедке) и нажмите $(item)$(k:key.use)$(), чтобы опустить и поднять якорь."
+    },
+    {
+      "type": "patchouli:image",
+      "border": true,
+      "images": [
+        "firmaciv:textures/gui/book/anchor.png"
+      ],
+      "text": "Якорь с лебедкой на шлюпе."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Паруса",
+      "anchor": "sails",
+      "text": "У парусных судов, конечно же, есть паруса. Чтобы управлять лодкой, их нужно расправлять. Найдите значок треугольного паруса и нажмите $(item)$(k:key.use)$(), чтобы расправить каждый парус. Поскольку на большинстве лодок несколько парусов, вы можете использовать различные комбинации, чтобы регулировать скорость."
+    },
+    {
+      "type": "patchouli:image",
+      "border": true,
+      "images": [
+        "firmaciv:textures/gui/book/sails.png"
+      ],
+      "text": "На этом шлюпе развернуты как стаксель (слева), так и грот (справа)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Плавание под парусами",
+      "anchor": "sailing",
+      "text": "В отличие от привычных вам лодок, управление парусным судном в Firma: Civilization требует определенных навыков. Когда вы управляете парусным судном, появляется новый элемент интерфейса, показывающий скорость и направление ветра, а также скорость судна. Цвет стрелки, указывающей направление ветра, показывает, насколько сложно плыть в этом направлении. Используйте клавиши $(item)$(k:key.forward)$() и $(item)$(k:key.back)$() для перемещения, чтобы ослабить или натянуть $(thing)Boom$(), а клавиши $(item)$(k:key.left)$() и $(item)$(k:key.right)$() — для управления $(thing)Rudder$()."
+    },
+    {
+      "type": "patchouli:image",
+      "border": false,
+      "images": [
+        "firmaciv:textures/gui/book/sailing.png"
+      ],
+      "text": "Интерфейс управления парусным судном поможет вам контролировать его."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Декорирование и & окрашивание парусов",
+      "anchor": "painting",
+      "text": "Любую лодку, построенную с помощью строительных лесов Shipwright's Scaffolding, можно покрасить, а любой парус — окрасить в индивидуальный цвет.  Просто возьмите в руку предмет для окрашивания и нажмите $(item)$(k:key.use)$(), когда увидите значок кисти, чтобы покрасить корпус или парус.  Для каждого цвета краски на больших лодках предусмотрены уникальные узоры."
+    },
+    {
+      "type": "patchouli:image",
+      "border": true,
+      "images": [
+        "firmaciv:textures/gui/book/painting.png"
+      ],
+      "text": "Покрашенные паруса и корпус."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Урон и ремонт",
+      "anchor": "damage",
+      "text": "На поврежденной лодке начнут появляться трещины.  Для ремонта любой лодки, построенной с использованием строительных лесов Shipwright's Scaffolding, используйте соответствующие блоки из досок.  Для каноэ используйте пиломатериалы.  При повреждении на 90 % лодка начнет набирать воду, а при повреждении на 100 % она затонет!  Это не относится к каякам."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "watercraft",
+      "text": "На протяжении игры вам будут доступны различные плавсредства.  Тип лодки, которую вы выберете, зависит от ваших потребностей и доступных материалов.$(li)$(bold)$(l:logistics/boats#kayak)Каяк$(): портативный и быстрый.  Лучше всего подходит для одиночных путешествий.$(li)$(bold)$(l:logistics/boats#canoe)Выдолбленное каноэ$(): дешёвое, сделано из древесины хвойных пород, вмещает двоих.$(li)$(bold)$(l:logistics/boats#rowboat)Гребная лодка$(): среднего размера, подходит для дальних плаваний.$(li)$(bold)$(l:logistics/boats#sloop)Шлюп$(): большое мореходное судно.  Самое продвинутое плавсредство.",
+      "title": "Суда"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "kayak",
+      "text": "Ваш лучший друг в одиночных путешествиях по суше. Конечно, то, что это единственная лодка, которую можно переносить как предмет, тоже играет свою роль. Это самая быстрая лодка для одиночных игроков, и она очень маневренная!$(br)Чтобы грести на каяке, держите в основной или дополнительной руке весло для каяка $(item)Kayak Paddle$(). Чтобы перенести каяк, просто сломайте его.",
+      "title": "Каяк"
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Каяк",
+      "images": [
+        "firmaciv:textures/gui/book/kayak_isometric.png"
+      ],
+      "text": "Каяки — самые маленькие и самые портативные лодки."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "canoe",
+      "title": "Каноэ",
+      "text": "Выдолбленное каноэ, скорее всего, станет первым шагом в вашем водном путешествии! Если вы живёте в эпоху меди, то можете построить каноэ с помощью пилы.$(br)Для каноэ нужны $(item)весло для каноэ$() и три бревна из $(n)мягкой древесины$(). Введите в $(emi) «$(6)#мягкая древесина$()», чтобы просмотреть все подходящие брёвна. К вашему сведению, все хвойные деревья относятся к мягкой древесине."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "firmaciv:textures/gui/book/canoe_isometric.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Вы можете посадить на место рулевого блоки или животных, но имейте в виду, что в этом случае вы не сможете управлять лодкой! Это удобно, если вы просто хотите отправить материалы вниз по течению.$(br2) В каноэ два сиденья, и управление осуществляется с кормы. Чтобы двигаться на полной скорости, нужно держать весло, а если весла держат два игрока, вы можете плыть еще быстрее."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            " F ",
+            " 0 ",
+            " B "
+          ]
+        ],
+        "mapping": {
+          "0": "tfc:wood/stripped_log/douglas_fir[axis=x]",
+          "F": "tfc:wood/stripped_log/douglas_fir[axis=x]",
+          "B": "tfc:wood/stripped_log/douglas_fir[axis=x]"
+        }
+      },
+      "name": "Просто бревно",
+      "text": "Чтобы построить $(thing)выдолбленное каноэ $(), положите три очищенных бревна горизонтально.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            " F ",
+            " 0 ",
+            " B "
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/canoe_component_block/douglas_fir[canoe_carved=5,facing=east,end=false]",
+          "F": "firmaciv:wood/canoe_component_block/douglas_fir[canoe_carved=5,facing=east,end=true]",
+          "B": "firmaciv:wood/canoe_component_block/douglas_fir[canoe_carved=5,facing=east,end=true]"
+        }
+      },
+      "name": "Брёвна, распиленные пополам",
+      "text": "Затем отделите верхнюю половину, зажав $(item)$(k:key.use)$() пилой.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            " F ",
+            " 0 ",
+            " B "
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/canoe_component_block/douglas_fir[canoe_carved=11,facing=east,end=false]",
+          "F": "firmaciv:wood/canoe_component_block/douglas_fir[canoe_carved=11,facing=west,end=true]",
+          "B": "firmaciv:wood/canoe_component_block/douglas_fir[canoe_carved=11,facing=east,end=true]"
+        }
+      },
+      "name": "Разрезанное бревно",
+      "text": "Затем выдолбите верхнюю часть, зажав $(item)$(k:key.use)$() топором.  Наконец, подожгите каноэ с помощью $(item)Firestarter$(), чтобы завершить процесс.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "rowboat",
+      "title": "Гребная лодка",
+      "text": "Итак, вы достигли Бронзового века и желаете обновления? Что ж, гребная лодка именно для вас. Она имеет три места, поэтому может вместить 3 игрока или до 2 животных, включая лошадей! Как и всегда, вы можете заменить сиденье (кроме места рулевого) на сундук по вашему желанию. Вы также можете разместить два дополнительных сундука на корме."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "firmaciv:textures/gui/book/rowboat_isometric.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "В гребной лодке, в отличие от других лодок, вы будете сидеть спиной вперед, когда управляете ей. Это дает вам механическое преимущество, так что вы сможете как следует налечься на весла! Конечно, вы можете управлять им от первого лица, но, возможно, вам будет удобнее делать это от третьего лица, глядя на себя."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Леса",
+      "recipe": "firmaciv:crafting/watercraft_frame_angled",
+      "text": "Чтобы построить гребную лодку, вам понадобятся строительные леса Shipwright's Scaffolding. Расположите их так, чтобы они были обращены внутрь, на участке размером 2 на 3.$(br)Затем заполните пространство между лесами досками из $(n)твёрдых пород дерева$(). Введите \"$(6)#hardwood$()\" в $(emi), чтобы просмотреть все доступные типы брёвен."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "   ",
+            "   ",
+            "   "
+          ],
+          [
+            " 12",
+            " 04",
+            " 56"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:watercraft_frame_angled[facing=north,shape=straight]",
+          "1": "firmaciv:watercraft_frame_angled[facing=west,shape=inner_right]",
+          "2": "firmaciv:watercraft_frame_angled[facing=west,shape=inner_left]",
+          "4": "firmaciv:watercraft_frame_angled[facing=south,shape=straight]",
+          "5": "firmaciv:watercraft_frame_angled[facing=east,shape=inner_left]",
+          "6": "firmaciv:watercraft_frame_angled[facing=east,shape=inner_right]"
+        }
+      },
+      "name": "Строительство гребной лодки",
+      "text": "Леса кораблестроителя, расположены в надлежащем порядке для строительства гребной лодки.",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "   ",
+            "   ",
+            "   "
+          ],
+          [
+            " 12",
+            " 04",
+            " 56"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/watercraft_frame/angled/hickory[facing=north,shape=straight,frame_processed=3]",
+          "1": "firmaciv:wood/watercraft_frame/angled/hickory[facing=west,shape=inner_right,frame_processed=3]",
+          "2": "firmaciv:wood/watercraft_frame/angled/hickory[facing=west,shape=inner_left,frame_processed=3]",
+          "4": "firmaciv:wood/watercraft_frame/angled/hickory[facing=south,shape=straight,frame_processed=3]",
+          "5": "firmaciv:wood/watercraft_frame/angled/hickory[facing=east,shape=inner_left,frame_processed=3]",
+          "6": "firmaciv:wood/watercraft_frame/angled/hickory[facing=east,shape=inner_right,frame_processed=3]"
+        }
+      },
+      "name": "Заполненные строительные леса",
+      "text": "К каждому помосту добавлено по четыре деревянных $(t:#tfg:hardwood) деревянных блока.$()",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "   ",
+            "   ",
+            "   "
+          ],
+          [
+            " 12",
+            " 04",
+            " 56"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/watercraft_frame/angled/hickory[facing=north,shape=straight,frame_processed=7]",
+          "1": "firmaciv:wood/watercraft_frame/angled/hickory[facing=west,shape=inner_right,frame_processed=7]",
+          "2": "firmaciv:wood/watercraft_frame/angled/hickory[facing=west,shape=inner_left,frame_processed=7]",
+          "4": "firmaciv:wood/watercraft_frame/angled/hickory[facing=south,shape=straight,frame_processed=7]",
+          "5": "firmaciv:wood/watercraft_frame/angled/hickory[facing=east,shape=inner_left,frame_processed=7]",
+          "6": "firmaciv:wood/watercraft_frame/angled/hickory[facing=east,shape=inner_right,frame_processed=7]"
+        }
+      },
+      "name": "Болтовые строительные леса",
+      "text": "Во вторую руку возьмите молоток и используете по четыре $(item)медных болта$() к каждой опоре.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "   ",
+            " LR",
+            "   "
+          ],
+          [
+            " 12",
+            " 04",
+            " 56"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/watercraft_frame/angled/hickory[facing=north,shape=straight,frame_processed=7]",
+          "1": "firmaciv:wood/watercraft_frame/angled/hickory[facing=west,shape=inner_right,frame_processed=7]",
+          "2": "firmaciv:wood/watercraft_frame/angled/hickory[facing=west,shape=inner_left,frame_processed=7]",
+          "4": "firmaciv:wood/watercraft_frame/angled/hickory[facing=south,shape=straight,frame_processed=7]",
+          "5": "firmaciv:wood/watercraft_frame/angled/hickory[facing=east,shape=inner_left,frame_processed=7]",
+          "6": "firmaciv:wood/watercraft_frame/angled/hickory[facing=east,shape=inner_right,frame_processed=7]",
+          "L": "alekiships:oarlock[facing=north]",
+          "R": "alekiships:oarlock[facing=south]"
+        }
+      },
+      "name": "Готовая гребная лодка",
+      "text": "Наконец, добавьте $(item) Уарлоки $() в центр лодки, а затем добавьте $(item) весла$() к каждой уключине.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "sloop",
+      "title": "Шлюп",
+      "text": "Уже в железном веке? Что ж, думаю, тебе давно пора построить нормальный корабль. Шлюп имеет ширину 4 блока и длину более 8 блоков — впечатляющий прогресс по сравнению с гребной лодкой! Он вмещает до 13 контейнеров и до 7 пассажиров и, в зависимости от ветра, может развивать очень высокую скорость. Кроме того, на нём можно разместить до 6 $(l:logistics/boats#cannons)пушек$()!"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "firmaciv:textures/gui/book/sloop_isometric.png"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Шлюп — дорогое удовольствие, для его постройки требуется много кованого железа, меди, шерсти и других материалов. Но материалы — это не единственная статья расходов! Вам также придется научиться управлять судном, а для этого нужна практика! Кроме того, если вы планируете пришвартовывать корабль у берега, вам, скорее всего, понадобятся доки и другая инфраструктура.$(br)$(bold)СОВЕТ$(): рекомендуется построить шлюп на суше, а затем спустить его на воду. Если строить его в воде, он может затонуть! \"Как шлюп назовёшь, так он и поплывёт\""
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Строительные леса",
+      "recipe": "firmaciv:crafting/watercraft_frame_flat",
+      "text": "Как и в случае с гребной лодкой, вы начнете с корабельных лесов.$(br) Затем леса заполняются досками из $(n)твердых пород дерева$(). Введите \"$(6)#hardwood$()\" в $(emi), чтобы просмотреть все доступные типы бревен."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     "
+          ],
+          [
+            "  12 ",
+            "  34 ",
+            " 1562",
+            " 30a4",
+            " 3aa4",
+            " 3aa4",
+            " 7889"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:watercraft_frame_flat",
+          "1": "firmaciv:watercraft_frame_angled[facing=west,shape=inner_right]",
+          "2": "firmaciv:watercraft_frame_angled[facing=west,shape=inner_left]",
+          "3": "firmaciv:watercraft_frame_angled[facing=north,shape=straight]",
+          "4": "firmaciv:watercraft_frame_angled[facing=south,shape=straight]",
+          "5": "firmaciv:watercraft_frame_angled[facing=west,shape=outer_right]",
+          "6": "firmaciv:watercraft_frame_angled[facing=west,shape=outer_left]",
+          "7": "firmaciv:watercraft_frame_angled[facing=east,shape=inner_left]",
+          "8": "firmaciv:watercraft_frame_angled[facing=east,shape=straight]",
+          "9": "firmaciv:watercraft_frame_angled[facing=east,shape=inner_right]",
+          "a": "firmaciv:watercraft_frame_flat"
+        }
+      },
+      "name": "Строительство шлюпа",
+      "text": "Леса кораблестроителя, расположенные для сооружения корпуса шлюпа.",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     "
+          ],
+          [
+            "  12 ",
+            "  34 ",
+            " 1562",
+            " 30a4",
+            " 3aa4",
+            " 3aa4",
+            " 7889"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/watercraft_frame/flat/oak[frame_processed=3]",
+          "1": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=inner_right,frame_processed=3]",
+          "2": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=inner_left,frame_processed=3]",
+          "3": "firmaciv:wood/watercraft_frame/angled/oak[facing=north,shape=straight,frame_processed=3]",
+          "4": "firmaciv:wood/watercraft_frame/angled/oak[facing=south,shape=straight,frame_processed=3]",
+          "5": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=outer_right,frame_processed=3]",
+          "6": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=outer_left,frame_processed=3]",
+          "7": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=inner_left,frame_processed=3]",
+          "8": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=straight,frame_processed=3]",
+          "9": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=inner_right,frame_processed=3]",
+          "a": "firmaciv:wood/watercraft_frame/flat/oak[frame_processed=3]"
+        }
+      },
+      "name": "Строительные леса шлюпа",
+      "text": "К каждому помосту добавлено по четыре $(6)$(t:#tfg:hardwood) деревянных блока.$()",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     ",
+            "     "
+          ],
+          [
+            "  12 ",
+            "  34 ",
+            " 1562",
+            " 30a4",
+            " 3aa4",
+            " 3aa4",
+            " 7889"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/watercraft_frame/flat/oak[frame_processed=7]",
+          "1": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=inner_right,frame_processed=7]",
+          "2": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=inner_left,frame_processed=7]",
+          "3": "firmaciv:wood/watercraft_frame/angled/oak[facing=north,shape=straight,frame_processed=7]",
+          "4": "firmaciv:wood/watercraft_frame/angled/oak[facing=south,shape=straight,frame_processed=7]",
+          "5": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=outer_right,frame_processed=7]",
+          "6": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=outer_left,frame_processed=7]",
+          "7": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=inner_left,frame_processed=7]",
+          "8": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=straight,frame_processed=7]",
+          "9": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=inner_right,frame_processed=7]",
+          "a": "firmaciv:wood/watercraft_frame/flat/oak[frame_processed=7]"
+        }
+      },
+      "name": "Строительные леса шлюпа",
+      "text": "Во вторую руку возьмите молоток и используете по четыре $(item)медных болта$() к каждым строй лесам.",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "     ",
+            "     ",
+            " L  R",
+            "     ",
+            "     ",
+            "     ",
+            " L  R"
+          ],
+          [
+            "  12 ",
+            "  34 ",
+            " 1562",
+            " 30a4",
+            " 3aa4",
+            " 3aa4",
+            " 7889"
+          ]
+        ],
+        "mapping": {
+          "0": "firmaciv:wood/watercraft_frame/flat/oak[frame_processed=7]",
+          "1": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=inner_right,frame_processed=7]",
+          "2": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=inner_left,frame_processed=7]",
+          "3": "firmaciv:wood/watercraft_frame/angled/oak[facing=north,shape=straight,frame_processed=7]",
+          "4": "firmaciv:wood/watercraft_frame/angled/oak[facing=south,shape=straight,frame_processed=7]",
+          "5": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=outer_right,frame_processed=7]",
+          "6": "firmaciv:wood/watercraft_frame/angled/oak[facing=west,shape=outer_left,frame_processed=7]",
+          "7": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=inner_left,frame_processed=7]",
+          "8": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=straight,frame_processed=7]",
+          "9": "firmaciv:wood/watercraft_frame/angled/oak[facing=east,shape=inner_right,frame_processed=7]",
+          "a": "firmaciv:wood/watercraft_frame/flat/oak[frame_processed=7]",
+          "L": "alekiships:cleat[facing=north]",
+          "R": "alekiships:cleat[facing=south]"
+        }
+      },
+      "name": "Строительные леса шлюпа",
+      "text": "Наконец, добавьте $(item) Утки$() к корпусу.",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Строительство корпуса - это только первый шаг. Затем найдите значок синего молоточка и$(item)$(k:key.use)$() чтобы добавить элементы, которые отображаются рядом с вашим перекрестием.$(br) Для получения полного списка материалов вам понадобится: $(li) 6 плит для строительных лесов $(li) 18 лестниц для строительных лесов$(li) 116 деревянных досок$(li) 96 медных болтов$(li)4 планки$(li) 34 ободранных бревна$(li) 1 Средний парус$(li)1 Маленький парус$(li) 16 обтёсанных брёвен $(li)1 Якорь$(li)8 Веревка"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Поскольку шлюп приводится в движение ветром, а не вручную, управление им отличается от управления другими судами. $(br2) Вам нужно будет научиться $(l:logistics/boats#sailing)управлять парусами$() и $(l:https://w.wiki/dVq$)лавировать$() против ветра, использовать $(l:logistics/boats#anchors)якорь$() и поднимать и опускать $(l:logistics/boats#sails)паруса$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "cannons",
+      "title": "Пушки",
+      "item": "firmaciv:cannon,alekiships:cannonball",
+      "text": "Пушки! Кто же не хочет иметь пушки? Это мощное оружие для ведения боевых действий на море можно устанавливать как на шлюпах, так и на суше. Это лучший способ уничтожить корабли противника, так как они наносят гораздо больший урон, чем любое другое оружие. \"Поднять орудия!\""
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfg:textures/gui/book/cannon_isometric.png"
+      ]
+    },
+    {
+      "type": "text",
+      "text": "Для стрельбы из пушки вам также понадобятся ядра, которые можно изготовить из двойных слитков кованого железа, а также порох, необработанная бумага и огниво.  Элемент интерфейса будет отображать состояние пушки.  Чтобы поднять пушку, нажмите $(item)$(k:key.use)$(), а чтобы опустить — присядьте и нажмите $(item)$(k:key.use)$()."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/metallurgy",
+        "tfg:agriculture/weaving",
+        "tfg:logistics/exploration_gear",
+        "tfg:logistics/navigation",
+        "tfg:the_world/earth_tree_index",
+        "tfg:logistics/trains"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "extra_recipe_mappings": {
+    "firmaciv:watercraft_frame_angled": 23,
+    "firmaciv:watercraft_frame_flat": 23,
+    "firmaciv:kayak": 24,
+    "firmaciv:kayak_paddle": 24,
+    "firmaciv:canoe_paddle": 26,
+    "alekiships:oarlock": 34,
+    "alekiships:oar": 34,
+    "alekiships:cleat": 40,
+    "alekiships:anchor": 40,
+    "firmaciv:small_triangular_sail": 40,
+    "firmaciv:medium_triangular_sail": 40,
+    "firmaciv:cannon": 50,
+    "firmaciv:cannon_barrel": 50,
+    "alekiships:cannonball": 50
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "name": "Глина и керамика",
+  "category": "tfg:craftsmanship",
+  "icon": "minecraft:clay_ball",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "index",
+      "text": "$(li)$(bold)$(l:craftsmanship/pottery#clay)Глина$()$(li2)$(l:craftsmanship/pottery#vessel)Сосуды$()$(li2)$(l:craftsmanship/pottery#jug)Кувшины$()$(li2)$(l:craftsmanship/pottery#mold)Формы$()$(li)$(bold)$(l:craftsmanship/pottery#kaolin_clay)Каолиновая глина$()$(li2)$(l:craftsmanship/pottery#kaolinite_powder)Каолиновый порошок$()$(li)$(bold)$(l:craftsmanship/pottery#fire_clay)Огнеупорная глина$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "clay",
+      "title": "Clay",
+      "text": "$(thing)Глина$() - невероятно полезный и универсальный материал, который можно использовать для гончарного дела. Сначала его может быть сложно найти. Глина обычно скрыта травой, но чаще всего находится в двух местах. В районах с годовым $(l:the_world/climate#rainfall)осадками$() не менее 175 мм, глину можно найти повсюду, обычно это место отмечено наличием определённых $(thing)Растений$()."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "    ",
+            "    ",
+            "T   "
+          ],
+          [
+            "1 2 ",
+            " 3 6",
+            "4 5 "
+          ],
+          [
+            "XXXW",
+            "X0XW",
+            "XXXW"
+          ]
+        ],
+        "mapping": {
+          "0": "tfc:clay_grass/sandy_loam",
+          "X": "tfc:clay_grass/sandy_loam",
+          "W": "minecraft:water",
+          "1": "tfc:plant/athyrium_fern",
+          "2": "tfc:plant/canna[stage=3]",
+          "3": "tfc:plant/goldenrod[stage=2]",
+          "4": "tfc:plant/pampas_grass[age=2,part=lower]",
+          "T": "tfc:plant/pampas_grass[age=2,part=upper]",
+          "5": "tfc:plant/perovskia[stage=3]",
+          "6": "tfc:plant/water_canna[stage=3]"
+        }
+      },
+      "name": "Индикаторы глины",
+      "text": "Глина с растениями, которые могут указывать на её наличие.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Орляк$(), $(thing)канна$(), $(thing)золотарник$(), $(thing)пампасная трава$(), $(thing)перовския$() и $(thing)водная канна$() указывают на наличие глины поблизости. Глину также можно найти в небольших залежах рядом с источниками воды, такими как реки, озёра или пруды.$(br2)Глину можно использовать для лепки, чтобы сформировать новые предметы. Для лепки из глины требуется пять ее кусков в руке. В отличие от камней, если вы сделаете ошибку, вы можете просто закрыть интерфейс лепки, переформировать глину и попробовать снова."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/gui/clay_knapping.png"
+      ],
+      "text": "Интерфейс высекания.",
+      "border": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "vessel",
+      "text": "Маленький сосуд — один из таких предметов. Как и вся керамика, он должен быть $(l:https://en.wikipedia.org/wiki/Pottery)обожжён$() перед использованием. Обжиг — это процесс $(l:game_mechanics/heating)нагрева$() предмета до температуры, при которой глина превратится в прочный $(thing)Керамический$() материал. Для этого требуется нагрев до 1400 °C, или $(e)$(bold)$(t:Yellow White)Жёлто-белого$().$(br2)Чтобы сделать это на ранней стадии игры, вам понадобится $(l:craftsmanship/pit_kiln)Земляная печь$().",
+      "title": "Маленький сосуд"
+    },
+    {
+      "type": "tfg:knapping_recipe",
+      "recipe": "tfc:clay_knapping/vessel",
+      "text": "Маленькие сосуды могут хранить предметы, чтобы сэкономить место в инвентаре, а также $(l:cooking/decay#vessels)сохранять пищевые продукты$(). В маленьких сосудах можно хранить до 16 предметов на слот, и в них нельзя поместить предметы больше $(l:game_mechanics/size_and_weight)«маленьких»$()."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "jug",
+      "text": "Другой полезный керамический предмет — $(thing)Кувшин$(). Его можно использовать для зачерпывания и $(thing)выпивания$() жидкостей, например свежей воды.$(br2)Чтобы использовать его, просто $(item)$(k:key.use)$() кувшином на жидкость в мире. Затем используйте кувшин, чтобы из него пить. Кувшин — это $(l:cooking/drinking_containers)ёмкость для питья$(), в которой может помещаться $(thing)100 mB$() жидкости за раз.",
+      "title": "Кувшин"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "mold",
+      "text": "Глина также необходима для создания $(thing)Форм$(). В них можно заливать расплавленный металл, который в конечном итоге затвердеет в форме формы. Предмет и, возможно, саму форму затем можно извлечь, используя $(item)$(k:key.use)$() на форме или поместив её в сетку крафта.$(br2)Все формы, кроме $(thing)форм для слитков$(), имеют ограничение: в них нельзя заливать расплавленный металл эпохи позднее бронзового.",
+      "title": "Формы"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Типы форм",
+      "item": "tag:tfc:unfired_molds,tag:tfc:fired_molds",
+      "text": "Существует множество типов форм. Наиболее полезны из них $(item)Слитков$() и $(item)Головки инструментов$().$(br)Формы для слитков требуют $(thing)144мБ$() расплавленного металла для производства одного слитка.$(br)Формы для головок инструментов заменяют традиционное раскалывание камней для инструментов и обычно требуют $(thing)144мБ$() жидкости, однако для некоторых типов инструментов может требоваться меньше или больше."
+    },
+    {
+      "type": "tfg:heat_recipe",
+      "recipe": "tfc:heating/ingot_mold",
+      "text": "Затем форму необходимо обожжь — как и все глиняные предметы — чтобы она стала пригодна для использования, например, в $(l:craftsmanship/pit_kiln)земляной печи$().$(br2)Как только она будет обожжена, в неё можно залить расплавленный металл. После того как металл достаточно остынет, его можно извлечь."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfc:ceramic/ingot_mold{tank:{\"Amount\":100,\"FluidName\":\"gtceu:copper\"}}",
+      "title": "Casting",
+      "link_recipes": false,
+      "text": "Скорее всего, вы столкнётесь с ситуациями, когда у вас остаётся небольшое количество лишнего расплавленного металла. Рекомендуется заливать его в форму для слитков и сохранять до следующего раза, когда вам понадобится отлить этот металл. Стараться создавать идеальные соотношения 144mB для сплавов нецелесообразно и не стоит усилий, пока вы не достигнете паровой эпохи обработки."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "kaolin_clay",
+      "title": "Каолиновая глина",
+      "item": "tfc:kaolin_clay",
+      "text": "Каолиновая глина требуется для создания $(l:craftsmanship/pottery#fire_clay)Огнеупорной глины$(). Она встречается на высоте Y=75-110 в плато, холмистых местностях и высокогорьях (а также в их $(t:Surface rock of Limestone, Dolomite, Chalk, or Marble)Карстовых$() $(t:Burren, Cenote, Doline, Shilin, or Tower Karst)вариациях$()), старых горах и щитовых вулканах при $(l:the_world/climate#temperature)температуре$() не ниже 18°C и количестве $(l:the_world/climate#rainfall)осадков$() не менее 300 мм. Цветок $(thing)Кровавый лили$() растёт на каолиновой глине, которая может находиться на глубине до 35 блоков."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Если вы видите цветок, но глины на поверхности нет, копайте глубже!",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:plant/blood_lily",
+            "Y": "tfc:kaolin_clay_grass"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:plant/blood_lily",
+            "Y": "tfc:red_kaolin_clay"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:plant/blood_lily",
+            "Y": "tfc:white_kaolin_clay"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:plant/blood_lily",
+            "Y": "tfc:pink_kaolin_clay"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Если вы не выбрали $(item)Тропический$() климат при создании мира, путь к получению каолиновой глины может быть долгим, но он всегда будет незабываемой частью TerraFirmaCraft. Важно подготовиться к путешествию: взять $(l:logistics/exploration_gear)снаряжение$(), $(l:logistics/boats)лодку$(), $(l:logistics/personal_storage)дополнительный инвентарь$(), $(l:cooking/food_and_water)пищу и воду$() и $(item)Лопату$(), чтобы всё это копать.$(br2)В общем, двигайтесь $(thing)Юго-Восток$() для повышения температуры и влажности, чтобы достичь идеальных климатических условий."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Если вы не любите долгие путешествия, легко укачиваетесь или очень не везёт, в $(tfg_short) есть другой способ получить каолиновую глину: посетить $(l:beneath/beneath)Подземный мир$()! Это требует меньше путешествий, но гораздо опаснее... с возможностью получить ещё большие богатства!"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfc:powder/kaolinite",
+      "anchor": "kaolinite_powder",
+      "text": "Каолиновый порошок получается путём нагрева $(l:craftsmanship/pottery#kaolin_clay)Каолиновой глины$(). Однако процесс неидеален, и только 20% глины превратится в порошок!$(br2)Чтобы массово производить каолиновый порошок на ранней стадии, рекомендуется заполнять маленькие сосуды блоками каолиновой глины, а затем размещать эти сосуды в $(l:craftsmanship/pit_kiln)земляной печи$() для обжига на месте. С помощью этого метода вы можете обжигать до 1 024 блоков каолиновой глины за один раз в одной печи."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Количество каолинового порошка, которое вам понадобится, будет огромным. Если вы прошли долгий путь, чтобы получить каолиновую глину, и хотите сделать свою поездку максимально продуктивной, рекомендуется не возвращаться, пока у вас не будет хотя бы 7 стопок (448 предметов) $(n)Каолинового Порошка$(). Это обеспечит вам достаточно материала для полной $(l:craftsmanship/blast_furnace)Доменной Печи$(), $(l:craftsmanship/crucible)Тигелей$() и форм. Также следует带回 как минимум 20 блоков каолиновой глины для $(l:craftsmanship/glassworking)Стеклоделия$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Огнеупорная глина",
+      "anchor": "fire_clay",
+      "item": "tfc:fire_clay",
+      "text": "Список применений огнеупорной глины невелик, но все они важны. Огнеупорная глина - это усиленный вариант глины, обладающий лучшей теплостойкостью. Она используется для изготовления предметов, которые должны сильно нагреваться!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/fire_clay",
+      "text": "Огнеупорная глина делается из $(thing)Графита$(), измельченного в $(l:craftsmanship/quern)Жернове$(), а также из $(l:craftsmanship/pottery#kaolinite_powder)Каолинового Порошка$().$(br2)Паровые машины открывают более эффективные способы создания огнеупорной глины, поэтому, возможно, стоит сохранить некоторые ингредиенты на потом."
+    },
+    {
+      "type": "tfg:knapping_recipe",
+      "recipe": "tfc:fire_clay_knapping/fire_ingot_mold",
+      "text": "$(thing)Огненные формы для слитков$() — это более прочный тип $(l:craftsmanship/pottery#mold)формы для слитков$(), которая имеет всего 1 шанс из 100 сломаться, по сравнению с 1 шансом из 10 для обычной формы для слитков."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:the_world/climate",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/crucible",
+        "tfg:craftsmanship/blast_furnace",
+        "tfg:craftsmanship/pit_kiln",
+        "tfg:craftsmanship/charcoal_forge",
+        "tfg:craftsmanship/charcoal_pit",
+        "tfg:craftsmanship/glassworking",
+        "tfg:game_mechanics/heating"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 2,
+  "extra_recipe_mappings": {
+    "minecraft:clay": 1,
+    "tag:tfc:clay_indicators": 3,
+    "tag:tfc:molds": 8,
+    "tfc:kaolin_clay": 12,
+    "tfc:plant/blood_lily": 13,
+    "tfc:powder/kaolinite": 16,
+    "tfc:fire_clay": 18
+  }
+}

@@ -1,0 +1,66 @@
+{
+	"name": "Космические станции",
+	"category": "tfg:the_moon",
+	"icon": "ad_astra:textures/gui/sprites/space_station.png",
+	"read_by_default": true,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "Храня следующие предметы в инвентаре (или в инвентаре вашей ракеты), вы сможете построить $(item)космическую станцию$() на орбите после запуска!$(br)$(li)43x алюминиевых рамы$(li)24x стеклянных панелей$(li)4x светопыли$(li)1x стартовая площадка"
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Там не так много что делать, и они совершенно необязательны, но если вам по какой-то причине нужна пустотная измерение, или вы просто $(italic)очень$() любите прыгать с парашютом, это вариант.$(br2)Убедитесь, что вы взяли что-то, за что можно держаться, так как на орбите $(thing)нет гравитации$().$(br2)$(bold)Совет:$() Орбиты считаются $(item)чистым помещением$() для условий рецептов."
+		},
+		{
+			"type": "patchouli:multiblock",
+			"anchor": "space_station",
+			"name": "Космическая платформа",
+			"text": "Для вашей ракеты будет построена платформа для посадки.",
+			"enable_visualize": false,
+			"multiblock": {
+				"pattern": [
+					[
+						"       ",
+						"       ",
+						"       ",
+						"   0   ",
+						"       ",
+						"       ",
+						"       "
+					],
+					[
+						"GXXXXXG",
+						"XXXXXXX",
+						"XXXXXXX",
+						"XXXXXXX",
+						"XXXXXXX",
+						"XXXXXXX",
+						"GXXXXXG"
+					]
+				],
+				"mapping": {
+					"0": "ad_astra:launch_pad",
+					"X": "gtceu:aluminium_frame",
+					"G": "gtceu:white_lamp"
+				}
+			}
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "ad_astra:zip_gun",
+			"anchor": "zip_gun",
+			"text": "Пистолет-бластер можно заправить любым из $(l:the_moon/the_moon#gases)сжатых газов$(), пригодных для дыхания, чтобы выпускать воздух и передвигаться в условиях низкой гравитации. Они необходимы, если вы хотите что-либо строить на орбите!"
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:the_moon/the_moon",
+				"tfg:the_moon/preparations",
+				"tfg:logistics/railgun"
+			]
+		}
+	]
+}

@@ -1,0 +1,86 @@
+{
+	"name": "Джелли",
+	"category": "tfg:agriculture",
+	"icon": "jellies:jellie/slime_ball/plant",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "$(thing)Джелли$() – это дружелюбные комки слизи, появляющиеся в самых разнообразных местах. $(br2)У них есть масса применений, в число которых входит производство уникальных для каждой разновидности $(thing)шаров слизи$(). $(br2)Я уже говорил что они очень дружелюбны? Если они достаточно приручены, то могут стать $(l:game_mechanics/pets)питомцами$(), с радостью следующими за тобой!"
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "index",
+			"text": "$(li)$(bold)$(l:agriculture/jellies#produce)Производит$()$(li)$(bold)$(l:agriculture/jellies#feeding)Кормёжка$()$(li)$(bold)Разновидности на Земле$()$(li2)$(l:agriculture/jellies#herbal)Целебный$()$(li2)$(l:agriculture/jellies#phosphorum)Фосфорный$()$(li2)$(l:agriculture/jellies#rock)Каменистый$()$(li)$(bold)Разновидности в Бездне$()$(li2)$(l:beneath/beneath_fauna#ice_jellie)Ледяной$()$(li2)$(l:beneath/beneath_fauna#plant_jellie)Природный$()$(li2)$(l:beneath/beneath_fauna#glowberry_jellie)Светящийся$()$(li2)$(l:beneath/beneath_fauna#spring_jellie)Родниковый$()$(li2)$(l:beneath/beneath_fauna#lava_jellie)Лавовый$()$(li2)$(l:beneath/beneath_fauna#biotite_jellie)Биотитовый$()$(li2)$(l:beneath/beneath_fauna#latex_jellie)Латексный$()$(br2)$(o)(Продолжение на следующей странице...)$()"
+		},
+		{
+			"type": "patchouli:text",
+			"text": "$(li)$(bold)Разновидности на Луне$()$(li2)$(l:the_moon/moon_fauna#certus_jellie)Кварцевый$()$(li)$(bold)Разновидности на Марсе$()$(li2)$(l:mars/mars_fauna#pentetic_jellie)Пентетовый$()$(li)$(bold)$(l:agriculture/jellies#spoiler)???$()"
+		},
+		{
+			"type": "patchouli:image",
+			"images": [
+				"tfg:textures/gui/field_guide/jellies.png"
+			],
+			"text": "$(thing)Джелли$() бесполые, поэтому они могут размножаться с любым другим типом$(thing)Джелли$()!",
+			"border": true
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Производит",
+			"anchor": "produce",
+			"text": "$(thing)Джелли$() слегка привередливы, и не будут производить продукты вне среды своего естественного обитания.\nСтоит учесть, что размножать их можно в любой среде.\n$(br2)Они так же не любят автоматизацию, и будут давать продукты только в том случае, когда их кормит игрок. .$(br2)$(#B0B0B0)$(o)Возможно они хотят внимания и заботы..."
+		},
+		{
+			"type": "patchouli:crafting",
+			"title": "Кормёжка",
+			"recipe": "tfg:shaped/jellies_nutritional_mash",
+			"anchor": "feeding",
+			"text": "$(thing)Питательное пюре$() является главным источником пищи всех $(thing)джелли$(), оно изготавливается преимущественно из зерна, фруктов, а также некоторых ингредиентов, зависящих от измерения.$(br2)К сожалению, они довольно привередливы, а потому их должен кормить $(thing)Игрок$(), а не $(l:agriculture/animal_husbandry#feeding_trough)Кормушка$().$(br)$(#B0B0B0)$(o)Почему оно двигается..."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "jellies:herbal",
+			"scale": 0.6,
+			"name": "Целебный джелли",
+			"anchor": "herbal",
+			"text": "$(thing)Целебный$() Джелли спавнится на Земле, в лесах с $(l:the_world/climate#temperature)Температурой$() 1-10°C и $(l:the_world/climate#rainfall)Годовыми осадками$() как минимум 150мм.\nОни производят $(thing)Целебную слизь$()."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "jellies:phosphorum",
+			"scale": 0.6,
+			"name": "Фосфорный джелли",
+			"anchor": "phosphorum",
+			"text": "$(thing)Phosphorum$() медузы появляются на Земле в холодных лесах, с $(l:the_world/climate#temperature)температурой$() от -10 до 0°C и $(l:the_world/climate#rainfall)количеством осадков$() не менее 150 мм. Они производят $(thing)Phosphorum Slime Balls$() и additionally едят $(thing)rotten flesh$()."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "jellies:rock",
+			"scale": 0.6,
+			"name": "Скальный желе",
+			"anchor": "rock",
+			"text": "$(thing)Скальные$() желе редко появляются в пещерах горных биомов. В настоящее время они ничего не делают."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:beneath/beneath_fauna",
+				"tfg:the_moon/moon_fauna",
+				"tfg:mars/mars_fauna"
+			]
+		},
+		{
+			"type": "patchouli:image",
+			"images": [
+				"tfg:textures/gui/field_guide/jellies_secret.png"
+			],
+			"anchor": "spoiler",
+			"text": "$(#B0B0B0)$(o)Последующие страницы слишком выцвели...$()",
+			"border": false
+		}
+	],
+	"read_by_default": true,
+	"sortnum": 7
+}

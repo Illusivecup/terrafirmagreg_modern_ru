@@ -1,0 +1,165 @@
+{
+  "name": "Снаряжение для исследования",
+  "category": "tfg:logistics",
+  "icon": "sns:hiking_boots",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(l:logistics/exploration_gear#hiking_boots)Туфли для хайкинга$()$(li2)$(l:logistics/exploration_gear#safety_boots)Безопасные ботинки$()$(li)$(bold)$(l:logistics/exploration_gear#canes)Трости$()$(li)$(bold)$(l:logistics/exploration_gear#snowshoes)Лыжи$()$(li)$(bold)$(l:logistics/exploration_gear#snorkel)Трубка для плавания$()$(li)$(bold)$(l:logistics/exploration_gear#flippers)ласты$()$(li)$(bold)$(l:logistics/exploration_gear#diving_suit)Акваланг$()$(li2)$(l:logistics/exploration_gear#lava_diving_suit)Лавовый акваланг$()$(li)$(bold)$(l:logistics/exploration_gear#digger_helmet)Шлем копателя$()$(li)$(bold)$(l:logistics/exploration_gear#grappling_hook)Гак$()$(li2)$(l:logistics/exploration_gear#harpoon)Гарпун$()$(li)$(bold)$(l:logistics/exploration_gear#hang_glider)Параплан$()$(li)$(bold)$(l:logistics/exploration_gear#jetpacks)Джетпаки$()",
+      "title": "Каталог",
+      "anchor": "index"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Туристические ботинки",
+      "anchor": "hiking_boots",
+      "item": "sns:hiking_boots",
+      "text": "Каждому исследователю нужны хорошие сапоги.$(br)$(thing)Туристические сапоги$() позволяют вам:$(li)Быстро ходить через кустарник.$(li)Получить небольшое увеличение скорости.$(li)Получить небольшое увеличение безопасной высоты падения.$(li)Автоматически подниматься на блоки, включается с помощью $(item)$(k:sns.key.stepUpToggle)$()"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "safety_boots",
+      "title": "Защитные ботинки",
+      "item": "sns:steel_toe_hiking_boots,sns:black_steel_toe_hiking_boots,sns:red_steel_toe_hiking_boots,sns:blue_steel_toe_hiking_boots",
+      "text": "В туристические сапоги можно интегрировать различные виды стали, чтобы повысить их защиту. $(thing)Синие и красные стальные$() сапоги обеспечивают дополнительную защиту от экстремальных температур."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "canes",
+      "title": "Canes",
+      "item": "tfccanes:walking_cane,tfccanes:refined_walking_cane",
+      "text": "$(thing)Трости$() обеспечивают эффект, аналогичный туристическим сапогам, но должны быть в руках. Их эффект высоты шага даже может складываться с сапогами, позволяя автоматически подниматься даже на стены высотой в 2 блока."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "snowshoes",
+      "title": "Snowshoes",
+      "item": "tfg:snowshoes",
+      "text": "При ношении на ногах $(thing)Снегоступы$() устраняют штраф замедления при ходьбе по снегу и позволяют передвигаться по порошковому снегу."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "snorkel",
+      "title": "Snorkel",
+      "item": "tfg:snorkel",
+      "text": "При ношении на лице $(thing)Трубка$() позволяет дышать дополнительно $(item)15 секунд$() под водой."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "flippers",
+      "title": "Flippers",
+      "item": "tfg:flippers",
+      "text": "При ношении на ногах $(thing)Ласты$() повышают вашу ловкость и скорость при плавании под водой."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "diving_suit",
+      "title": "Акваланг",
+      "item": "create:copper_diving_helmet,create:copper_diving_boots,create:copper_backtank",
+      "text": "$(item)Медный шлем для дайвинга и баллон$() позволяют носителю находиться под водой неопределённо долго, пока в баллоне есть воздух. Вы можете заправить баллон, подавая на него $(thing)механическую энергию$()$. Ношение $(item)Медных ботинок для дайвинга$() позволяет лучше двигаться на морском дне и предотвращает воздействие $(thing)механических лент$() и $(thing)газов легче воздуха$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "lava_diving_suit",
+      "title": "Лавовый акваланг",
+      "item": "create:netherite_diving_helmet,create:netherite_diving_boots,create:netherite_backtank,minecraft:netherite_leggings",
+      "text": "$(thing)Гидрокостюм из синей стали$() работает аналогично $(l:logistics/exploration_gear#diving_suit)Гидрокостюму$(), но вместо того, чтобы позволять вам дышать под водой, он позволяет дышать в лаве. Для работы весь комплект должен быть надет, чтобы защитить вас от интенсивного тепла."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "digger_helmet",
+      "title": "Шлемы копателя",
+      "item": "diggerhelmet:digger_helmet,diggerhelmet:copper_digger_helmet,diggerhelmet:bismuth_bronze_digger_helmet,diggerhelmet:black_bronze_digger_helmet,diggerhelmet:bronze_digger_helmet,diggerhelmet:wrought_iron_digger_helmet,diggerhelmet:steel_digger_helmet,diggerhelmet:black_steel_digger_helmet,diggerhelmet:red_steel_digger_helmet,diggerhelmet:blue_steel_digger_helmet,diggerhelmet:wool_lining,diggerhelmet:silk_lining,diggerhelmet:mining_speed_modifier,diggerhelmet:auto_drink_modifier",
+      "text": "$(thing)Шахтёрские шлемы$() обеспечивают постоянный окружающий источник света вокруг игрока благодаря свече на голове. Они также имеют полезные модификаторы улучшений, такие как $(item)Mining Speed Modifier$(), $(item)Auto Drink Modifier$() или $(thing)Temperature Insulation Linings$()$(br)Может носиться в слотах $(l:craftsmanship/clothing#curios)Curios$(), но тогда не обеспечивает броню."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "grappling_hook",
+      "title": "Крюк-кошка",
+      "item": "grapplemod:grapplinghook",
+      "text": "$(thing)Гак$() выпускает веревку с $(item)$(k:key.attack)$() и закрепляется на блоках, позволяя вам раскачиваться и быстро передвигаться по вертикали.$(br2)Вы можете скрафтить гак с различными предметами для его улучшения - подробности смотрите в разделе главы $(thing)Советы - Инструменты$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "harpoon",
+      "title": "Harpoon",
+      "item": "species:harpoon",
+      "text": "$(thing)Гарпун$() очень похож на $(l:logistics/exploration_gear#grappling_hook)Гак$(), но гораздо более ограничен, не имеет улучшений и может быть запущен только прямо вверх с $(item)$(k:key.use)$()$(br2)Однако он позволяет вам подниматься по веревке с $(item)$(k:key.jump)$() и может быть объединен с $(l:logistics/exploration_gear#coil)Катушками$() для создания $(item)Цепных дорог$()!"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "species:coil",
+      "anchor": "coil",
+      "text": "Если вы щелкните правой кнопкой мыши по двум Заборам с $(item)Катушкой$(), вы создадите $(item)Цепную дорогу$()! Постройте её над собой, а затем выпустите ваш $(l:logistics/exploration_gear#harpoon)Гарпун$() в забор, чтобы начать движение."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Щёлкните правой кнопкой мыши по катушке с пустой рукой, чтобы изменить натяжение каната. Каждая катушка $(thing)односторонняя$(), что указано стрелками на самом канате, поэтому для двустороннего каната вам понадобятся две катушки.$(br2)Катушки также можно размещать на других блоках в декоративных целях, но для работы в качестве зиплайна они должны быть установлены на заборы."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "hang_glider",
+      "item": "hangglider:hang_glider,hangglider:reinforced_hang_glider",
+      "text": "$(item)Параплан$() позволяет путешествовать на большие расстояния по горизонтали, что делает его отличным для пересечения открытых пространств."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "jetpacks",
+      "item": "gtceu:liquid_fuel_jetpack,gtceu:electric_jetpack,gtceu:advanced_electric_jetpack",
+      "title": "Jetpacks",
+      "text": "$(item)Ранцы-джетпаки$() отлично подходят для вертикального перемещения и имеют несколько улучшений, каждое из которых быстрее и лучше держится на высоте, чем предыдущее.$(br2)Электрические ранцы можно заряжать удалённо, используя $(item)Shift-$(k:key.use)$() на Батарее или с помощью $(item)Беспроводного зарядного устройства$()."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:agriculture/weaving",
+        "tfg:agriculture/leather_making",
+        "tfg:logistics/roads",
+        "tfg:craftsmanship/clothing"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "extra_recipe_mappings": {
+    "sns:hiking_boots": 1,
+    "sns:steel_toe_hiking_boots": 2,
+    "sns:black_steel_toe_hiking_boots": 2,
+    "sns:red_steel_toe_hiking_boots": 2,
+    "sns:blue_steel_toe_hiking_boots": 2,
+    "tfccanes:walking_cane": 3,
+    "tfccanes:refined_walking_cane": 3,
+    "tfg:snowshoes": 4,
+    "tfg:snorkel": 5,
+    "tfg:flippers": 6,
+    "create:copper_diving_helmet": 7,
+    "create:copper_diving_boots": 7,
+    "create:copper_backtank": 7,
+    "create:netherite_diving_helmet": 8,
+    "create:netherite_diving_boots": 8,
+    "create:netherite_backtank": 8,
+    "minecraft:netherite_leggings": 8,
+    "diggerhelmet:digger_helmet": 9,
+    "diggerhelmet:copper_digger_helmet": 9,
+    "diggerhelmet:bismuth_bronze_digger_helmet": 9,
+    "diggerhelmet:black_bronze_digger_helmet": 9,
+    "diggerhelmet:bronze_digger_helmet": 9,
+    "diggerhelmet:wrought_iron_digger_helmet": 9,
+    "diggerhelmet:steel_digger_helmet": 9,
+    "diggerhelmet:black_steel_digger_helmet": 9,
+    "diggerhelmet:red_steel_digger_helmet": 9,
+    "diggerhelmet:blue_steel_digger_helmet": 9,
+    "diggerhelmet:wool_lining": 9,
+    "diggerhelmet:silk_lining": 9,
+    "diggerhelmet:mining_speed_modifier": 9,
+    "diggerhelmet:auto_drink_modifier": 9,
+    "grapplemod:grapplinghook": 10,
+    "species:harpoon": 11,
+    "hangglider:hang_glider": 14,
+    "hangglider:reinforced_hang_glider": 14,
+    "gtceu:liquid_fuel_jetpack": 15,
+    "gtceu:electric_jetpack": 15,
+    "gtceu:advanced_electric_jetpack": 15
+  }
+}

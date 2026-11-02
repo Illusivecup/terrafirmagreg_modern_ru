@@ -1,0 +1,491 @@
+{
+	"name": "Clothing",
+	"category": "tfg:craftsmanship",
+	"icon": "tfc_textile:cotton_shirt",
+	"read_by_default": true,
+	"sortnum": 19,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "$(item)Одежда$() — это тип $(thing)экипировки$(), которая предоставляет эффекты, помимо $(l:game_mechanics/damage_types)брони$().$(br2)Большинство видов одежды влияют на $(l:game_mechanics/player_temperature)температуру игрока$(), но некоторые могут обеспечивать дополнительные полезные эффекты."
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "index",
+			"text": "$(li)$(bold)$(l:craftsmanship/clothing#curios)О Приспособлениях$()$(li)$(bold)Ранняя одежда$()$(li2)$(l:craftsmanship/clothing#straw_hat)Соломенная шляпа$()$(li2)$(l:craftsmanship/clothing#primitive)Примитивная$()$(li2)$(l:craftsmanship/clothing#insulated_leather)Кожаная$()$(li)$(bold)Продвинутая одежда$()$(li2)$(l:craftsmanship/clothing#cloth)Тканевая$()$(li2)$(l:craftsmanship/clothing#hides)Кожаная$()$(li2)$(l:craftsmanship/clothing#fully_insulated)Полностью изолирующая$()$(li)$(bold)$(l:craftsmanship/clothing#table)Таблица характеристик одежды$()$(li)$(bold)Прочая одежда$()$(li2)$(l:logistics/exploration_gear#snowshoes)Лыжи$()$(li2)$(l:logistics/exploration_gear#snorkel)Трубка$() и $(l:logistics/exploration_gear#flippers)Ласты$()$(li2)$(l:game_mechanics/hazards#mask)Маска$()$(li2)$(l:game_mechanics/hazards#gloves)Резиновые перчатки$()$(li)$(bold)$(l:craftsmanship/clothing#armor_trim)Украшения для одежды$()"
+		},
+		{
+			"type": "patchouli:image",
+			"title": "Что такое Безделушки?",
+			"anchor": "curios",
+			"images": [
+				"tfg:textures/gui/field_guide/curios.png"
+			],
+			"border": true,
+			"text": "Нажмите на круглую кнопку в левом верхнем углу портрета вашего персонажа, чтобы открыть меню."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Одежду можно носить в обычных слотах экипировки, но её также можно носить в слотах $(thing)Приспособлений$(), чтобы одновременно носить другую экипировку.$(br2)В этом меню также есть слоты для вещей вроде $(l:logistics/personal_storage#backpack)рюкзака$() или $(l:logistics/personal_storage#tool_belt)пояса для инструментов$()."
+		},
+		{
+			"type": "tfg:knapping_recipe",
+			"recipe": "sns:straw_knapping/straw_hat",
+			"anchor": "straw_hat",
+			"title": "Соломенная шляпа",
+			"text": "Первый предмет одежды, который вы можете изготовить, это простая $(item)Соломенная шляпа$(), сделанная из $(l:craftsmanship/building_materials#thatch)соломы$(). Она защищает вас от $(l:game_mechanics/player_temperature#wetness)прямых солнечных лучей$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Примитивная одежда",
+			"anchor": "primitive",
+			"item": "tfc_textile:raw_hat,tfc_textile:raw_shirt,tfc_textile:raw_pants,tfc_textile:raw_socks",
+			"text": "Голый и замерзающий в Арктике? $(item)Примитивный$() набор одежды очень легко создать, он требует лишь немного $(l:craftsmanship/building_materials#thatch)соломы$() и несколько $(item)сырых шкур$(). Идеально для вашего пещерного шика!$(br2)У примитивной одежды очень низкая теплоизоляция и прочность, но она должна дать вам достаточно времени, чтобы найти что-то получше."
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shapeless/primitive_insulation_small",
+			"recipe2": "tfg:shapeless/primitive_insulation_large",
+			"title": " "
+		},
+		{
+			"type": "tfg:knapping_recipe",
+			"recipe": "tfg:knapping/raw_hat",
+			"text": "$(l:craftsmanship/sticks_and_stones#knapping)Раскалывание$() $(item)Примитивного капюшона$()."
+		},
+		{
+			"type": "tfg:knapping_recipe",
+			"recipe": "tfg:knapping/raw_shirt",
+			"text": "Раскалывание $(item)Примитивной туники$()."
+		},
+		{
+			"type": "tfg:knapping_recipe",
+			"recipe": "tfg:knapping/raw_pants",
+			"text": "Раскалывание $(item)Примитивных шорт$()."
+		},
+		{
+			"type": "tfg:knapping_recipe",
+			"recipe": "tfg:knapping/raw_socks",
+			"text": "Раскалывание $(item)Примитивных ботинок$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "insulated_leather",
+			"title": "Изолированная кожа",
+			"item": "tfcambiental:insulated_leather_hat,tfcambiental:insulated_leather_tunic,tfcambiental:insulated_leather_pants,tfcambiental:insulated_leather_boots",
+			"text": "$(item)Изолирующая кожаная$() одежда — это следующий шаг после вашей пещерной косплей-экипировки. Она требует лишь немного $(l:agriculture/leather_making)Кожаной$() брони, а также либо $(l:agriculture/animal_husbandry#wooly_animals)сырую шерсть$(), либо $(l:agriculture/animal_husbandry#oviparous_animals)перо$()."
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shaped/insulated_leather_hat",
+			"recipe2": "tfg:shaped/insulated_leather_tunic",
+			"title": " "
+		},
+		{
+			"type": "tfg:knapping_recipe",
+			"recipe": "tfg:knapping/leather_apron",
+			"text": "$(l:agriculture/leather_making)Кожаная$() $(item)Фартук$() обеспечивает хорошую изоляцию, но не тепло или охлаждение. Идеально для работы перед $(l:craftsmanship/charcoal_forge)горном$()!"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Тканевая одежда",
+			"anchor": "cloth",
+			"item": "tag:forge:cloth",
+			"text": "Для более сильной и долговременной защиты вам стоит задуматься о создании подходящей одежды из различных $(l:agriculture/weaving)тканей$(). $(l:agriculture/animal_husbandry#wooly_animals)Шерстяная$() и $(l:beneath/beneath_crops#cotton)хлопковая$() одежда согреет вас, а $(l:the_world/wild_crops#flax)льняная$(), $(l:the_world/wild_crops#jute)мешковинная$() и $(l:beneath/beneath#webbed_lair)шёлковая$() одежда остудит.$(br)На их создание требуется больше усилий, но они гораздо прочнее и могут быть дёшево отремонтированы."
+		},
+		{
+			"type": "patchouli:crafting",
+			"title": " ",
+			"recipe": "tfg:shaped/cotton_shirt",
+			"recipe2": "tfg:shaped/burlap_pants"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tag:tfc_textile:animal_furs",
+			"anchor": "hides",
+			"title": "Шкуры животных",
+			"text": "Шкуры и меха различных животных можно использовать для создания одной из самых прочных одежд в $(tfg_short), обладающей лучшими характеристиками и прочностью по сравнению с чем-либо ещё. У каждой из них разные характеристики в зависимости от того, как трудно их получить, или где можно найти соответствующее животное."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Например, $(l:the_world/wild_animals#crocodile)крокодильи$() одежда остудит вас, а $(l:the_world/wild_animals#caribou)карибу$() куртка будет тёплой и уютной.$(br2)Самые сильные охлаждающие одеяния потребуют поездки в $(l:beneath/beneath_mechanics#clothes)довольно жаркое$() место...$(br2)Все их также можно легко отремонтировать."
+		},
+		{
+			"type": "patchouli:crafting",
+			"title": " ",
+			"recipe": "tfg:shaped/caribou_shirt",
+			"recipe2": "tfg:shaped/crocodile_shirt"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"anchor": "fully_insulated",
+			"title": "Полная изоляция",
+			"item": "gtceu:nanomuscle_chestplate,ad_astra:space_suit",
+			"text": "Наконец, некоторые продвинутые доспехи также обеспечивают $(thing)полную изоляцию$() от внешнего мира, не давая вашей $(l:game_mechanics/player_temperature)температуре игрока$() опуститься ниже 5°C или подняться выше 25°C."
+		},
+		{
+			"type": "tfg:table",
+			"anchor": "table",
+			"strings": [
+				{
+					"text": "Тип одежды",
+					"bold": true
+				},
+				{
+					"text": "Durability",
+					"bold": true
+				},
+				{
+					"text": "Warmth",
+					"bold": true
+				},
+				{
+					"text": "Insulation",
+					"bold": true
+				},
+				{
+					"text": "Соломенная шляпа"
+				},
+				{
+					"text": "Low"
+				},
+				{
+					"text": "-2°C"
+				},
+				{
+					"text": "+3"
+				},
+				{
+					"text": "Primitive"
+				},
+				{
+					"text": "Low"
+				},
+				{
+					"text": "+2°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Изолированная кожа"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+2°C"
+				},
+				{
+					"text": "+10"
+				},
+				{
+					"text": "Кожаный фартук"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+0°C"
+				},
+				{
+					"text": "+20"
+				},
+				{
+					"text": "Burlap"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "-2°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Linen"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "-2°C"
+				},
+				{
+					"text": "+3"
+				},
+				{
+					"text": "Wool"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+4°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Cotton"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+4°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Silk"
+				},
+				{
+					"text": "Очень высокий"
+				},
+				{
+					"text": "-2°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Призрачный шёлк"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "-8°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Red Elk"
+				},
+				{
+					"text": "Очень высокий"
+				},
+				{
+					"text": "-8°C"
+				},
+				{
+					"text": "+20"
+				}
+			],
+			"title": "Статы одежды",
+			"legend": [],
+			"columns": 3,
+			"first_column_width": 80,
+			"column_width": 50,
+			"row_height": 9,
+			"left_buffer": 2,
+			"top_buffer": 20,
+			"draw_background": false
+		},
+		{
+			"type": "patchouli:text",
+			"text": "$(br2)$(br2)$(br2)$(br2)$(br2)$(br2)$(br2)$(br2)$(o)Продолжение на следующей странице...$()"
+		},
+		{
+			"type": "tfg:table",
+			"anchor": "table",
+			"strings": [
+				{
+					"text": "Тип одежды",
+					"bold": true
+				},
+				{
+					"text": "Durability",
+					"bold": true
+				},
+				{
+					"text": "Warmth",
+					"bold": true
+				},
+				{
+					"text": "Insulation",
+					"bold": true
+				},
+				{
+					"text": "Жуткий волк"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Panther"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Cougar"
+				},
+				{
+					"text": "Medium"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+5"
+				},
+				{
+					"text": "Tiger"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "-4°C"
+				},
+				{
+					"text": "+10"
+				},
+				{
+					"text": "Crocodile"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "-4°C"
+				},
+				{
+					"text": "+10"
+				},
+				{
+					"text": "Lion"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "-4°C"
+				},
+				{
+					"text": "+10"
+				},
+				{
+					"text": "Чёрный медведь"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+10"
+				},
+				{
+					"text": "Гризли"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+10"
+				},
+				{
+					"text": "Caribou"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+20"
+				},
+				{
+					"text": "Sabertooth"
+				},
+				{
+					"text": "High"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+20"
+				},
+				{
+					"text": "Белый медведь"
+				},
+				{
+					"text": "Очень высокий"
+				},
+				{
+					"text": "+8°C"
+				},
+				{
+					"text": "+20"
+				}
+			],
+			"legend": [],
+			"title": "Статы одежды (продолжение)",
+			"columns": 3,
+			"first_column_width": 80,
+			"column_width": 50,
+			"row_height": 9,
+			"left_buffer": 2,
+			"top_buffer": 20,
+			"draw_background": false
+		},
+		{
+			"type": "patchouli:empty",
+			"draw_filler": false
+		},
+		{
+			"title": "Кайма брони",
+			"item": "tag:minecraft:trim_templates",
+			"type": "patchouli:spotlight",
+			"anchor": "armor_trim",
+			"text": "Ваша одежда выглядит слишком просто?$(br2)Как и броня, $(l:craftsmanship/sewing_table#armor_trim)Кайма брони$() может быть применена к большинству предметов одежды."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:agriculture/leather_making",
+				"tfg:agriculture/weaving",
+				"tfg:game_mechanics/player_temperature",
+				"tfg:craftsmanship/sewing_table",
+				"tfg:the_world/wild_animals",
+				"tfg:the_world/wild_crops",
+				"tfg:the_world/climate",
+				"tfg:logistics/exploration_gear",
+				"tfg:beneath/beneath",
+				"tfg:beneath/beneath_crops"
+			]
+		}
+	],
+	"extra_recipe_mappings": {
+		"tag:curios:clothes_hat": 0,
+		"tag:curios:clothes_torso": 0,
+		"tag:curios:clothes_pants": 0,
+		"tag:curios:clothes_socks": 0
+	}
+}

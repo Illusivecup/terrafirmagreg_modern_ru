@@ -1,0 +1,66 @@
+{
+	"name": "Каталог деревьев Бездны",
+	"category": "tfg:beneath",
+	"icon": "tfg:textures/block/wood/sapling/mahoe.png",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "Несмотря на отсутствие солнечного света, в Бездне растут несколько видов деревьев, большинство из которых можно найти только здесь!$(br2)Деревья растут таким же образом, как и в мире но они требуют 12 светового уровня, который не обеспечивается естественным светом Бездны. Для решения этой проблемы вы можете использовать $(l:agriculture/aqueducts)Лавовые Акведуки$() или любой другой доступный источник света."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Араукария",
+			"anchor": "araucaria",
+			"item": "tag:tfg:araucaria_logs",
+			"text": "$(bold)Араукария$()$(br)Находится только в биоме $(thing)Плетёное Логово$(). $(br)$(thing)Дней роста$(): 5"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Бук",
+			"anchor": "beech",
+			"item": "tag:tfg:beech_logs",
+			"text": "$(bold)Бук$()$(br)Находится в биомах  $(thing)Терновая роща$() и $(thing)Пышная Лощина$(). $(br)$(thing)Дней роста$(): 6"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Гинкго",
+			"anchor": "ginkgo",
+			"item": "tag:wan_ancient_beasts:ginkgo_logs",
+			"text": "$(bold)Гинкго$()$(br)Находится только в биоме $(thing)Пышная Лощина$(). $(br)$(thing)Дней роста$(): 7"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Махое",
+			"anchor": "mahoe",
+			"item": "tag:tfg:mahoe_logs",
+			"text": "$(bold)Махое$()$(br)Находится только в биоме $(thing)Терновая роща$(). $(br)$(thing)Дней роста$(): 5"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Мангровое дерево",
+			"anchor": "mangrove",
+			"item": "tag:tfc:mangrove_logs",
+			"text": "$(bold)Мангровое дерево$()$(br)Находится в биоме $(thing)Знойная трясина$(). $(br)$(thing)Дней роста$(): 7$(br2)Также можно найти$(l:the_world/earth_tree_index#mangrove)в верхнем мире$()."
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:the_world/earth_tree_index",
+				"tfg:beneath/beneath",
+				"tfg:beneath/beneath_crops",
+				"tfg:beneath/beneath_wild_fruits",
+				"tfg:mars/mars_tree_index"
+			]
+		}
+	],
+	"extra_recipe_mappings": {
+		"tfg:wood/sapling/araucaria": 1,
+		"tfg:wood/sapling/beech": 2,
+		"tfg:wood/sapling/ginkgo": 3,
+		"tfg:wood/sapling/mahoe": 4,
+		"tfc:wood/sapling/mangrove": 5
+	},
+	"read_by_default": true
+}

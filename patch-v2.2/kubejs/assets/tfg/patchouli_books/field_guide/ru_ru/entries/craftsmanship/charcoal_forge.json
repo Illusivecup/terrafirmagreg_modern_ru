@@ -1,0 +1,134 @@
+{
+  "name": "Угольный горн и меха",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:textures/block/molten_lit.png",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "charcoal_forge",
+      "text": "$(thing)Угольный горн$() — это устройство для $(l:game_mechanics/heating)нагрева$() и плавки предметов, таких как металлы, керамика и кирпичи.$(br)Горны необходимы для работы $(l:craftsmanship/crucible)Тигеля$().$(br)Он состоит из 5 блоков $(thing)камня$()―например, булыжника, необработанного камня или кирпичей―вокруг $(l:craftsmanship/charcoal_pit#charcoal_pile)Кучи угля$() высотой 7 или 8 слоёв, которая затем зажигается."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            " B ",
+            "C0C",
+            " B "
+          ],
+          [
+            "   ",
+            " R ",
+            "   "
+          ]
+        ],
+        "mapping": {
+          "0": "tfc:charcoal_pile[layers=7]",
+          "C": "tfc:rock/cobble/gabbro",
+          "R": "tfc:rock/raw/gabbro",
+          "B": "tfc:rock/bricks/gabbro"
+        }
+      },
+      "name": "Угольная кузница",
+      "text": "Полная структура горна, готовая к розжигу.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Для работы Горна необходим дымоход. Блок непосредственно над Горном должен быть воздухом или $(l:craftsmanship/crucible)Тигелем$(). Кроме того, либо блок непосредственно над ним, либо один из восьми соседних блоков $(italic)должен иметь доступ к небу!$()$(br2)$(l:craftsmanship/charcoal_forge#bellows)Воздуходувка$() может быть размещена на один блок выше и рядом с Горном, чтобы повысить максимальную температуру, которой он может достичь. Но это не является строго обязательным."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "  G  ",
+            "  G  ",
+            "GGCGG",
+            "  B  ",
+            "  G  "
+          ],
+          [
+            "XYXYX",
+            "YXYXY",
+            "XY0YX",
+            "YXYXY",
+            "XYXYX"
+          ]
+        ],
+        "mapping": {
+          "0": "tfc:charcoal_forge[heat_level=7]",
+          "X": "tfc:rock/smooth/gabbro",
+          "Y": "tfc:rock/smooth/dacite",
+          "G": "minecraft:light_blue_stained_glass",
+          "C": "tfc:crucible",
+          "B": "tfc:bellows[facing=west]"
+        }
+      },
+      "name": "Схема дымохода",
+      "text": "Любое из синих стёкол должно иметь прямой доступ к небу и доступ к горну, чтобы считаться действительной трубой.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/gui/charcoal_forge.png"
+      ],
+      "title": "Интерфейс горна.",
+      "text": "$(bold)СОВЕТ:$() Вы можете напрямую бросать топливо, такой как уголь, сверху на горн с помощью $(item)$(k:key.drop)$() для повторной заправки.",
+      "border": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Пять нижних слотов горна используются для топлива. Пока горн работает, он периодически потребляет $(t:#tfc:forge_fuels)$(6)топливо$(), которым может быть $(thing)Уголь, Угольный кокс или Торфяные брикеты$(). Верхние пять слотов нагревают предметы до температуры, показанной в индикаторе слева. Правые слоты предназначены для контейнеров, которые могут содержать жидкий металл, такие как $(l:craftsmanship/pottery#vessel)Сосуды$() и $(l:craftsmanship/pottery#mold)Формы$(). Плавящиеся в горне предметы будут заполнять эти контейнеры. В противном случае расплавленная жидкость будет $(bold)уничтожена$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfc:bellows",
+      "title": "Bellows",
+      "anchor": "bellows",
+      "text": "$(thing)Воздуходувка$() может использоваться для повышения температуры устройства за счёт улучшения подачи кислорода. Однако, сжигая при более высокой температуре, они будут потреблять топливо быстрее. Воздуходувка может подавать воздух в блок непосредственно перед ней и на один блок ниже. Это позволяет ей подавать воздух в $(l:craftsmanship/blast_furnace)Доменную печь$() или, например, в $(l:craftsmanship/charcoal_forge#charcoal_forge)Угольный горн$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Чтобы использовать воздуходувку, просто разместите её, направив на целевой нагревательный прибор, и $(item)$(k:key.use)$() её. Воздуходувка будет нагнетать воздух в прибор, повышая максимальную температуру на короткое время. Воздуходувку можно автоматизировать, подавая на её заднюю часть <16RPM $(thing)механического вращения$() с помощью $(item)Оси$(). Это отключит ручное использование. Рассмотрите возможность использования $(item)Муфты$() для включения/отключения механической мощности."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Вдув от воздуходувки будет подавать воздух в устройство на 200 тиков. Однако большинство устройств позволяют вам буферизовать до 600 тиков окисления за раз.$(br2)Потребление топлива устройством будет удвоено независимо от оставшейся длительности подачи воздуха, поэтому нет дополнительного штрафа за чрезмерное использование воздуходувки."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "automation",
+      "title": "Советы по автоматизации",
+      "text": "$(li)Горн автоматически соберёт любое топливо, брошенное рядом с его боковыми сторонами. (Нажмите $(item)$(k:key.drop)$() или используйте $(item)Дроппер$(), $(item)Дispenser$() или $(item)Воронку$().)$(li)$(item)Механическая рука$() также может поддерживать в горне топливо.$(li)$(item)Пункт$() считается изоляцией для горна, если вы хотите автоматизировать $(item)Ванну$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Ищете что-то более впечатляющее или хотите перенести свой горн внутрь? Ознакомьтесь с $(l:beneath/beneath_mechanics#hellforge)Адским горном$()!"
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:agriculture/leather_making",
+        "tfg:craftsmanship/pit_kiln",
+        "tfg:craftsmanship/pottery",
+        "tfg:craftsmanship/crucible",
+        "tfg:craftsmanship/blast_furnace",
+        "tfg:craftsmanship/bloomery",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/glassworking",
+        "tfg:craftsmanship/charcoal_pit",
+        "tfg:game_mechanics/heating"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 6,
+  "extra_recipe_mappings": {
+    "tfc:bellows": 7
+  }
+}

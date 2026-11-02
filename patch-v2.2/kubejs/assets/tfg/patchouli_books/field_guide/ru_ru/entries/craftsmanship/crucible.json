@@ -1,0 +1,129 @@
+{
+  "name": "Crucible",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:crucible",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Тигель$() — это продвинутое устройство, используемое для создания $(l:craftsmanship/metallurgy#alloying)сплавов$(). Это более точный метод, чем использование $(l:craftsmanship/pottery#vessel)небольшого сосуда$() для создания сплавов.$(br2)Чтобы получить тигель, вам сначала потребуется получить $(l:craftsmanship/pottery#fire_clay)огнеупорную глину$(), которая является более прочным материалом, чем обычная глина. Эту огнеупорную глину можно затем расколоть, придав ей форму $()Неглазурованного тигеля$()."
+    },
+    {
+      "type": "tfg:knapping_recipe",
+      "recipe": "tfc:fire_clay_knapping/crucible",
+      "text": "Лепка $(thing)необожженного тигля$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "После того как тигель будет расколот, его нужно будет $(l:craftsmanship/pottery#vessel)обжечь$(), как и любую другую керамику.$(br2)Чтобы использовать тигель, ему нужен источник тепла. Тигель можно нагревать любым нагреваемым блоком под ним, предпочтительно $(l:craftsmanship/charcoal_forge)угольным горном$().$(br)Важно, что тигели передают тепло предметам гораздо быстрее, чем горны. Это может быть хорошо или плохо. Если предметы с низкой температурой плавления, такие как $(item)олово$(), доставляют проблемы при обработке, возможно, стоит придерживаться горна для нагрева."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "   ",
+            " C ",
+            "   "
+          ],
+          [
+            "GGG",
+            "G0G",
+            "GGG"
+          ]
+        ],
+        "mapping": {
+          "0": "tfc:charcoal_forge[heat_level=7]",
+          "C": "tfc:crucible",
+          "G": "tfc:rock/bricks/granite"
+        }
+      },
+      "name": "",
+      "text": "Тигель, нагреваемый угольной кузницей снизу.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "advanced_alloying",
+      "text": "Теперь вы готовы использовать тигель. При взаимодействии с ним вы увидите $(thing)интерфейс тигеля$(), показанный на следующей странице. Верхняя область показывает текущее содержание металла в тигеле. Первый показанный металл — это то, что будет получено, если его извлечь прямо сейчас. Другие показанные металлы — это состав текущего сплава в тигеле.",
+      "title": "Продвинутое сплавление"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/gui/crucible.png"
+      ],
+      "text": "Интерфейс тигля",
+      "border": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "У тигеля есть девять слотов, куда можно добавлять предметы для плавления, и их расплавленное содержимое будет сразу добавлено в тигель. Контейнеры с расплавленным металлом, такие как $(l:craftsmanship/pottery#mold)формы$(), также можно разместить здесь, и они будут опорожнены в тигель, что позволяет точно контролировать состав вашего сплава. Удержание $(item)$(k:key.sneak)$() при наведении на опорожняемую форму или сосуд ускоряет их опустошение.$(br)Формы или другие жидкостные контейнеры также можно поместить в выходной слот, и они будут медленно заполняться содержимым тигеля."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Индикатор температуры слева будет расти в зависимости от внешних источников тепла, таких как $(l:craftsmanship/charcoal_forge)угольный горн$() снизу или тепло от $(l:craftsmanship/blast_furnace)доменной печи$() сверху. Металл можно извлечь из тигеля, пока он всё ещё расплавлен.$(br2)Тигель также сохраняет своё содержимое при разрушении, что позволяет вам переносить контейнер со сплавом, если вы того желаете."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Вы успешно создадите сплав, когда текст вверху тигеля укажет название вашего сплава.$(br)Если вы случайно смешаете неподходящий тип металла в ваш расплавленный сплав, к сожалению, вы потеряете всю партию. Даже небольшое количество чужеродного металла может испортить сплав. Вы также можете обнаружить, что у вас закончилось место в тигеле до достижения идеального соотношения, и вы можете беспокоиться, что потратили металл впустую. К счастью, вы можете пожертвовать часть продукта, слит немного металла, чтобы освободить место для большего количества материала. Сплав становится постоянным только после литья!"
+    },
+    {
+      "type": "patchouli:image",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/prospecting/crucible_alloying.png"
+      ],
+      "text": "$(4)◼$() - Результат сплавления.$(br)$(3)◼$() - Список долей металла, участвующих в сплаве.",
+      "border": false,
+      "title": "Расплавленный сплав"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfcchannelcasting:unfired_channel,tfcchannelcasting:channel,tfcchannelcasting:unfired_mold_table,tfcchannelcasting:mold_table",
+      "title": "Литьё в каналы",
+      "anchor": "channel_casting",
+      "text": "Вы можете лить из $(thing)Тигеля$() в несколько форм одновременно с помощью $(thing)Каналов$() и $(thing)Столов для форм$(). Просто соедините $(thing)Столы для форм$() с $(thing)Тигелем$() с помощью $(thing)Каналов$() и используйте $(item)$(k:key.use)$() на $(thing)Канале$() рядом с $(thing)Тигелем$(). $(item)$(k:key.sneak)-$(k:key.use)$() на $(thing)Стол для форм$() с $(l:craftsmanship/pottery#mold)формой$() для её размещения или удаления."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock_id": "tfcchannelcasting:example",
+      "name": "Установка для литья",
+      "text": "Каналы равномерно распределяют расплавленный металл по всем соединённым столам. Столы не имеют шанса сломать форму внутри.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Использование $(l:craftsmanship/charcoal_forge#bellows) мехов$() на $(thing)Столе для форм$() будет быстрее охлаждать металл.$()$(li)Активация $(thing)Канала$() импульсом редстоуна также начнёт заливку металла.$()$(li)$(thing)Столы для форм$() выдают сигнал компаратора.$(li)Металл можно напрямую закачивать из таких вещей, как жидкостные трубы или опорожняющаяся $(l:craftsmanship/blast_furnace)доменная печь$().$(li)Загрузчики могут извлекать охлаждённые металлические предметы из форм, оставляя форму на месте.",
+      "title": "Automation"
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/pit_kiln",
+        "tfg:craftsmanship/pottery",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/charcoal_forge",
+        "tfg:craftsmanship/blast_furnace",
+        "tfg:craftsmanship/bloomery",
+        "tfg:craftsmanship/anvils",
+        "tfg:craftsmanship/glassworking",
+        "tfg:game_mechanics/heating"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 7,
+  "extra_recipe_mappings": {
+    "tfc:ceramic/unfired_crucible": 1,
+    "tfc:crucible": 1,
+    "tfcchannelcasting:unfired_channel": 11,
+    "tfcchannelcasting:channel": 11,
+    "tfcchannelcasting:unfired_mold_table": 11,
+    "tfcchannelcasting:mold_table": 11
+  }
+}

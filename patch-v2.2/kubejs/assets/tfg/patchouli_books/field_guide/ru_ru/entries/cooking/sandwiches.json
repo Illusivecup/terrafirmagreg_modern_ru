@@ -1,0 +1,50 @@
+{
+    "name": "Готовка бутерброда",
+    "category": "tfg:cooking",
+    "icon": "tfc:textures/item/food/barley_bread_sandwich.png",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "anchor": "sandwich",
+            "text": "$(thing) Бутерброды$() — это блюдо, позволяющее сочетать два предмета $(thing)$(n)$(t:Bread, Flat Bread, or Bread Slice)хлеба$() и три $(n)$(thing)$(t:tfc:#usable_in_sandwich)ингредиента для сэндвича$().$(br2)Ингредиенты для сэндвича не должны быть испорченными. Однако после приготовления сэндвич считается свежим, и его порча начинается так же, как у только что приготовленной еды."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "tfc:food/barley_bread_sandwich",
+            "title": "Бутерброд ",
+            "link_recipes": false,
+            "text": "Сэндвичи — это блюда с изменяемым составом. Использованные ингредиенты определяют содержащиеся в них $(l:cooking/food_and_water#nutrients)Нутриенты $().$(br2) $(t:§70.8§r§l∑§r§7Ingredients §r+ §70.5§r§l∑§r§7Bread§r) Чтобы рассчитать пищевую ценность, сложи показатели питательности всех ингредиентов и умножь полученную сумму на 0,8. Для хлеба используется множитель 0,5$()."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "tfc:food/barley_bread_jam_sandwich",
+            "anchor": "jam_sandwich",
+            "title": "Бутерброд с джемом.",
+            "link_recipes": false,
+            "text": "Сэндвичи с джемом — это также блюда с изменяемым составом, для которых используется тот же расчёт пищевой ценности, что и для обычных сэндвичей.$(br)При создании сэндвича с джемом остаётся пустая банка.$(br2)Джем можно сочетать только с $(thing)приготовленными мясом и рыбой$() или $(thing)сыром$(), чтобы приготовить сэндвич с джемом."
+        },
+        {
+            "type": "patchouli:relations",
+            "title": "Читать далее",
+            "anchor": "relations",
+            "entries": [
+                "tfg:cooking/food_and_water",
+                "tfg:cooking/salad",
+                "tfg:cooking/mixing_bowl",
+                "tfg:the_world/wild_crops",
+                "tfg:the_world/wild_fruits",
+                "tfg:the_world/wild_animals"
+            ]
+        }
+    ],
+    "read_by_default": true,
+    "sortnum": 10,
+    "extra_recipe_mappings": {
+        "tfc:food/barley_bread_sandwich": 0,
+        "tfc:food/maize_bread_sandwich": 0,
+        "tfc:food/oat_bread_sandwich": 0,
+        "tfc:food/rice_bread_sandwich": 0,
+        "tfc:food/rye_bread_sandwich": 0,
+        "tfc:food/wheat_bread_sandwich": 0
+    }
+}

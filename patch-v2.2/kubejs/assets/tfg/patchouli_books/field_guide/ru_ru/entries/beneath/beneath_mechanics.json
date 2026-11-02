@@ -1,0 +1,153 @@
+{
+	"name": "Советы и хитрости",
+	"category": "tfg:beneath",
+	"icon": "beneath:cursecoal",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "Жизнь в Бездне имеет некоторые существенные различия от жизни выше! Эта запись содержит некоторую информацию, которая может оказаться полезной для более длительного выживания в глубинах."
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "index",
+			"text": "$(li)$(bold)$(l:beneath/beneath_mechanics#temperature)Управление температурой$()$(li2)$(l:beneath/beneath_mechanics#ice)Лёд$()$(li2)$(l:beneath/beneath_mechanics#clothes)Одежда$()$(li2)$(l:beneath/beneath_mechanics#other_cooling)Прочее$()$(li)$(bold)$(l:beneath/beneath_mechanics#hellforge)Адская кузня$()$(li)$(bold)$(l:beneath/beneath_mechanics#rope_ladder)Вертикальная навигация$()$(li2)$(l:beneath/beneath_mechanics#rope_ladder)Веревочная лестница$()$(li2)$(l:logistics/exploration_gear#hang_glider)Параплан$()$(li2)$(l:logistics/exploration_gear#grappling_hook)Крюк-кошка$()$(li2)$(l:logistics/exploration_gear#harpoon)Гарпун и трос$()$(li)$(bold)$(l:beneath/beneath_mechanics#piglins)Пиглины$()$(li2)$(l:beneath/beneath_mechanics#disguise)Маскировка$()$(li2)$(l:beneath/beneath_mechanics#towers)Башни$()$(li2)$(l:beneath/beneath_mechanics#outposts)Посты$()$(li2)$(l:beneath/beneath_mechanics#bastions)Бастионы$()"
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "temperature",
+			"title": "Управление температурой",
+			"text": "Подземелье жарко! Температура начинается с 20°C на самом верху и становится только жарче при спуске.$(br2)Избегание $(l:game_mechanics/player_temperature)перегрева$() является гораздо более серьёзной проблемой, чем в верхнем мире, но есть способы её смягчить.$(br2)Самый простой способ избежать перегрева — оставаться на верхних уровнях Подземелья и $(l:game_mechanics/player_temperature#wetness)погружаться$() в воду, когда начинаете перегреваться."
+		},
+		{
+			"type": "tfg:sealed_barrel_recipe",
+			"recipe": "tfg:barrel/packed_ice",
+			"anchor": "ice",
+			"text": "Возьми с собой немного$(l:game_mechanics/player_temperature#blocks)Льда$()! Пока стоишь рядом он будет понижать $(l:game_mechanics/player_temperature)твою температуру$().Лёд можно добывать на поверхности а полученную ледяную стружку можно превратить в $(item)Плотный Лёд$(). $(thing)Плотный$() и $(thing)Синий$() лёд не плавится и может быть перенесён с помощью $(item)пилы $(). $(l:cooking/drinks#ice_slush)Ледяная слякоть$() может быть выпита."
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "clothes",
+			"title": "Одежда",
+			"text": "$(item)Джутовая$(), $(item)Льняная$(), и$(item)Шёлковая$() $(l:craftsmanship/clothing)одежда$() поможет обеспечить некоторую термостойкость.$(br)$(l:the_world/wild_animals#crocodile)Крокодилья$(), $(l:the_world/wild_animals#tiger)Тигровая$(), и $(l:the_world/wild_animals#lion)Львиная$() одежда даёт больший охлаждающий эффект.$(br)Наконец, $(l:beneath/beneath_fauna#phantom)Фантомная$() и $(l:beneath/beneath_fauna#red_elk)Красно-лосиная$() одежда, это сильнейшая охлаждающая одежда, да и протянет она дольше.$(br2)Вся одежда может быть починена. Нажми $(thing)Г$() что бы проверить рецепт в $(emi)."
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shaped/silk_shirt",
+			"recipe2": "tfg:shaped/crocodile_shirt"
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "tfg:shaped/phantom_silk_shirt",
+			"recipe2": "tfg:shaped/red_elk_shirt"
+		},
+		{
+			"type": "patchouli:crafting",
+			"anchor": "other_cooling",
+			"recipe": "tfg:crafting/smoothie/magmango",
+			"text": "Другие пути оставаться охлаждённым включают нахождение возле $(l:beneath/beneath_fauna#ice_jellie)Ледяной Джелли$() и потребление охлаждающей еды как $(item)Ледяной Суп$() и $(item)Фруктовый Смузи$()!"
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Адская кузня",
+			"anchor": "hellforge",
+			"text": "Из-за отсутствия доступа к небу, $(l:craftsmanship/charcoal_forge)Угольная Кузня$() не работает в Бездне!$(br2) $(thing)Адская Кузня$() это неоправданно огромная кузня, с огромным обьёмом для топлива, продуктов, и нагрева. Она может нагреть до 9 $(l:craftsmanship/crucible)Тигелей$() одновременно, и достпу к небу ей также не требуется!$(br2) Она работает и в верхнем мире."
+		},
+		{
+			"type": "patchouli:multiblock",
+			"multiblock": {
+				"pattern": [
+					[
+						"ZXXXZ",
+						"XYYYX",
+						"XY0YX",
+						"XYYYX",
+						"ZXXXZ"
+					],
+					[
+						"     ",
+						" XXX ",
+						" XXX ",
+						" XXX ",
+						"     "
+					]
+				],
+				"mapping": {
+					"Z": "beneath:blackstone_aqueduct[fluid=lava]",
+					"Y": "beneath:hellforge_side",
+					"0": "beneath:hellforge",
+					"X": "beneath:hellbricks"
+				}
+			},
+			"name": "Адская кузня",
+			"text": "Любой тип $(l:agriculture/aqueducts)Акведуков$() будет работать.",
+			"enable_visualize": false
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Адская Кузня требует что бы лава текла по акведукам со всех 4х сторон, а также 21 адский кирпич. Центр 3х3 должен быть заполнен $(l:craftsmanship/charcoal_pit)Древесноугольными кучами$() по 7 древесного угля каждая, и тогда они могут быть зажжены.$(br2)Для избежание перегрева мы рекомендуем использовать лаву из небольшого лавового бассейна сверхних уровней Бездны."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "В Адской кузне может находиться как топливо, так и предметы для плавки — различий нет. Поэтому будьте внимательны и смотрите что помещаете внутрь! Также справа имеются слоты для контейнеров, как в угольной кузнице. Уровень лавы показывает температуру."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Верёвочная Лестница",
+			"anchor": "rope_ladder",
+			"item": "tag:tfg:rope_ladders",
+			"text": "$(thing)Верёвочная Лестица$() - отличный способ подниматься и опускаться в Бездне. В отличие от обычных лестниц, они могут быть установлены по краю скал, не требуя каких-либо блоков опор кроме верхнего, цельный стак может быть размещен или подобран одновременно.$(br)$(item)Подходящие волокна$() можно получить с $(l:beneath/beneath_wild_fruits#oil_palm)Масличных пальм$(), и $(item)Мотки Верёвки$() могут быть изготовлены из $(thing)тросов$() или $(thing)других тканей$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"title": "Торговля Пиглинов",
+			"anchor": "piglins",
+			"item": "minecraft:gold_ingot",
+			"text": "Как вы ожидаете, вы можете торговать с $(thing)Пиглинами$() таким же образом, как и с ними можно торговать в ванилле, используя $(item)золотые слитки$().$(br2)Полный список сделок можно найти в $(emi) - просто нажмите $(thing)Г$() на золотом слитке, чтобы увидеть его."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tfg:piglin_disguise",
+			"title": "Маскировка под Пиглина",
+			"anchor": "disguise",
+			"text": "Если хотите облегчить обмен или просто мило поболтать, просто наденьте $(thing)Маскировку пиглина$(), тогда $(thing)Пиглины$() не будут к вам враждебны при первой встрече. Но будьте осторожны! Их терпение не безгранично..."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Башни",
+			"anchor": "towers",
+			"text": "Вы можете встретить высокие $(thing)Башни$() в Бездне. Они содержат немного добычи, но в первую очередь предназначены для лёгких вертикальных путешествий. $(br)Однако чем дальше вы продвигаетесь, тем сильнее они защищены."
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Аванпосты",
+			"anchor": "outposts",
+			"text": "$(thing)пиглинский Аванпост$() представляют собой более мелкие структуры, расположенные в верхних слоях Бездны. В них содержится кое-какой полезный лут, но они защищены лучше, чем башни..Вы можете найти такие вещи как:$(li)Более качественное дальнобойное оружие и стрелы с наконечниками$(li)Чернобронзовое оружие, инструменты, и броню$(li)Еду и медицину$(li)Лампы$(li)Ткани, мешки, взрывчатку, и не забываем конечно же - еду!"
+		},
+		{
+			"type": "patchouli:text",
+			"title": "Бастионы",
+			"anchor": "bastions",
+			"text": "Вылазка в $(thing)Бастион$() может быть очень опасна, но кто не рискует, не пьет шампанское! Вы можете отыскать следующие вещи:$(li)Слитки Золота, Розового золота, Свинного железа, Черной бронзы и Серебра.$(li)Снаряжение, инструменты и броню из черной бронзы.$(li) Каолинитовую глину и графит$(li) Лампы$(li) Ткань, кожа, семена и еда.$(li)А так же другие сокровища!"
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:beneath/beneath",
+				"tfg:beneath/beneath_fauna",
+				"tfg:game_mechanics/player_temperature",
+				"tfg:logistics/exploration_gear",
+				"tfg:craftsmanship/clothing",
+				"tfg:cooking/drinks"
+			]
+		}
+	],
+	"extra_recipe_mappings": {
+		"beneath:hellbricks": 8,
+		"tag:tfg:rope_ladders": 12,
+		"minecraft:gold_ingot": 13,
+		"tfg:piglin_disguise": 14
+	},
+	"read_by_default": true
+}

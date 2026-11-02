@@ -1,0 +1,87 @@
+{
+  "name": "Глоссарий эффектов живых существ",
+  "category": "tfg:game_mechanics",
+  "icon": "minecraft:textures/mob_effect/jump_boost.png",
+  "sortnum": 4,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "index",
+      "text": "$(li)$(bold)$(2)Положительные эффекты$()$(li2)$(l:game_mechanics/mob_effects#cooling)Охлаждение$()$(li2)$(l:game_mechanics/mob_effects#warming)Прогрев$()$(li2)$(l:game_mechanics/mob_effects#quenched)Закалка$()$(li2)$(l:game_mechanics/mob_effects#cure_parasites)Излечение от паразитов$()$(li2)$(l:game_mechanics/mob_effects#cure_toxins)Детоксикация$()$(li2)$(l:game_mechanics/mob_effects#cure_microplastics)Фильтрация микропластика$()$(li)$(bold)$(4)Отрицательные эффекты$()$(li2)$(l:game_mechanics/mob_effects#freezing)Замерзание$()$(li2)$(l:game_mechanics/mob_effects#blazing)Ожог$()$(li2)$(l:game_mechanics/mob_effects#instant_radiation)Мгновенная радиация$()$(li2)$(l:game_mechanics/mob_effects#final_moments)Последние минуты$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "cooling",
+      "title": "Cooling",
+      "text": "При активном действии этот эффект постоянно $(thing)охлаждает$() игрока до минимума $(n)5°C$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "warming",
+      "title": "Warming",
+      "text": "При активном действии этот эффект постоянно $(thing)нагревает$() игрока до максимума $(n)25°C$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "quenched",
+      "title": "Quenched",
+      "text": "При активном действии этот эффект предотвращает естественное снижение $(l:cooking/food_and_water#thirst)жажды$(). Однако он не предотвращает эффект Жажды, уменьшающий ваш уровень.$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "cure_parasites",
+      "title": "Избавиться от паразитов",
+      "text": "При активном действии этот эффект постепенно удаляет $(l:cooking/food_and_water#parasites)Загрязнение паразитами$() со скоростью примерно 1% каждые 10 секунд на базовом уровне.$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "cure_toxins",
+      "title": "Detoxify",
+      "text": "При активном действии этот эффект постепенно удаляет $(l:cooking/food_and_water#toxins)Загрязнение токсинами$() со скоростью примерно 1% каждые 10 секунд на базовом уровне.$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "cure_microplastics",
+      "title": "Фильтрация микропластика",
+      "text": "При активном действии этот эффект постепенно удаляет $(l:cooking/food_and_water#microplastics)Загрязнение микропластиком$() со скоростью примерно 1% каждые 10 секунд на базовом уровне.$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "freezing",
+      "title": "Freezing",
+      "text": "При активном действии этот эффект постоянно $(thing)охлаждает$() игрока до опасно низкого минимума $(n)-20°C$(). Рекомендуется использовать защитное снаряжение, чтобы выжить в этом состоянии."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "blazing",
+      "title": "Blazing",
+      "text": "При активном действии этот эффект постоянно $(thing)прогревает$() игрока до опасно высокого максимума $(n)60°C$(). Рекомендуется использовать защитное снаряжение, чтобы выжить в этом состоянии."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "instant_radiation",
+      "title": "Мгновенная радиация",
+      "text": "Этот эффект быстро наносит игроку урон $(l:game_mechanics/hazards#radioactive_materials)от радиации$()."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "final_moments",
+      "title": "Последние минуты",
+      "text": "Этот эффект запускает таймер, отсчитывающий последние несколько минут. Когда таймер истекает, вы умираете."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:the_world/climate",
+        "tfg:beneath/beneath_mechanics",
+        "tfg:cooking/food_and_water",
+        "tfg:cooking/drinks",
+        "tfg:game_mechanics/hazards"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+{
+  "name": "Roads",
+  "category": "tfg:logistics",
+  "icon": "rnr:rock/sett_road/quartzite",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(l:logistics/roads#intro)Строительство дорог$()$(li)$(bold)$(l:logistics/roads#mattock)Мотыги$()$(li)$(bold)$(l:logistics/roads#base_course)Основание$()$(li)$(bold)$(l:logistics/roads#pavers)Плиты$()$(li2)$(l:logistics/roads#hoggin)Смесь Хоггина$()$(li2)$(l:logistics/roads#gravel_fill)Гравийная засыпка$()$(li2)$(l:logistics/roads#stone)Булыжник, Брусчатка & Плитняк$()$(li2)$(l:logistics/roads#concrete)Бетон$()$(li2)$(l:logistics/roads#asphalt)Асфальт$()$(li)$(bold)$(l:logistics/roads#paving_cart)Дорожная тележка$()",
+      "title": "Каталог",
+      "anchor": "index"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "title": "Introduction",
+      "text": "Строительство дорог необходимо для повышения эффективности наземного транспорта и состоит из трёх основных этапов:$(li)$(bold)1:$() Уплотнение грунта с помощью $(l:logistics/roads#mattock)Мотыги$().$(li)$(bold)2:$() Укладка $(l:logistics/roads#base_course)Щебёночного основания$().$(li)$(bold)3:$() Укладка дорожного $(l:logistics/roads#pavers)Покрытия$().$(br)Для разных видов дорог используются разные материалы."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tag:rnr:mattocks",
+      "title": "Mattocks",
+      "anchor": "mattock",
+      "text": "Мотygой можно обрабатывать блоки типа земли так же, как $(l:craftsmanship/chisel)Зубилом$(). При использовании в режиме блока мотыга будет уплотнять эти блоки с помощью $(item)$(k:key.use)$(). Если мотыгой уплотняли грязь или грязные корни, получившийся уплотнённый ил необходимо обработать щебёночным основанием."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "rnr:crushed_base_course",
+      "title": "Основание",
+      "anchor": "base_course",
+      "text": "После того как местный грунт будет уплотнён, следующим шагом будет укладка основания для дороги. Щебёночное основание можно сделать из смеси гравия или каменной крошки с рыхлыми камнями, и его можно наносить на уплотнённые блоки с помощью $(item)$(k:key.use)$(). Это основание из щебня создаёт прочную основу для окончательного пешеходного покрытия."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tag:rnr:road_materials",
+      "title": "Pavers",
+      "anchor": "pavers",
+      "text": "Последним шагом в создании дороги является укладка дорожного покрытия. Различные предметы, включая $(l:logistics/roads#stone)Кирпичи$(), $(l:logistics/roads#hoggin)Смесь Хоггина$() и $(l:logistics/roads#stone)Рыхлые камни$(), можно наносить с помощью $(item)$(k:key.use)$() на основание, чтобы создать проходимую дорогу. Разные материалы дают разные виды дорог, а разные виды дорог обеспечивают различные бонусы к скорости ходьбы."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Процесс трамбовки, нанесения основания и мощения кирпичами.",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "R"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "R": "tfc:dirt/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "R"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "R": "rnr:tamped_loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "R"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "R": "rnr:base_course"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "R"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "R": "rnr:rock/sett_road/chert"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "hoggin",
+      "item": "rnr:hoggin_mix",
+      "title": "Смесь Хоггина",
+      "text": "$(item)Смесь Хоггина$() — это уплотняющее покрытие, сделанное из смеси глины, гравия и песка. Его можно наносить на основание, чтобы создать простую дорожку, дающую скромную $(thing)$(bold)10% бонус$() к скорости ходьбы и позволяющую $(item)Animal Cranks$() работать со скоростью 16RPM."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Строительство дороги с помощью смеси Хоггина.",
+      "enable_visualize": false,
+      "multiblock": {
+        "pattern": [
+          [
+            "    0    ",
+            "         "
+          ],
+          [
+            "         ",
+            "         "
+          ],
+          [
+            "DDCCRRRRR",
+            "DDCCRRRRR"
+          ]
+        ],
+        "mapping": {
+          "D": "rnr:tamped_loam",
+          "C": "rnr:base_course",
+          "R": "rnr:hoggin"
+        }
+      }
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "gravel_fill",
+      "item": "tag:rnr:gravel_road_items",
+      "title": "Гравий и Макадам",
+      "text": "Небольшое количество $(thing)Гравийной засыпки$() можно нанести на основание, чтобы создать простую дорожку, дающую скромную $(thing)$(bold)10% бонус$() к скорости ходьбы. Дополнительную гравийную засыпку можно добавлять и уплотнять, чтобы создать $(thing)Макадамскую дорогу$(), дающую $(thing)$(bold)20% бонус к скорости$().$(br)Все покрытия выше Хоггина позволят $(item)Animal Cranks$() работать со скоростью 32RPM."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Строительство дороги с помощью гравийной засыпки.",
+      "enable_visualize": false,
+      "multiblock": {
+        "pattern": [
+          [
+            "    0    ",
+            "         "
+          ],
+          [
+            "         ",
+            "         "
+          ],
+          [
+            "DDCCRROMM",
+            "DDCCROMMM"
+          ]
+        ],
+        "mapping": {
+          "D": "rnr:tamped_loam",
+          "C": "rnr:base_course",
+          "R": "rnr:rock/gravel_road/chert",
+          "O": "rnr:rock/over_height_gravel/chert",
+          "M": "rnr:rock/macadam_road/chert"
+        }
+      }
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "stone",
+      "item": "tag:rnr:flagstone_road_items,tag:rnr:cobble_road_items,tag:rnr:brick_road_items",
+      "title": "Каменные плиты",
+      "text": "Существует множество разных каменных дорожных покрытий, которые можно наносить на основание, и все они дают $(thing)$(bold)20% бонус к скорости$().$(li)$(thing)$(bold)Булыжные дороги$() создаются добавлением $(item)Рыхлых камней$() на основание.$(li)$(thing)$(bold)Дороги из брусчатки$() можно строить из каменных или керамических $(item)Кирпичей$().$(li)$(thing)$(bold)Дороги из плитняка$() можно строить из каменных или песчаниковых $(item)Плитняков$()."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Строительство дороги с помощью различных каменных покрытий.",
+      "enable_visualize": false,
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "    0    ",
+              "         "
+            ],
+            [
+              "         ",
+              "         "
+            ],
+            [
+              "DDCCRRRRR",
+              "DDCCRRRRR"
+            ]
+          ],
+          "mapping": {
+            "D": "rnr:tamped_loam",
+            "C": "rnr:base_course",
+            "R": "rnr:rock/cobbled_road/chert"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "    0    ",
+              "         "
+            ],
+            [
+              "         ",
+              "         "
+            ],
+            [
+              "DDCCRRRRR",
+              "DDCCRRRRR"
+            ]
+          ],
+          "mapping": {
+            "D": "rnr:tamped_loam",
+            "C": "rnr:base_course",
+            "R": "rnr:rock/sett_road/chert"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "    0    ",
+              "         "
+            ],
+            [
+              "         ",
+              "         "
+            ],
+            [
+              "DDCCRRRRR",
+              "DDCCRRRRR"
+            ]
+          ],
+          "mapping": {
+            "D": "rnr:tamped_loam",
+            "C": "rnr:base_course",
+            "R": "rnr:rock/flagstones/chert"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tag:rnr:concrete_roads",
+      "anchor": "concrete",
+      "title": "Concrete",
+      "text": "Бетонные дороги дают $(thing)$(bold)30% бонус к скорости передвижения$() при правильном строительстве. Однако дорожные рабочие должны быть внимательны при строительстве бетонных дорог, чтобы предотвратить их $(4)трещение$() или $(4)передавливание$() во влажном состоянии, так как это приведёт к потере бонуса к скорости."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Бетонная дорога",
+      "images": [
+        "rnr:textures/gui/book/concrete_road.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "wet_concrete",
+      "title": "Приготовление бетона",
+      "text": "$(thing)Бетонные дороги$() заливаются из $(item)влажной бетонной смеси$(). Сначала смешайте воду с каменной пылью и вяжущим веществом, таким как гипс или глина, чтобы получить $(thing)жидкий бетон$(). Затем разбавьте жидкий бетон водой, чтобы получить $(thing)влажную бетонную смесь$(). Готово к заливке.",
+      "item": "rnr:bucket/concrete"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "После того, как $(thing)Влажный бетон$() будет замешан, его можно собрать в ведро и поместить на $(thing)Основание покрытия$(), где он растечется по соседним блокам. Бетон затвердеет через день, и до его затвердевания необходимо следить за тем, чтобы никакие существа не ходили по влажному бетону, так как это создаст неровную поверхность, не дающую бонуса к скорости. Следы можно разгладить с помощью $(thing)Кайло$()."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Заливка бетона",
+      "images": [
+        "rnr:textures/gui/book/wet_concrete.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Усадочная трещина также является проблемой, так как бетон затвердевает. Если бетон заливается в области шире $(bold)4x4$() блоков, блоки, находящиеся дальше двух блоков от ближайшего $(thing)Края$(), $(thing)Шва усадки$() или $(thing)Фактурной отделки$(), дадут трещину при затвердевании. Этого можно избежать, заливая бетон меньшими участками, используя $(thing)Мотыгу$() для добавления $(thing)Швов усадки$() или нанося $(thing)Фактурную отделку$()."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Контрольные соединения",
+      "images": [
+        "rnr:textures/gui/book/control_joints.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Текстурированные покрытия$() создаются путём вдавливания $(thing)кирпичей$(), $(thing)брусчатки$() или $(thing)блоков гладкого камня$() в высыхающий бетон для создания архитектурного покрытия. Эти блоки также действуют как $(thing)деформационные швы$() для предотвращения растрескивания. После того как бетон полностью высохнет, $(l:craftsmanship/chisel)зубилом$() можно сделать из него плиты и ступени."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Фокс Сетт Роуд",
+      "images": [
+        "rnr:textures/gui/book/faux_sett.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Строительство дороги путем заливки бетона.",
+      "enable_visualize": false,
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "    0    ",
+              "         "
+            ],
+            [
+              "         ",
+              "         "
+            ],
+            [
+              "DDCCRRRRR",
+              "DDCCRRRRR"
+            ]
+          ],
+          "mapping": {
+            "D": "rnr:tamped_loam",
+            "C": "rnr:base_course",
+            "R": "rnr:wet_concrete_road"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "    0    ",
+              "         "
+            ],
+            [
+              "         ",
+              "         "
+            ],
+            [
+              "DDCCRRJRR",
+              "DDCCRRJRR"
+            ]
+          ],
+          "mapping": {
+            "D": "rnr:tamped_loam",
+            "C": "rnr:base_course",
+            "R": "rnr:wet_concrete_road",
+            "J": "rnr:wet_concrete_road_control_joint[axis=x]"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "    0    ",
+              "         "
+            ],
+            [
+              "         ",
+              "         "
+            ],
+            [
+              "DDCCRRJRR",
+              "DDCCRRJRR"
+            ]
+          ],
+          "mapping": {
+            "D": "rnr:tamped_loam",
+            "C": "rnr:base_course",
+            "R": "rnr:concrete_road",
+            "J": "rnr:concrete_road_control_joint[axis=x]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "asphalt",
+      "title": "Asphalt",
+      "text": "Асфальтовые дороги — это продвинутый тип дорог, который relies на нефть и $(tfg_short) производственные линии.$(br)После подготовки основания можно залить $(thing)асфальтовую смесь$() поверх него. Она на короткое время станет $(thing)горячим асфальтом$() перед тем, как затвердеет в прочную $(item)асфальтовую дорогу$().$(br)Правильно построенная асфальтовая дорога даёт $(thing)$(bold)бонус к скорости передвижения на 40%$()."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Асфальтированная дорога",
+      "images": [
+        "tfg:textures/gui/field_guide/asphalt_roads/overview.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "В отличие от бетонных дорог, асфальт не требует жёсткого контроля при заливке, он не покроется трещинами и повредится, если наступить на него до застывания. $(br2)Но будь осторожен при работе с $(thing)Горячим асфальтом$(), если ты наступишь на него, ты получишь урон. Поэтому носи защитное снаряжение при работе с ним. Важно, при ломании асфальта тебе выпадет $(thing)Кусок асфальта$() заместо полноценного блока дороги."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "tar_chunk",
+      "item": "tfg:tar_chunk",
+      "title": "Кусок дегтя",
+      "text": "Основным сырьём для асфальта является нефть. Затвердейте $(thing)Нефть$(), $(thing)Лёгкую нефть$(), $(thing)Тяжёлую нефть$() и т.д. в $(thing)Жидкостном отвердителе$() для получения соответствующих $(thing)Смоляных$() блоков, затем обработайте их в $(thing)Экстракторе$(), чтобы получить $(thing)Кусок смолы$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "asphalt_mix",
+      "item": "tfg:asphalt_mix_bucket",
+      "title": "Асфальтовая смесь",
+      "text": "Смешай кусок смолы и $(thing)Каменную пыль$() в $(thing)Миксере$() для создания $(thing)Асфальтного наполнителя$(). Добавь $(thing)Пыль гильсонита$() для увеличения количества наполнителя.$(br)Затем смешай наполнитель с песком, каменной пылью и $(thing)Дроблёным основанием покрытия$() для получения жидкой $(thing)Асфальтной смеси$().$(br)Храни её в резервуарах для быстрой транспортировки и заливки."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Заливаем асфальт",
+      "images": [
+        "tfg:textures/gui/field_guide/asphalt_roads/pouring.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(item)$(k:key.use)$() размещённый $(thing)блок основания$() с ведром $(thing)асфальтовой смеси$() чтобы залить его. Смесь распространяется на соседние блоки основания, превращая до 20 соседних блоков основания в $(thing)горячий асфальт$(). Через короткое время горячий асфальт остывает и превращается в $(thing)асфальтовую дорогу$(). $(item)$(k:key.sneak)-$(k:key.use)$() на $(thing)блоке основания$() со смесью для заделки небольшой площади, что потребляет меньше жидкости."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfg:asphalt_road_hot",
+      "title": "Горячий асфальт",
+      "text": "$(thing)Горячий асфальт$() очень горячий; прикосновение к нему вызовет продолжительный ожог. При работе с ним носите защитную одежду от тепла.$(br2)После того как он остынет в $(thing)асфальтовую дорогу$(), поверхность больше не горячая."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfg:asphalt_road_stairs,tfg:asphalt_road_slab",
+      "text": "$(thing)Асфальтная дорога$() может быть превращена в  $(thing)Плиту из асфальтной дороги$() и $(thing)Ступеньки из асфальтной дороги$(), для этого используй режимы обработки блоков$(thing)Кайлом$() или камнерез."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "road_marking_stencils",
+      "item": {
+        "tag": "tfg:road_marking_stencils"
+      },
+      "title": "Трафареты для разметки",
+      "text": "Самая заметная особенность кастомизации асфальтовых дорог — дорожная разметка: распыляйте цвета и узоры на готовой поверхности для планирования полос, перекрёстков и предупреждающих линий.$(br2)Various трафареты можно изготовить на $(thing)ремесленном столе$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gtceu:white_dye_spray_can,gtceu:yellow_dye_spray_can",
+      "text": "Держите $(thing)баллон с краской$() в одной руке и, при желании, $(thing)трафарет для дорожной разметки$() в другой, затем $(item)$(k:key.use)$() на асфальте для покраски. Цвет определяется баллоном с краской, а ориентация — направлением игрока.$(br)Повторная покраска существующей разметки заменит её и израсходует прочность баллона, если не используется точно такой же рисунок."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfg:textures/gui/field_guide/asphalt_roads/marking.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gtceu:solvent_spray_can",
+      "title": "Удаление разметки",
+      "text": "Используй $(thing)Аэрозоль (Растворитель)$() на асфальтной дороге для удаления разметки."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfg:asphalt_rubble",
+      "title": "Поломки и переработка",
+      "text": "При поломке любого вида из асфальта, вместо обычного блока, тебе выпадет $(thing)Асфальтовый щебень$().\nТы можешь переработать его в небольшое количество асфальтной смеси используя $(thing)Экстрактор$()"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Дорожная тележка",
+      "anchor": "paving_cart",
+      "item": "tfg:rnr_plow",
+      "text": "$(thing)Дорожная тележка$() — это специализированная тележка для быстрой и эффективного укладки дорожных покрытий. Её можно заполнить $(6)$(t:#rnr:road_materials)дорожными материалами$() и $(thing)дробёным основанием$(), затем присоединить к $(l:agriculture/animal_husbandry#equines)лошади$() с помощью $(item)$(k:key.astikorcarts.desc)$() для создания дорог во время движения. Тележка также может заполнять любые существующие блоки основания."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "tfg:rnr_plow",
+      "scale": 0.5,
+      "name": "Дорожная тележка",
+      "text": "Лезвия дорожной тележки опустятся при нажатии $(item)$(k:key.use)$(), что указывает на то, что тележка будет вспахивать дорогу при движении."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Ползунок регулировки ширины",
+      "images": [
+        "tfg:textures/gui/field_guide/paving_cart/tfg_paving_cart_gui_width.png"
+      ],
+      "border": true,
+      "text": "В тележку можно регулировать ширину дорожки в графическом интерфейсе, который открывается с помощью $(item)$(k:key.sneak)-$(k:key.use)$()."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Переменная ширина дороги",
+      "images": [
+        "tfg:textures/gui/field_guide/paving_cart/tfg_paving_cart_path_width.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Кнопка случайного выбор",
+      "images": [
+        "tfg:textures/gui/field_guide/paving_cart/tfg_paving_cart_gui_random.png"
+      ],
+      "border": true,
+      "text": "У тележки есть режим, при котором она укладывает мощение в случайном порядке."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Дорожка из случайных материалов",
+      "images": [
+        "tfg:textures/gui/field_guide/paving_cart/tfg_paving_cart_path_random.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/building_materials",
+        "tfg:craftsmanship/chisel",
+        "tfg:the_world/geology",
+        "tfg:the_world/wild_animals",
+        "tfg:agriculture/animal_husbandry",
+        "tfg:logistics/tack",
+        "tfg:logistics/trains",
+        "tfg:logistics/boats"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "extra_recipe_mappings": {
+    "tag:rnr:mattocks": 2,
+    "tag:forge:mattock_heads": 2,
+    "rnr:crushed_base_course": 3,
+    "rnr:base_course": 3,
+    "tag:rnr:road_materials": 4,
+    "rnr:hoggin_mix": 6,
+    "rnr:hoggin": 6,
+    "rnr:hoggin_slab": 6,
+    "rnr:hoggin_stairs": 6,
+    "tag:rnr:gravel_road_items": 8,
+    "tag:rnr:macadam_roads": 8,
+    "tag:rnr:gravel_roads": 8,
+    "tag:rnr:flagstone_road_items": 10,
+    "tag:rnr:cobbled_roads": 10,
+    "tag:rnr:sett_roads": 10,
+    "tag:rnr:flagstone_roads": 10,
+    "rnr:bucket/concrete": 12,
+    "tag:rnr:concrete_roads": 12,
+    "tfg:asphalt_mix_bucket": 22,
+    "tfg:asphalt_binder": 22,
+    "tfg:asphalt_road": 22,
+    "tfg:asphalt_road_stairs": 22,
+    "tfg:asphalt_road_slab": 22,
+    "tag:tfg:road_marking_stencils": 22,
+    "tfg:rnr_plow": 36
+  }
+}

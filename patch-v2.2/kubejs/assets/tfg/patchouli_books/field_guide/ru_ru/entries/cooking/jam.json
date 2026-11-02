@@ -1,0 +1,65 @@
+{
+    "name": "Создание джемов",
+    "category": "tfg:cooking",
+    "icon": "tfc:textures/item/jar/cloudberry.png",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "anchor": "index",
+            "text": "$(li)$(bold)$(l:cooking/jam#jarring_station) Станция для разлива $()$(li)$(bold)$(l:cooking/jam#shelves) Полки для банок$()$(li)$(bold)$(l:cooking/jam#jarbnets) Подставки для банок$()"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "tag:tfg:foods/all_jams",
+            "anchor": "jam",
+            "title": "Хранения Варенья",
+            "text": "$(thing)Банки$() используются для длительного хранения фруктов в виде варенья. Банки начинаются с $(thing)пустых банок$(), которые можно получить с помощью $(thing)стеклодувной мастерской$(). Затем к ним добавляется $(thing)крышка для банки$(), и получается $(thing)пустая банка с крышкой$().$(br)В кастрюле вскипятите $(thing)сахар$() с 2–4 кусочками $(thing)фруктов$(). Когда все будет готово, $(item)$(k:key.use)$() с пустой банкой и крышкой, чтобы получить $(thing)герметично закрытую банку с джемом$()."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "firmalife:vat,firmalife:jarring_station",
+            "anchor": "jarring_station",
+            "title": "Автоматизация варенья",
+            "text": "Варенье можно производить в больших количествах в $(l:cooking/cooking_methods#vat)чане$() с помощью $(l:cooking/cooking_methods#jarring_station)стерилизационной станции$(). Засыпьте ингредиенты в чан, закройте его с помощью красного камня, а затем извлеките готовый продукт из стерилизационной станции."
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "Распаковка",
+            "recipe": "tfc:crafting/unseal_plum_jar",
+            "text": "Чтобы использовать банку в рецептах, сначала откройте ее на верстаке. Крышку достать невозможно. Открытая банка хранится всего несколько дней!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "tag:tfc:jar_shelves,tag:beneath:jar_shelves",
+            "anchor": "shelves",
+            "title": "Полки для банок",
+            "text": "$(thing)Полки для банок$() можно крепить к прочным стенам. Их можно разместить непосредственно на стене или на уже существующем блоке с установленными банками. Верхняя часть полки для банок считается прочной поверхностью для размещения предметов, других банок или блоков.$(br)Банки можно размещать на любых прочных поверхностях с помощью $(item)$(k:key.use)$(). На блоке можно разместить четыре банки любого типа."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "tag:firmalife:jarbnets",
+            "anchor": "jarbnet",
+            "title": "Подставки для банок",
+            "text": "Подставки — это косметический блок для хранения $(item)банок$(), $(item)свечей$() и $(item)кувшинов$(). Его можно открыть и закрыть, щёлкнув по нему пустой рукой и нажав $(item)$(k:key.sneak)$(). Если внутри есть свечи, их можно зажечь, чтобы получить немного света."
+        },
+        {
+            "type": "patchouli:relations",
+            "title": "Читать далее",
+            "anchor": "relations",
+            "entries": [
+                "tfg:cooking/food_and_water",
+                "tfg:cooking/cooking_methods",
+                "tfg:cooking/decay",
+                "tfg:cooking/sandwiches"
+            ]
+        }
+    ],
+    "read_by_default": true,
+    "sortnum": 8,
+    "extra_recipe_mappings": {
+        "tag:tfg:foods/all_jams": 1,
+        "tag:tfc:jar_shelves": 5,
+        "tag:beneath:jar_shelves": 5,
+        "tag:firmalife:jarbnets": 6
+    }
+}

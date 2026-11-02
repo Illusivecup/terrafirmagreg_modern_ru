@@ -1,0 +1,555 @@
+{
+  "name": "Glassworking",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:blowpipe_with_glass",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "index",
+      "text": "$(li)$(bold)$(l:craftsmanship/glassworking#intro)Партии стекла$()$(li2)$(l:craftsmanship/glassworking#lime_and_potash)Известь и поташ$()$(li)$(bold)$(l:craftsmanship/glassworking#tools)Инструменты для стеклоделия$()$(li2)$(l:craftsmanship/glassworking#blowpipe)Трубка для выдувания$()$(li2)$(l:craftsmanship/glassworking#paddle)Шаблон$()$(li2)$(l:craftsmanship/glassworking#jacks)Зажимы$()$(li2)$(l:craftsmanship/glassworking#saw)Алмазная пила$()$(li)$(bold)$(l:craftsmanship/glassworking#glassworking_steps)Этапы стеклоделия$()$(li2)$(l:craftsmanship/glassworking#table_pour)Выливание на стол$()$(li2)$(l:craftsmanship/glassworking#basin_pour)Выливание в ванну$()$(li)$(bold)$(l:craftsmanship/glassworking#coloring)Окрашивание стекла$()$(li2)$(l:craftsmanship/glassworking#dyes)Список красителей$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "title": "Introduction",
+      "text": "Стеклоделие - это процесс превращения песка в стекло. Для начала вам нужно создать $(thing)Партию стекла$(), существует четыре типа: $(br)$(br) 1. $(thing)Кремнезём$(), из белого песка.$(br) 2. $(thing)Гематитовый$(), из жёлтого, красного или розового песка.$(br) 3. $(thing)Оливиновый$(), из зелёного или коричневого песка.$(br) 4. $(thing)Вулканический$(), из чёрного песка."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/silica_glass_batch",
+      "text": "Партии стекла можно затем изготовить, используя один из упомянутых выше цветов песка, плюс $(l:craftsmanship/glassworking#lime_and_potash)известь$() и вид $(l:craftsmanship/glassworking#lime_and_potash)поташа$().$(br)Помните, что разные виды песка можно получить, разбивая гравий молотком.",
+      "title": "Партия силикатного стекла"
+    },
+    {
+      "type": "patchouli:smelting",
+      "anchor": "lime_and_potash",
+      "title": "Известь и поташ",
+      "recipe": "tfg:smelting/dried_seaweed_to_soda",
+      "text": "$(item)Сода$() или $(item)Селитра$() могут использоваться как источник $(thing)Поташа$(). Сода — это порошок, получаемый нагреванием $(thing)Сушёной морской водоросли$() или $(thing)Ламинарии$().$(br2)$(item)Известь$() производится путём нагревания $(item)Флюса$().",
+      "recipe2": "tfg:smelting/lime"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "tools",
+      "text": "Стеклоделие начинается с партии стекла, а затем выполняется серия шагов. Эти шаги могут потребовать специальных инструментов:$(br)$(li)$(l:craftsmanship/glassworking#blowpipe)Трубку для выдувания$(), для $(thing)выдувания$() и $(thing)растягивания$().$(li)$(l:craftsmanship/glassworking#paddle)Шаблон$(), для $(thing)выравнивания$().$(li)$(l:craftsmanship/glassworking#jacks)Зажимы$(), для $(thing)сжимания$().$(li)$(l:craftsmanship/glassworking#saw)Алмазную пилу$(), для $(thing)пиления$().$(li)И $(l:agriculture/weaving)шерстяную ткань$(), для $(thing)скатывания$().",
+      "title": "Инструменты ремесленника"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "blowpipe",
+      "title": "Blowpipe",
+      "item": "tfc:ceramic/unfired_blowpipe,tfc:ceramic_blowpipe,tfc:blowpipe",
+      "text": "Самый важный инструмент — $(thing)Трубка$(). $(item)Неглазурованная керамическая трубка$() может быть $(thing)расколота$() из глины, а затем обожжена в $(thing)Керамическую трубку$().$(br)Однако керамические трубки хрупкие и могут сломаться при использовании. Неуязвимая $(item)Трубка$() может быть $(l:craftsmanship/anvils#working)прокована$() из $(thing)Латунной палки$() на наковальне."
+    },
+    {
+      "type": "patchouli:crafting",
+      "anchor": "paddle",
+      "title": "Paddle",
+      "recipe": "tfc:crafting/paddle",
+      "text": "Операцию $(thing)Выравнивания$() можно выполнить с помощью $(thing)Лопатки$(), которая изготавливается из дерева."
+    },
+    {
+      "type": "tfg:welding_recipe",
+      "anchor": "jacks",
+      "title": "Jacks",
+      "recipe": "tfc:welding/jacks",
+      "text": "Операцию $(thing)Сжатие$() можно выполнить с помощью $(thing)Домкратов$(), изготовленных из $(l:craftsmanship/anvils#welding)Сварки$() латунного стержня с латунной пластиной."
+    },
+    {
+      "type": "patchouli:crafting",
+      "anchor": "saw",
+      "title": "Gem Saw",
+      "recipe": "tfc:crafting/gem_saw",
+      "text": "Операция $(thing)пиления$() может быть выполнена с помощью $(item)алмазной пилы$(). Алмазную пилу также используют для разбивания $(item)стеклянных блоков$() и $(item)стеклянных панелей$() для их получения."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "glassworking_steps",
+      "text": "Сначала стекло на трубке необходимо нагреть до температуры не ниже $(4)$(bold)Тускло-красного$(). Затем возьмите трубку в $(thing)неведущую руку$() и удерживайте $(item)$(k:key.use)$() для выполнения каждого шага$().$(br)Используйте $(item)$(k:key.swapOffhand)$(), чтобы взять горячую трубку в неведущую руку.$(br2)$(bold)Дуть$()$(br)Используйте $(thing)Трубку$(), глядя прямо перед собой.$(br2)$(bold)Растянуть$()$(br)Используйте $(thing)Трубку$(), глядя прямо вниз.",
+      "title": "Как работать со стеклом"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Выпрямление$()$(br)Используйте $(thing)Трубку для выдувания$() в основной руке, держа $(l:craftsmanship/glassworking#paddle)Лопатку$().$(br2)$(bold)Сжатие$()$(br)Используйте $(thing)Трубку для выдувания$() в основной руке, держа $(l:craftsmanship/glassworking#jacks)Клещи$().$(br2)$(bold)Пиление$()$(br)Используйте $(thing)Трубку для выдувания$() в основной руке, держа $(l:craftsmanship/glassworking#saw)Алмазную пилу$().$(br2)$(bold)Раскатка$()$(br)Используйте $(thing)Трубку для выдувания$() в основной руке, держа $(l:agriculture/weaving)Шерстяную ткань$()."
+    },
+    {
+      "type": "patchouli:image",
+      "anchor": "guide_pane",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/glassworking/lens_0.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_1.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_0.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_1.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_2.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_3.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_4.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_5.png",
+        "tfg:textures/gui/field_guide/glassworking/pane_6.png"
+      ],
+      "text": "$(bold)Слайд-шоу с обучением:$() Пошаговое создание армированных стеклянных панелей.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "anchor": "guide_lens",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/glassworking/lens_0.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_1.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_2.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_3.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_4.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_5.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_6.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_7.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_8.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_9.png"
+      ],
+      "text": "$(bold)Слайд-шоу с обучением:$() Пошаговое создание линзы.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "anchor": "guide_glass",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/glassworking/lens_0.png",
+        "tfg:textures/gui/field_guide/glassworking/lens_1.png",
+        "tfg:textures/gui/field_guide/glassworking/glass_0.png",
+        "tfg:textures/gui/field_guide/glassworking/glass_1.png",
+        "tfg:textures/gui/field_guide/glassworking/glass_2.png",
+        "tfg:textures/gui/field_guide/glassworking/glass_3.png"
+      ],
+      "text": "$(bold)Слайд-шоу с обучением:$() Пошаговое создание зелёного stained glass.",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Стеклянные панели$() делаются с помощью $(thing)Заливки на столе$(). Заливочный стол создаётся путём размещения до шестнадцати $(thing)Блоков каолиновой глины$() или $(thing)Блоков с латунным покрытием$() в непрерывной области.$(br2) 1. Добавьте $(l:craftsmanship/glassworking)Стекловаренную смесь$() в $(thing)Трубку для выдувания$().$(br) 2. Нагрейте трубку до $(4)$(bold)Тускло-красного$().$(br) 3. $()$(item)$(k:key.use)$() $(thing)Трубку для выдувания$() на поверхности стола.$(br) 4. Наконец, $(item)$(k:key.use)$() с $(l:craftsmanship/glassworking#paddle)Лопаткой$() для выпрямления стекла.",
+      "title": "Литьё на столе",
+      "anchor": "table_pour"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "После того как стекло остынет, его можно разбить $(l:craftsmanship/glassworking#saw)Алмазной пилой$() для получения.",
+      "border": true,
+      "multiblock": {
+        "mapping": {
+          "0": "#tfc:glass_pouring_table",
+          "C": "#tfc:glass_pouring_table"
+        },
+        "pattern": [
+          [
+            "CCCC",
+            "CCC0",
+            "CCCC",
+            "CCCC"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Стеклянные блоки$() делаются с помощью $(thing)Заливки в ванну$(). Ванна создаётся путём обложения всех сторон блока воздуха, кроме верхней, $(thing)Блоками каолиновой глины$() или $(thing)Блоками с латунным покрытием$().$(br2) 1. Добавьте $(l:craftsmanship/glassworking)Стекловаренную смесь$() в $(thing)Трубку для выдувания$().$(br) 2. Нагрейте трубку до $(4)$(bold)Тускло-красного$().$(br) 3. $(item)$(k:key.use)$() $(thing)Трубку для выдувания$() на поверхности стола.",
+      "title": "Литьё в ванну",
+      "anchor": "basin_pour"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "После того как стекло остынет, его можно разбить $(l:craftsmanship/glassworking#saw)Алмазной пилой$() для получения.",
+      "border": true,
+      "multiblock": {
+        "mapping": {
+          "0": "#tfc:glass_basin_blocks",
+          "C": "#tfc:glass_basin_blocks"
+        },
+        "pattern": [
+          [
+            " C ",
+            "C C",
+            " C "
+          ],
+          [
+            "   ",
+            " 0 ",
+            "   "
+          ]
+        ]
+      }
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Окрашивание стекла",
+      "recipe": "tfc:crafting/white_kaolin_clay",
+      "recipe2": "tfg:shapeless/brass_plated_block"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "У стекла есть естественный цвет, основанный на типе $(l:craftsmanship/glassworking)Стекловаренной смеси$(), которая использовалась. Другие цвета можно получить с помощью $(l:cooking/bowls#powder_bowl)Чаши$().$(br2)Для использования поставьте $(l:cooking/bowls)Чашу$() на землю, затем $(item)$(k:key.use)$() необходимый $(thing)Порошок$(). Перед $(thing)Заливкой$() используйте $(thing)Трубку для выдувания$() на чашу, чтобы добавить порошок в смесь.",
+      "anchor": "coloring",
+      "title": "Окрашивание стекла"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(7)Белый$(): силикатное или гематитовое стекло + $(thing)сода$()$(li)$(bold)$(0)Чёрный$(): любое стекло + $(thing)графит$()$(li)$(bold)$(8)Серый$(): любое + $(thing)графит$() + $(thing)сода$()$(li)$(bold)$(7)Светло-Серый$(): любое стекло + $(thing)графит$() + 2x $(thing)сода$()$(li)$(bold)$(5)Пурпурный$(): любое стекло + $(thing)железо$() + $(thing)медь$()$(li)$(bold)$(#964b00)Коричневый$(): любое стекло + $(thing)никель$()$(li)$(bold)$(3)Бирюзовый$(): невулканическое стекло + $(thing)медь$() + $(thing)сапфир$()$(li)$(bold)$(2)Зелёный$(): силикатное или гематитовое стекло + $(thing)железо$()",
+      "title": "Цвета красителей",
+      "anchor": "dyes"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(a)Лайм$(): Силикатное или гематитовое стекло + $(thing)Железо$() + $(thing)Сода$()$(li)$(bold)$(b)Светло-Голубой$(): Силикатное стекло + $(thing)лазурит$()$(li)$(bold)$(1)Синий$(): Силикатное стекло + $(thing)медь$()$(li)$(bold)$(4)Красный$(): Силикатное или гематитовое стекло + $(thing)Олово$()$(li)$(bold)$(6)Желтый$(): Силикатное или гематитовое стекло + $(thing)Серебро$()$(li)$(bold)$(#ef8e38)Оранжевый$(): Силикатное стекло + $(thing)Пирит$()$(li)$(bold)$(5)Маджента$(): Силикатное или гематитовое стекло + $(thing)Рубин$()$(li)$(bold)$(d)Розовый$(): Силикатное стекло + $(thing)Золото$()$(li)$(bold)$(0)Тонированный$(): Несиликатное стекло + $(thing)аметист$()"
+    },
+    {
+      "type": "tfg:table_small",
+      "strings": [
+        {
+          "text": ""
+        },
+        {
+          "text": "C"
+        },
+        {
+          "text": "T"
+        },
+        {
+          "fill": "0xff42f2"
+        },
+        {
+          "fill": "0x8af3ff"
+        },
+        {
+          "fill": "0x526cff"
+        },
+        {
+          "fill": "0xe3e3e3"
+        },
+        {
+          "fill": "0xe69407"
+        },
+        {
+          "fill": "0xc738c9"
+        },
+        {
+          "fill": "0xffe81c"
+        },
+        {
+          "fill": "0x48ff1f"
+        },
+        {
+          "fill": "0xe01414"
+        },
+        {
+          "fill": "0x0c9400"
+        },
+        {
+          "fill": "0x188a9e"
+        },
+        {
+          "fill": "0x7d4f00"
+        },
+        {
+          "fill": "0x6e059c"
+        },
+        {
+          "fill": "0x7d7d7d"
+        },
+        {
+          "fill": "0xbdbdbd"
+        },
+        {
+          "fill": "0x000000"
+        },
+        {
+          "text": "Силикат"
+        },
+        {
+          "fill": "0x3d42a8"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "text": "Гематит"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3d42a8"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "text": "Olivine"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3d42a8"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "text": "Volcanic"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3d42a8"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0xb33e3e"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        },
+        {
+          "fill": "0x3eb340"
+        }
+      ],
+      "text": "Доступность цветов стекла. 'C' - прозрачный, 'T' - тонированный. Цвета могут быть изготовлены только с определенными партиями стекла.",
+      "title": "Доступность цвета стекла",
+      "legend": [
+        {
+          "text": "Может быть создано",
+          "color": "0x3eb340"
+        },
+        {
+          "text": "Не может быть создано",
+          "color": "0xb33e3e"
+        },
+        {
+          "text": "Стандартный цвет",
+          "color": "0x3d42a8"
+        }
+      ],
+      "columns": 18,
+      "first_column_width": 35,
+      "column_width": 10,
+      "row_height": 10,
+      "left_buffer": 5,
+      "top_buffer": 15,
+      "draw_background": true
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/pottery",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/charcoal_forge",
+        "tfg:craftsmanship/crucible",
+        "tfg:craftsmanship/charcoal_pit",
+        "tfg:craftsmanship/anvils",
+        "tfg:agriculture/weaving",
+        "tfg:game_mechanics/heating"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 11,
+  "extra_recipe_mappings": {
+    "tag:tfc:glass_batches": 2,
+    "tfc:powder/lime": 3,
+    "tfc:powder/soda_ash": 3,
+    "tag:tfc:glassworking_tools": 9,
+    "tag:tfc:kaolin_blocks": 14,
+    "tfc:metal/block/brass": 14
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "Панорамирование и шлюзы",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:pan/empty",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "panning",
+      "title": "Panning",
+      "text": "$(thing)Промывание$() — это метод получения пыли руды из некоторых самородных руд путём поиска в реках и других водоёмах.$(br2)Для промывания используются $(t:#tfc:ore_deposits)$(6)Месторождения Руд$(), которые находятся в гравийных отложениях на дне озёр и рек.$(br2)Чтобы начать промывать, вам понадобится $(item)Пустой Лоток$()."
+    },
+    {
+      "type": "tfg:knapping_recipe",
+      "recipe": "tfc:clay_knapping/pan",
+      "text": "Глину можно $(l:craftsmanship/pottery)расколоть$() в лоток, как показано выше."
+    },
+    {
+      "type": "tfg:heat_recipe",
+      "recipe": "tfc:heating/ceramic_pan",
+      "text": "Как только лоток будет $(thing)расколот$(), его нужно $(l:game_mechanics/heating)обжечь$(), чтобы получить $(thing)Керамический Лоток$().$(br2)Далее вам нужно найти какое-нибудь $(t:#tfc:ore_deposits)$(6)Месторождение Руды$(). Месторождения могут содержать несколько разных руд: самородную медь, самородное серебро, самородное золото и касситерит."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "#tfc:ore_deposits"
+        }
+      },
+      "name": "Пример месторождения",
+      "text": "Рудные месторождения в гравии.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Теперь можно начинать промывать!$(br2)$(bold)1.$() Держа лоток в руке, используйте $(item)$(k:key.use)$() на блоке месторождения руды.$(br2)$(bold)2.$$() Стоя в воде с лотком в руке, удерживайте $(item)$(k:key.use)$(), и вы начнёте промывать.$(br2)$(bold)3.$() Через несколько мгновений, если вам повезёт, в инвентаре может появиться пыль руды."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/panning.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "sluice",
+      "title": "Sluices",
+      "item": "tag:tfc:sluices",
+      "text": "$(thing)Шлюз$() — устройство для автоматической обработки $(thing)Месторождений Руды$() дающее те же результаты, что и $(l:craftsmanship/panning#panning)Промывание$(), но с немного более высокими шансами."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "При установке рудопромывочный жёлоб занимает два блока. Чтобы он работал, вода должна втекать через верхнюю часть жёлоба и вытекать через нижнюю. Рудопромывочный жёлоб будет работать, когда видно, что через него течёт вода. Вода, втекающая в жёлоб, должна быть последним блоком водного потока. Под нижней частью жёлоба должен быть пустой блок, куда будет стекать вода."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/sluice_cross.png"
+      ],
+      "text": "Жёлоб с правильной установкой воды.",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Чтобы использовать рудопромывочный жёлоб, брось предметы руды в водный поток и позволь им втечь в него. Они появятся на жёлобе, и через некоторое время есть шанс, что обработанные предметы будут выплюнуты снизу."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/sluice_in_use.png"
+      ],
+      "text": "Работающий рудопромывочный жёлоб с предметами внутри.",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Промывание и использование шлюза могут дать несколько возможных продуктов: $(thing)Пыль Руды$(), $(thing)Небольшие Кучи Пыли Руды$(), $(thing)Обломки Породы$() и $(thing)Самоцветы$().$(br)Вероятность получения определённых выпадений можно посмотреть, изучив месторождение руды в $(emi).",
+      "title": "Ожидаемые продукты"
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:craftsmanship/sticks_and_stones",
+        "tfg:craftsmanship/pottery",
+        "tfg:craftsmanship/metallurgy"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 15,
+  "extra_recipe_mappings": {
+    "tag:tfc:ore_deposits": 0,
+    "tfc:ceramic/unfired_pan": 1,
+    "tfc:pan/empty": 2,
+    "tfc:pan/filled": 4,
+    "tag:tfc:sluices": 6
+  }
+}

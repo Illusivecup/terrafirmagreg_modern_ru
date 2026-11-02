@@ -1,0 +1,98 @@
+{
+	"name": "Фауна Луны",
+	"category": "tfg:the_moon",
+	"icon": "species:textures/item/birt_egg.png",
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"title": "Внеземная фауна",
+			"text": "Космос — дом для многих видов животных, которых вы не найдёте на Земле. Несколько животных враждебны и будут атаковать игрока, но большинство из них пассивны. Только некоторые из них $(l:agriculture/animal_husbandry)приручаемы$().$(br)Животных, которых вы находите на других мирах, можно разделить на две категории: $(item)горячие$() и $(item)холодные$(). Животные могут выживать только на планетах, которые имеют схожий климат с тем, откуда они родом, или на $(thing)умеренных$() планетах, таких как Земля."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "Космические животные не нуждаются в среде с кислородом, но это сделает область \"умеренной\" для их выживания. Например, если вы принесёте холодолюбивое животное (например, Лунного кролика) на горячую планету (например, Венеру), оно загорится, если не будет находиться в среде с кислородом.$(br)Это делает Землю идеальным местом для зоопарка, если вы того хотите.$(br)Вы можете перевозить животных между планетами с помощью системы AE2 Spatial Storage."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "$(li)$(bold)Приручаемые$()$(li2)$(l:the_moon/moon_fauna#moon_rabbit)Лунный кролик$()$(li2)$(l:the_moon/moon_fauna#birt)Бирт$()$(li2)$(l:the_moon/moon_fauna#certus_jellie)Цертусовый желе$()$(li)$(bold)Дикие$()$(li2)$(l:the_moon/moon_fauna#limpet)Лимпет$()$(li2)$(l:the_moon/moon_fauna#star_crawler)Звёздный ползун$()$(li2)$(l:the_moon/moon_fauna#endermen)Эндермены$()$(li2)$(l:the_moon/moon_fauna#shulker)Шалкеры$()"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "tfg:moon_rabbit{NoAI:1b,birth:-100000000L,oldDay:9223372036854775807L,geneticSize:16,MoonRabbitType:5}",
+			"scale": 1.3,
+			"offset": -0.3,
+			"name": "Лунный кролик",
+			"anchor": "moon_rabbit",
+			"text": "Несмотря на их окрас, $(thing)Лунные кролики$() имеют идентичные характеристики с земными. Также они едят плоды хоруса."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:birt",
+			"anchor": "birt",
+			"scale": 0.9,
+			"name": "Birt",
+			"text": "$(thing)Птахи$() являются видом птиц? Они откладывают яйца в своих гнёздах, пассивны, если на них не нападают, и их можно употреблять в пищу. Их яйца можно бросать, чтобы оглушить цель."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "jellies:certus",
+			"scale": 0.6,
+			"name": "Цертусовый желе",
+			"anchor": "certus_jellie",
+			"text": "$(thing)Цертусовые$() $(l:agriculture/jellies)Желе$() появляются в лунных биомах $(item)Азурина$(). Они производят $(thing)Крупные бутоны Цертусового кварца$()."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "species:limpet",
+			"scale": 0.8,
+			"name": "Limpet",
+			"anchor": "limpet",
+			"text": "$(thing)Рудовички$() это разновидности улиток, у которых на раковине есть руда. Руду можно добыть любой киркой или буром. Он пассивен и может быть съеден."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "ad_astra:star_crawler",
+			"scale": 0.4,
+			"name": "Звёздный ползун",
+			"anchor": "star_crawler",
+			"text": "$(thing)Звездные ползуны$() являются разновидностью морских звезд. Они враждебны и могут быть съедены."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "endermanoverhaul:windswept_hills_enderman",
+			"scale": 1,
+			"name": "Endermen",
+			"anchor": "endermen",
+			"text": "Луна — дом для большего количества видов $(thing)Эндерменов$(). Некоторые нейтральны, но несколько враждебны, так что будьте осторожны!"
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "endermanoverhaul:end_islands_enderman",
+			"scale": 1,
+			"text": "Самые опасные $(thing)Endermen$() находятся в биомах $(l:the_moon/moon_biomes#forest)Chorus$()."
+		},
+		{
+			"type": "patchouli:entity",
+			"entity": "minecraft:shulker{Color:7}",
+			"anchor": "shulker",
+			"title": "Shulker",
+			"scale": 0.7,
+			"text": "$(thing)Шалкеры$() можно найти возле крупных метеоритов и заброшенных лунных баз. Возможно, они охраняют что-то...?"
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:the_moon/the_moon",
+				"tfg:the_world/wild_animals",
+				"tfg:agriculture/animal_husbandry",
+				"tfg:agriculture/jellies",
+				"tfg:beneath/beneath_fauna",
+				"tfg:mars/mars_fauna",
+				"tfg:the_moon/moon_biomes"
+			]
+		}
+	],
+	"read_by_default": true
+}

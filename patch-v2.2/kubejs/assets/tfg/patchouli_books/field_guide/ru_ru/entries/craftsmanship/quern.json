@@ -1,0 +1,93 @@
+{
+  "name": "Quern",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:quern",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Жернов$() — устройство для измельчения предметов. Он может дробить руду для $(l:game_mechanics/mining#processing)обработки$(), а также делать порошки, $(thing)красители$() и некоторые другие предметы. Он собирается из $(thing)основания$() и $(thing)ручного жернова$().$(br)Жерновы можно автоматизировать, подавая $(thing)механическую мощность$() на их верхнюю грань со скоростью <32RPM."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/quern",
+      "text": "Основание жернова можно сделать из трех $(t:#forge:smooth_stone)$(6)обработанного камня$() и трех любых других $(t:#forge:stone)$(6)каменных$() блоков.$(br2)Сырьевые каменные блокы можно получить через $(l:craftsmanship/anvils#raw_rock)добычу$(), а обработанные блоки — с помощью $(l:craftsmanship/chisel)зубила$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/handstone",
+      "text": "Для работы жернова необходим $(thing)Ручной камень$()."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/quern_empty.png"
+      ],
+      "text": "Наведите на верхнюю часть блока жернова и $(item)$(k:key.use)$(), чтобы поставить ручной камень.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/quern_add_item.png"
+      ],
+      "text": "Используйте $(item)$(k:key.use)$() на верхней части ручного камня, чтобы добавить предметы.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/quern_handle.png"
+      ],
+      "text": "Используйте $(item)$(k:key.use)$() на ручке, чтобы вращать ручной камень.",
+      "border": true
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/quern_result.png"
+      ],
+      "text": "Продукция должна появиться на основании жернова. $(item)$(k:key.use)$() в любом месте основания, чтобы забрать её.",
+      "border": true
+    },
+    {
+      "type": "tfg:quern_recipe",
+      "recipe": "tfg:quern/copper_crushed_ore_from_normal_raw_ore",
+      "text": "$(l:game_mechanics/mining#processing)Руды$() можно дробить для получения большего количества металла.",
+      "title": "Дроблёная руда"
+    },
+    {
+      "type": "tfg:quern_recipe",
+      "recipe": "tfg:quern/sulfur",
+      "text": "$(l:mechanics/dye)Краситель$() можно получить из различных цветов.",
+      "title": "Powders"
+    },
+    {
+      "type": "tfg:quern_recipe",
+      "recipe": "tfc:quern/red_dye",
+      "text": "$(thing)Красители$() можно получить из различных цветов.",
+      "title": "Dyes"
+    },
+    {
+      "type": "tfg:quern_recipe",
+      "recipe": "tfc:quern/barley_grain",
+      "text": "$(thing)Мука$() также доступна из жернова."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/geology",
+        "tfg:cooking/bread",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:game_mechanics/mining"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 14,
+  "extra_recipe_mappings": {
+    "tfc:handstone": 0,
+    "tfc:quern": 0
+  }
+}

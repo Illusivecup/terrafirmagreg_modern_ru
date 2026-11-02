@@ -1,0 +1,4572 @@
+{
+  "name": "Сельскохозяйственные культуры",
+  "category": "tfg:the_world",
+  "icon": "tfc:textures/item/seeds/onion.png",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)$(l:the_world/wild_crops#wild_crops)Дикорастущие культуры$()$(li)$(bold)$(#0000eb)Культуры$()$(li2)$(l:the_world/wild_crops#barley)Ячмень$()$(li2)$(l:the_world/wild_crops#beet)Свёкла$()$(li2)$(l:the_world/wild_crops#cabbage)Капуста$()$(li2)$(l:the_world/wild_crops#canola)Рапс$()$(li2)$(l:the_world/wild_crops#carrot)Морковь$()$(li2)$(l:the_world/wild_crops#cucumber)Огурец$()$(li2)$(l:the_world/wild_crops#flax)Лён$()$(li2)$(l:the_world/wild_crops#garlic)Чеснок$()$(li2)$(l:the_world/wild_crops#green_bean)Зелёная фасоль$()$(li2)$(l:the_world/wild_crops#jute)Джут$()$(li2)$(l:the_world/wild_crops#lentil)Чечевица$()$(li2)$(l:the_world/wild_crops#maize)Кукуруза$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li2)$(l:the_world/wild_crops#melon)Арбуз$()$(li2)$(l:the_world/wild_crops#oat)Овёс$()$(li2)$(l:the_world/wild_crops#onion)Лук$()$(li2)$(l:the_world/wild_crops#papyrus)Папирус$()$(li2)$(l:the_world/wild_crops#potato)Картофель$()$(li2)$(l:the_world/wild_crops#pumpkin)Тыква$()$(li2)$(l:the_world/wild_crops#radish)Редис$()$(li2)$(l:the_world/wild_crops#red_bell_pepper)Красный перец$()$(li2)$(l:the_world/wild_crops#rice)Рис$()$(li2)$(l:the_world/wild_crops#rye)Рожь$()$(li2)$(l:the_world/wild_crops#soybean)Соя$()$(li2)$(l:the_world/wild_crops#squash)Кабачок$()$(li2)$(l:the_world/wild_crops#sugarcane)Сахарный тростник$()$(li2)$(l:the_world/wild_crops#sunflower)Подсолнух$()$(li2)$(l:the_world/wild_crops#tomatoes)Помидор$()$(li2)$(l:the_world/wild_crops#wheat)Пшеница$()$(li2)$(l:the_world/wild_crops#yellow_bell_pepper)Жёлтый перец$()"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "intro",
+      "text": "Культуры — источник пищи и других материалов. Хотя каждая культура немного отличается, у всех них есть некоторые общие принципы. Чтобы начать выращивать культуры, вам понадобятся некоторые $(thing)семена$(), которые можно найти, отыскивая $(l:the_world/wild_crops#wild_crops)дикие культуры$() и собирая их.$(br2)Как только вы получите семена, вам также понадобится $(thing)мотыга$(), чтобы возделывать пахотные земли."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Кроме того, что дикие культуры можно найти, семена также можно получить из существующих культур. Когда полностью созревшая культура умирает — либо из-за погоды, или если оставить её гнить — она даст семена, dropping больше семян, которые можно использовать для выращивания ещё большего количества культур в следующем сезоне."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Дикие культуры",
+      "anchor": "wild_crops",
+      "text": "$(thing)Дикие культуры$() можно найти разбросанными по миру, растущими небольшими группами. Их можно собирать, чтобы получить некоторые $(thing)продукты$() и $(thing)семена$(), которые затем можно cultivate самостоятельно.$(br2)Дикие культуры созревают только с июня по октябрь. В остальное время они выглядят мёртвыми до следующего лета."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Дикие культуры появляются в климатических зонах, близких к тем, где сама культура может выращиваться, поэтому если вы ищете конкретную культуру, ищите в климате, где она может выращиваться.$(br2)Однако, в отличие от $(l:agriculture/growing_crops)культур$(), которые посадил игрок, дикие культуры не требуют $(l:agriculture/growing_crops#hydration)увлажнения$(). Вместо этого их находят в областях в зависимости от средней $(l:the_world/climate#temperature)температуры$() и $(l:the_world/climate#rainfall)количества осадков$()."
+    },
+    {
+      "type": "tfg:table",
+      "strings": [
+        {
+          "text": "Crop",
+          "bold": true
+        },
+        {
+          "text": "Temperature (°C)",
+          "bold": true
+        },
+        {
+          "text": "Осадки (мм)",
+          "bold": true
+        },
+        {
+          "text": "Barley"
+        },
+        {
+          "text": " -8 - 26"
+        },
+        {
+          "text": " 70 - 310"
+        },
+        {
+          "text": "Oat"
+        },
+        {
+          "text": "  3 - 40"
+        },
+        {
+          "text": "140 - 400"
+        },
+        {
+          "text": "Rye"
+        },
+        {
+          "text": "-11 - 30"
+        },
+        {
+          "text": "100 - 350"
+        },
+        {
+          "text": "Maize"
+        },
+        {
+          "text": " 13 - 40"
+        },
+        {
+          "text": "300 - 500"
+        },
+        {
+          "text": "Wheat"
+        },
+        {
+          "text": " -4 - 35"
+        },
+        {
+          "text": "100 - 400"
+        },
+        {
+          "text": "Rice"
+        },
+        {
+          "text": " 15 - 30"
+        },
+        {
+          "text": "100 - 500"
+        },
+        {
+          "text": "Beet"
+        },
+        {
+          "text": " -5 - 20"
+        },
+        {
+          "text": " 70 - 300"
+        },
+        {
+          "text": "Cabbage"
+        },
+        {
+          "text": "-10 - 27"
+        },
+        {
+          "text": " 60 - 280"
+        },
+        {
+          "text": "Carrot"
+        },
+        {
+          "text": "  3 - 30"
+        },
+        {
+          "text": "100 - 400"
+        },
+        {
+          "text": "Garlic"
+        },
+        {
+          "text": "-20 - 18"
+        },
+        {
+          "text": " 60 - 310"
+        },
+        {
+          "text": "Зелёная фасоль"
+        },
+        {
+          "text": "  2 - 35"
+        },
+        {
+          "text": "150 - 410"
+        },
+        {
+          "text": "Melon"
+        },
+        {
+          "text": "  5 - 37"
+        },
+        {
+          "text": "200 - 500"
+        }
+      ],
+      "text": "",
+      "title": "Требования к диким культурам",
+      "legend": [],
+      "columns": 2,
+      "first_column_width": 80,
+      "column_width": 70,
+      "row_height": 10,
+      "left_buffer": 2,
+      "top_buffer": 12,
+      "draw_background": false
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "tfg:table",
+      "strings": [
+        {
+          "text": "Crop",
+          "bold": true
+        },
+        {
+          "text": "Temperature (°C)",
+          "bold": true
+        },
+        {
+          "text": "Осадки (мм)",
+          "bold": true
+        },
+        {
+          "text": "Potato"
+        },
+        {
+          "text": " -1 - 37"
+        },
+        {
+          "text": "200 - 410"
+        },
+        {
+          "text": "Pumpkin"
+        },
+        {
+          "text": "  0 - 30"
+        },
+        {
+          "text": "120 - 390"
+        },
+        {
+          "text": "Onion"
+        },
+        {
+          "text": "  0 - 30"
+        },
+        {
+          "text": "100 - 390"
+        },
+        {
+          "text": "Soybean"
+        },
+        {
+          "text": "  8 - 30"
+        },
+        {
+          "text": "160 - 410"
+        },
+        {
+          "text": "Squash"
+        },
+        {
+          "text": "  5 - 33"
+        },
+        {
+          "text": " 90 - 390"
+        },
+        {
+          "text": "Sugarcane"
+        },
+        {
+          "text": " 12 - 38"
+        },
+        {
+          "text": "160 - 500"
+        },
+        {
+          "text": "Tomato"
+        },
+        {
+          "text": "  0 - 36"
+        },
+        {
+          "text": "120 - 390"
+        },
+        {
+          "text": "Jute"
+        },
+        {
+          "text": "  5 - 37"
+        },
+        {
+          "text": "100 - 410"
+        },
+        {
+          "text": "Papyrus"
+        },
+        {
+          "text": " 19 - 37"
+        },
+        {
+          "text": "310 - 500"
+        },
+        {
+          "text": "Красный болгарский перец"
+        },
+        {
+          "text": " 16 - 30"
+        },
+        {
+          "text": "190 - 400"
+        },
+        {
+          "text": "Жёлтый болгарский перец"
+        },
+        {
+          "text": " 16 - 30"
+        },
+        {
+          "text": "190 - 400"
+        },
+        {
+          "text": "Sunflower"
+        },
+        {
+          "text": "  5 - 40"
+        },
+        {
+          "text": "100 - 450"
+        }
+      ],
+      "text": "",
+      "title": "Требования для диких культур",
+      "legend": [],
+      "columns": 2,
+      "first_column_width": 80,
+      "column_width": 70,
+      "row_height": 10,
+      "left_buffer": 2,
+      "top_buffer": 12,
+      "draw_background": false
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "tfg:table",
+      "strings": [
+        {
+          "text": "Crop",
+          "bold": true
+        },
+        {
+          "text": "Temperature (°C)",
+          "bold": true
+        },
+        {
+          "text": "Осадки (мм)",
+          "bold": true
+        },
+        {
+          "text": "Canola"
+        },
+        {
+          "text": " -5 - 25"
+        },
+        {
+          "text": " 50 - 350"
+        },
+        {
+          "text": "Flax"
+        },
+        {
+          "text": " -8 - 25"
+        },
+        {
+          "text": "175 - 475"
+        },
+        {
+          "text": "Cucumber"
+        },
+        {
+          "text": " 15 - 40"
+        },
+        {
+          "text": "350 - 500"
+        },
+        {
+          "text": "Radish"
+        },
+        {
+          "text": " -16 - 4"
+        },
+        {
+          "text": "75 - 325"
+        },
+        {
+          "text": "Lentil"
+        },
+        {
+          "text": " -18 - 2"
+        },
+        {
+          "text": "250 - 425"
+        }
+      ],
+      "text": "",
+      "title": "Требования для диких культур",
+      "legend": [],
+      "columns": 2,
+      "first_column_width": 80,
+      "column_width": 70,
+      "row_height": 10,
+      "left_buffer": 2,
+      "top_buffer": 12,
+      "draw_background": false
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "barley",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -8 - 26 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 18 - 75 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Ячмень — это одноблочная культура. Семена ячменя можно сажать на пахотных землях и они будут давать $(thing)ячмень$() и $(thing)семена ячменя$() в качестве продукта.",
+      "title": "Barley"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/barley[age=7]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "oat",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 3 - 40 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 35 - 100 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Овёс — это одноблочная культура. Семена овса можно сажать на пахотных землях и они будут давать $(thing)овёс$() и $(thing)семена овса$() в качестве продукта.",
+      "title": "Oat"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/oat[age=7]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "rye",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -11 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 25 - 85 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Рожь — это одноблочная культура. Семена ржи можно сажать на пахотных землях и они будут давать $(thing)рожь$() и $(thing)семена ржи$() в качестве продукта.",
+      "title": "Rye"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rye[age=7]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "maize",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 13 - 40 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 75 - 100 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Кукуруза — это двухблочная культура. Семена кукурузы можно сажать на пахотных землях, они будут расти на два блока в высоту и будут давать $(thing)кукурузу$() и $(thing)семена кукурузы$() в качестве продукта.",
+      "title": "Maize"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/maize[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/maize[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/maize[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/maize[age=3,part=top]",
+            "Y": "tfc:crop/maize[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/maize[age=4,part=top]",
+            "Y": "tfc:crop/maize[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/maize[age=5,part=top]",
+            "Y": "tfc:crop/maize[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "wheat",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -4 - 35 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 25 - 100 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Пшеница — это одноблочная культура. Семена пшеницы можно сажать на пахотных землях и они будут давать $(thing)пшеницу$() и $(thing)семена пшеницы$() в качестве продукта.",
+      "title": "Wheat"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/wheat[age=7]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "rice",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 15 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 25 - 100 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Рис — это одноблочная культура. Рис нужно выращивать под водой — его нужно сажать на пахотных землях в пресной воде глубиной в один блок. Он будет давать $(thing)рис$() и $(thing)семена риса$() в качестве продукта.",
+      "title": "Rice"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Примечание: для роста блок риса должен быть $(thing)Залит водой$().",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=0,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=1,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=2,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=3,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=4,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=5,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=6,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/rice[age=7,fluid=water]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "beet",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -5 - 20 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 18 - 85 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Свёкла — это одноблочная культура. Семена свёклы можно сажать на пахотных землях и они будут давать $(thing)свёклу$() и $(thing)семена свёклы$() в качестве продукта.",
+      "title": "Beet"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/beet[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/beet[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/beet[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/beet[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/beet[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/beet[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "cabbage",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -10 - 27 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 15 - 65 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Капуста — это одноблочная культура. Семена капусты можно сажать на пахотных землях и они будут давать $(thing)капусту$() и $(thing)семена капусты$() в качестве продукта.",
+      "title": "Cabbage"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/cabbage[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/cabbage[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/cabbage[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/cabbage[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/cabbage[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/cabbage[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "carrot",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 3 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 25 - 100 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Морковь — это одноблочная культура. Семена моркови можно сажать на пахотных землях и они будут давать $(thing)морковь$() и $(thing)семена моркови$() в качестве продукта.",
+      "title": "Carrot"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/carrot[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/carrot[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/carrot[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/carrot[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/carrot[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "garlic",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -20 - 18 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Увлажнение$(): 15 - 75 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Чеснок — это одноблочная культура. Семена чеснока можно сажать на пахотных землях и они будут давать $(thing)чеснок$() и $(thing)семена чеснока$() в качестве продукта.",
+      "title": "Garlic"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/garlic[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/garlic[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/garlic[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/garlic[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/garlic[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "green_bean",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 2 - 35 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 38 - 100 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Фасоль — это вьющееся растение высотой в два блока. Семена фасоли можно посадить на пашне, они вырастут на два блока в высоту, если рядом есть палка, и будут давать в урожай $(thing)Зелёную фасоль$() и $(thing)Семена фасоли$().",
+      "title": "Зеленая фасоль"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Палка необходима для полного роста культуры.",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=0,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=0,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=1,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=1,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=2,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=2,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=3,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=3,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=4,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=4,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=5,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=5,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=6,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=6,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/green_bean[age=7,part=top,stick=true]",
+            "Y": "tfc:crop/green_bean[age=7,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "potato",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -1 - 37 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 50 - 100 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Картофель — это растение, занимающее один блок. Семена картофеля можно посадить на пашне, и они будут давать в урожай $(thing)Картофель$() и $(thing)Семена картофеля$().",
+      "title": "Potatoes"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/potato[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "pumpkin",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 0 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 30 - 80 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Тыква — это расползающееся растение. Семена тыквы можно посадить на пашне, и когда растение созреет, рядом с ним на земле появятся до двух $(thing)Блоков тыквы$(). Если блоки тыквы собрать, а растение снова созреет, оно может вырастить больше тыкв. Из тыкв можно сделать $(l:game_mechanics/lighting#jack_o_lanterns)Фонари Джека$().",
+      "title": "Дыни"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=0]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=1]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=2]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=3]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=4]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=5]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=6]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/pumpkin[age=7]",
+            "P": "tfc:pumpkin"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "melon",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 5 - 37 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 75 - 100 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Арбуз — это расползающееся растение. Семена арбуза можно посадить на пашне, и когда растение созреет, рядом с ним на земле появятся до двух $(thing)Блоков арбуза$(). Если блоки арбуза собрать, а растение снова созреет, оно может вырастить больше арбузов.",
+      "title": "Арбузы"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=0]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=1]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=2]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=3]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=4]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=5]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=6]",
+            "P": "minecraft:air"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "   ",
+              " CP",
+              "   "
+            ],
+            [
+              "GGG",
+              "G0G",
+              "GGG"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:farmland/loam",
+            "G": "tfc:farmland/loam",
+            "C": "tfc:crop/melon[age=7]",
+            "P": "tfc:melon"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "red_bell_pepper",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 16 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 25 - 60 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Красный болгарский перец — это растение, которое можно собирать. Когда он почти созрел, его можно собрать с помощью $(item)$(k:key.use)$(), чтобы получить зелёный болгарский перец. Сбор с помощью $(item)$(k:key.use)$() позволяет растению в будущем вырастить больше перцев, а не уничтожать растение.",
+      "title": "Красный болгарский перец"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/red_bell_pepper[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "yellow_bell_pepper",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 16 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 25 - 60 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Жёлтый болгарский перец — это растение, которое можно собирать. Когда он почти созрел, его можно собрать с помощью $(item)$(k:key.use)$(), чтобы получить зелёный болгарский перец. Сбор с помощью $(item)$(k:key.use)$() позволяет растению в будущем вырастить больше перцев, а не уничтожать растение.",
+      "title": "Жёлтый болгарский перец"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/yellow_bell_pepper[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "onion",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 0 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 25 - 90 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Лук — это растение, занимающее один блок. Семена лука можно посадить на пашне, и они будут давать в урожай $(thing)Лук$() и $(thing)Семена лука$().",
+      "title": "Лук"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/onion[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "soybean",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 8 - 30 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 40 - 100 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Соя — это растение, занимающее один блок. Семена сои можно посадить на пашне, и они будут давать в урожай $(thing)Соя$() и $(thing)Семена сои$().",
+      "title": "Soybean"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/soybean[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "squash",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 5 - 33 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 23 - 95 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Кабачок — это растение, занимающее один блок. Семена кабачка можно посадить на пашне, и они будут давать в урожай $(thing)Кабачок$() и $(thing)Семена кабачка$().",
+      "title": "Squash"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=0]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=1]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=2]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=3]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=4]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=5]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=6]",
+            "Y": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/squash[age=7]",
+            "Y": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "sugarcane",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 12 - 38 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 40 - 100 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Сахарный тростник — это растение высотой в два блока. Семена сахарного тростника можно посадить на пашне, они вырастут на два блока в высоту и будут давать в урожай $(thing)Сахарный тростник$() и $(thing)Семена сахарного тростника$(). Из сахарного тростника можно сделать $(thing)Сахар$().",
+      "title": "Sugarcane"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/sugarcane[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/sugarcane[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/sugarcane[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/sugarcane[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/sugarcane[age=4,part=top]",
+            "Y": "tfc:crop/sugarcane[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/sugarcane[age=5,part=top]",
+            "Y": "tfc:crop/sugarcane[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/sugarcane[age=6,part=top]",
+            "Y": "tfc:crop/sugarcane[age=6,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/sugarcane[age=7,part=top]",
+            "Y": "tfc:crop/sugarcane[age=7,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "tomatoes",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 0 - 36 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 30 - 95 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Помидор — это вьющееся растение высотой в два блока. Семена помидора можно посадить на пашне, они вырастут на два блока в высоту, если рядом есть палка, и будут давать в урожай $(thing)Помидоры$() и $(thing)Семена помидора$().",
+      "title": "Помидоры"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Палка необходима для полного роста культуры.",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=0,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=0,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=1,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=1,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=2,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=2,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=3,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=3,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=4,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=4,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=5,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=5,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=6,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=6,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/tomato[age=7,part=top,stick=true]",
+            "Y": "tfc:crop/tomato[age=7,part=bottom,stick=true]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "jute",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 5 - 37 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 25 - 100 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Джут — это культура высотой в два блока. Семена джута можно посадить на пашне, они вырастут до двух блоков в высоту и дадут урожай $(thing)Джута$() и $(thing)Семена джута$().",
+      "title": "Jute"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/jute[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/jute[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/jute[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/jute[age=3,part=top]",
+            "Y": "tfc:crop/jute[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/jute[age=4,part=top]",
+            "Y": "tfc:crop/jute[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/jute[age=5,part=top]",
+            "Y": "tfc:crop/jute[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "papyrus",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 19 - 37 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 70 - 100 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Папирус — это культура высотой в два блока. Семена папируса можно посадить на пашне, они вырастут до двух блоков в высоту и дадут урожай $(l:agriculture/papermaking)Папирус$() и $(thing)Семена папируса$().",
+      "title": "Papyrus"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/papyrus[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/papyrus[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfc:crop/papyrus[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/papyrus[age=3,part=top]",
+            "Y": "tfc:crop/papyrus[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/papyrus[age=4,part=top]",
+            "Y": "tfc:crop/papyrus[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfc:crop/papyrus[age=5,part=top]",
+            "Y": "tfc:crop/papyrus[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "sunflower",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 5 - 40 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 20 - 80 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Подсолнечник — это культура высотой в два блока. Семена подсолнечника можно посадить на пашне, они вырастут до двух блоков в высоту и дадут $(item)Головки подсолнечника$(), которые можно переработать в $(thing)Семенное масло$(). Семенное масло можно использовать в качестве топлива для ламп, а также для производства $(thing)Биодизеля$() в дальнейшем.$(br)Подсолнечник также учитывается как Цветок для целей $(l:agriculture/beekeeping)Пчеловодства$().",
+      "title": "Sunflower"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:sunflower[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:sunflower[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:sunflower[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:sunflower[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:sunflower[age=4,part=top]",
+            "Y": "tfg:sunflower[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:sunflower[age=5,part=top]",
+            "Y": "tfg:sunflower[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:sunflower[age=6,part=top]",
+            "Y": "tfg:sunflower[age=6,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ],
+      "text": "$(thing)Дикий подсолнух$() растет между 5 и 40C и от 100 до 450мм осадков. Кроме того, их семена можно жарить и есть!"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "canola",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -5 - 25 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 10 - 60 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Рапс — это культура высотой в два блока. Семена рапса можно посадить на пашне, они вырастут до двух блоков в высоту и дадут $(item)Зерна рапса$(), которые можно переработать в $(thing)Семенное масло$(). Семенное масло можно использовать в качестве топлива для ламп, а также для производства $(thing)Биодизеля$() в дальнейшем.$(br)Рапс также учитывается как Цветок для целей $(l:agriculture/beekeeping)Пчеловодства$().",
+      "title": "Canola"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:rapeseed[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:rapeseed[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:rapeseed[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:rapeseed[age=3,part=top]",
+            "Y": "tfg:rapeseed[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:rapeseed[age=4,part=top]",
+            "Y": "tfg:rapeseed[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:rapeseed[age=5,part=top]",
+            "Y": "tfg:rapeseed[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:rapeseed[age=6,part=top]",
+            "Y": "tfg:rapeseed[age=6,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ],
+      "text": "Дикая канола (также известная как рапс) растёт при температуре от -7 до 25°C и количестве осадков от 50 до 350 мм.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "flax",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -8 - 25 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 15 - 65 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Лён — это культура высотой в два блока. Семена льна можно посадить на пашне, они вырастут до двух блоков в высоту и дадут $(item)Стебли льна$(), которые можно переработать в $(thing)Льняную ткань$() или $(thing)Брезент$().$(br)Лён также учитывается как Цветок для целей $(l:agriculture/beekeeping)Пчеловодства$().",
+      "title": "Flax"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:flax[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:flax[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:flax[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:flax[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:flax[age=4,part=top]",
+            "Y": "tfg:flax[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:flax[age=5,part=top]",
+            "Y": "tfg:flax[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:flax[age=6,part=top]",
+            "Y": "tfg:flax[age=6,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ],
+      "text": "$(thing)Дикий Лён$() растёт в промежутке между -5 и 23С, и от 175 до 475 мм годовых осадков."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "cucumber",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): 5 - 40 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 70 - 100 %$(br)$(bold)Питательное вещество$(): Азот$(br2)Огурцы — это культура высотой в два блока. Семена огурцов можно посадить на пашне, они вырастут до двух блоков в высоту и дадут $(item)Огурцы$(), которые дают $(thing)Овощное$() питание.$(br)$(bold)Для полного созревания огурцам нужна опора.$()",
+      "title": "Cucumber"
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:cucumber[age=0,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "minecraft:air",
+            "Y": "tfg:cucumber[age=1,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:cucumber[age=2,part=top]",
+            "Y": "tfg:cucumber[age=2,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:cucumber[age=3,part=top]",
+            "Y": "tfg:cucumber[age=3,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:cucumber[age=4,part=top]",
+            "Y": "tfg:cucumber[age=4,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "tfg:cucumber[age=5,part=top]",
+            "Y": "tfg:cucumber[age=5,part=bottom]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ],
+      "text": "$(thing)Дикий огурец$() растёт в при температуре от 15 до 40 °C и осадках 350—500 мм.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "radish",
+      "title": "Radish",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -20 - 20 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 15 - 65 %$(br)$(bold)Питательное вещество$(): Калий$(br2)Редис можно есть для получения $(thing)Овощного$() питания. Если вам нужна культура, которая может выживать в холодном климате, редис — хороший выбор."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:radish[age=0]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:radish[age=1]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:radish[age=2]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:radish[age=3]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:radish[age=4]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:radish[age=5]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ],
+      "text": "$(thing)Дикая редька$() растёт при температуре от -16 до 4 °C и осадках 75—325 мм.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "lentil",
+      "title": "Lentil",
+      "text": "$(bold)$(l:the_world/climate#temperature)Температура$(): -20 - 18 °C$(br)$(bold)$(l:agriculture/growing_crops#hydration)Влажность$(): 50 - 100 %$(br)$(bold)Питательное вещество$(): Фосфор$(br2)Чечевицу можно есть для получения $(thing)Овощного$() питания, хотя рекомендуется сначала её готовить. Чечевица — ещё один хороший выбор для сельского хозяйства в холодном климате."
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:lentil[age=0]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:lentil[age=1]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:lentil[age=2]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:lentil[age=3]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:lentil[age=4]",
+            "Z": "tfc:farmland/loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "Y"
+            ],
+            [
+              "Z"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "Y": "tfg:lentil[age=5]",
+            "Z": "tfc:farmland/loam"
+          }
+        }
+      ],
+      "text": "$(thing)Дикая чечевица$() растёт при температуре от -18 до 2 °C и осадках 250—425 мм.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:the_world/wild_fruits",
+        "tfg:the_world/flora",
+        "tfg:agriculture/growing_crops",
+        "tfg:agriculture/greenhouse",
+        "tfg:agriculture/beekeeping",
+        "tfg:cooking/food_and_water",
+        "tfg:beneath/beneath_crops",
+        "tfg:the_moon/moon_crops",
+        "tfg:mars/mars_crops"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 5,
+  "extra_recipe_mappings": {
+    "tfc:seeds/barley": 12,
+    "tfc:food/barley": 12,
+    "tfc:seeds/oat": 14,
+    "tfc:food/oat": 14,
+    "tfc:seeds/rye": 16,
+    "tfc:food/rye": 16,
+    "tfc:seeds/maize": 18,
+    "tfc:food/maize": 18,
+    "tfc:seeds/wheat": 20,
+    "tfc:food/wheat": 20,
+    "tfc:seeds/rice": 22,
+    "tfc:food/rice": 22,
+    "tfc:seeds/beet": 24,
+    "tfc:food/beet": 24,
+    "tfc:seeds/cabbage": 26,
+    "tfc:food/cabbage": 26,
+    "tfc:seeds/carrot": 28,
+    "tfc:food/carrot": 28,
+    "tfc:seeds/garlic": 30,
+    "tfc:food/garlic": 30,
+    "tfc:seeds/green_bean": 32,
+    "tfc:food/green_bean": 32,
+    "tfc:seeds/potato": 34,
+    "tfc:food/potato": 34,
+    "tfc:seeds/pumpkin": 36,
+    "tfc:seeds/melon": 38,
+    "tfc:seeds/red_bell_pepper": 40,
+    "tfc:seeds/yellow_bell_pepper": 42,
+    "tfc:seeds/onion": 44,
+    "tfc:food/onion": 44,
+    "tfc:seeds/soybean": 46,
+    "tfc:food/soybean": 46,
+    "tfc:seeds/squash": 48,
+    "tfc:food/squash": 48,
+    "tfc:seeds/sugarcane": 50,
+    "tfc:food/sugarcane": 50,
+    "tfc:seeds/tomato": 52,
+    "tfc:food/tomato": 52,
+    "tfc:seeds/jute": 54,
+    "tfc:jute": 54,
+    "tfc:seeds/papyrus": 56,
+    "tfc:papyrus": 56,
+    "tfg:sunflower_seeds": 58,
+    "tfg:sunflower_product": 58,
+    "tfg:rapeseed_seeds": 60,
+    "tfg:rapeseed_product": 60,
+    "tfg:flax_seeds": 62,
+    "tfg:flax_product": 62,
+    "tfg:cucumber_seeds": 64,
+    "tfg:cucumber_product": 64,
+    "tfg:radish_seeds": 66,
+    "tfg:radish_product": 66,
+    "tfg:lentil_seeds": 68,
+    "tfg:lentil_product": 68
+  }
+}

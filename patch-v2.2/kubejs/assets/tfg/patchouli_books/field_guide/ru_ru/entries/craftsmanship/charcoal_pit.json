@@ -1,0 +1,275 @@
+{
+  "name": "Изготовление угля",
+  "category": "tfg:craftsmanship",
+  "icon": "minecraft:charcoal",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "charcoal_pit",
+      "text": "$(thing)Угольная яма$() - это способ получения $(thing)Древесного угля$(). Угольные ямы делаются из $(thing)поленниц$(). Чтобы разместить поленницу, используй $(item)$(k:key.use)$() и $(item)$(k:key.sneak)$(), держа в руках $(thing)Бревно$(). Дополнительные брёвна можно вставить внутрь, нажимая $(item)$(k:key.use)$() непосредственно, держа бревно, или нажимая $(item)$(k:key.use)$() с чем-то другим, чтобы открыть интерфейс."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "tfc:log_pile"
+        }
+      },
+      "name": "Поленница",
+      "text": "Поленницы нуждаются в твёрдом блоке под ними для размещения. Они очень легковоспламеняемы.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Угольная яма образуется, когда стопки брёвен обложены со всех сторон твёрдыми негорючими блоками. Количество полученного древесного угля пропорционально количеству брёвен внутри стопок. Чтобы запустить обжиг, подожгите одну из стопок брёвен, а затем накройте конструкцию. Если всё сделано верно, от неё поднимутся частицы $(thing)дыма$().$(br)Угольную яму можно сделать любого размера и формы — главное, чтобы она была полностью изолирована.$(br)По умолчанию обжиг занимает $(t:15 минут)18 внутриигровых часов.$()"
+    },
+    {
+      "type": "patchouli:image",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/charcoal_pit/charcoal_pit_0.png",
+        "tfg:textures/gui/field_guide/charcoal_pit/charcoal_pit_1.png",
+        "tfg:textures/gui/field_guide/charcoal_pit/charcoal_pit_2.png",
+        "tfg:textures/gui/field_guide/charcoal_pit/charcoal_pit_3.png",
+        "tfg:textures/gui/field_guide/charcoal_pit/charcoal_pit_4.png"
+      ],
+      "text": "$(bold)Слайд-шоу с обучением:$() Создание земляной печи размером 2x2x2.",
+      "border": true
+    },
+    {
+      "type": "tfg:multimultiblock",
+      "text": "Строительство одной из возможных угольных ям, по слоям.",
+      "multiblocks": [
+        {
+          "pattern": [
+            [
+              "     ",
+              "     ",
+              "     ",
+              "     ",
+              "     "
+            ],
+            [
+              "XXXXX",
+              "X   X",
+              "X   X",
+              "X   X",
+              "XXXXX"
+            ],
+            [
+              "XXXXX",
+              "XXXXX",
+              "XX0XX",
+              "XXXXX",
+              "XXXXX"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:dirt/sandy_loam",
+            "X": "tfc:dirt/sandy_loam"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "     ",
+              "     ",
+              "     ",
+              "     ",
+              "     "
+            ],
+            [
+              "XXXXX",
+              "XYYYX",
+              "XYYYX",
+              "XYYYX",
+              "XXXXX"
+            ],
+            [
+              "XXXXX",
+              "XXXXX",
+              "XX0XX",
+              "XXXXX",
+              "XXXXX"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:dirt/sandy_loam",
+            "X": "tfc:dirt/sandy_loam",
+            "Y": "tfc:log_pile"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "     ",
+              "     ",
+              "     ",
+              "     ",
+              "     "
+            ],
+            [
+              "XXXXX",
+              "XYYYX",
+              "XYYYX",
+              "XYYYX",
+              "XXXXX"
+            ],
+            [
+              "XXXXX",
+              "XXXXX",
+              "XX0XX",
+              "XXXXX",
+              "XXXXX"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:dirt/sandy_loam",
+            "X": "tfc:dirt/sandy_loam",
+            "Y": "tfc:burning_log_pile"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "     ",
+              " XXX ",
+              " XXX ",
+              " XXX ",
+              "     "
+            ],
+            [
+              "XXXXX",
+              "XYYYX",
+              "XYYYX",
+              "XYYYX",
+              "XXXXX"
+            ],
+            [
+              "XXXXX",
+              "XXXXX",
+              "XX0XX",
+              "XXXXX",
+              "XXXXX"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:dirt/sandy_loam",
+            "X": "tfc:dirt/sandy_loam",
+            "Y": "tfc:log_pile"
+          }
+        },
+        {
+          "pattern": [
+            [
+              "     ",
+              "     ",
+              "     ",
+              "     ",
+              "     "
+            ],
+            [
+              "XXXXX",
+              "XYYYX",
+              "XYYYX",
+              "XYYYX",
+              "XXXXX"
+            ],
+            [
+              "XXXXX",
+              "XXXXX",
+              "XX0XX",
+              "XXXXX",
+              "XXXXX"
+            ]
+          ],
+          "mapping": {
+            "0": "tfc:dirt/sandy_loam",
+            "X": "tfc:dirt/sandy_loam",
+            "Y": "tfc:charcoal_pile[layers=7]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "charcoal_pile",
+      "text": "После того как угольная яма прогорит и перестанет дымить, у вас останутся $(thing)Кучи угля$(). В куче угля может быть до 8 слоёв $(thing)Угля$(). Выкопайте её лопатой, чтобы получить предметы угля. Кучи угля можно дополнять или размещать с помощью $(item)$(k:key.use)$().$(br2)$(bold)СОВЕТ:$() Не накрывайте угольную яму плотным материалом, вроде булыжника, иначе она может обрушиться и уничтожить ваш угль, когда процесс завершится."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "coke_oven",
+      "title": "Коксовая печь",
+      "text": "$(thing)Коксовая печь$() — это мультиблок, который может автоматически преобразовывать брёвена в уголь и уголь в $(item)Кокс$(), производя при этом $(thing)Креозот$(). Эта структура становится доступной после того, как вы впервые произведёте $(l:craftsmanship/bloomery)Кованое железо$(), и рекомендуется сделать её как можно скорее. Коксовые печи — это огромный улучшение качества жизни для производства угля, и как кокс, так и креозот понадобятся для дальнейшего прогресса."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "AAA",
+            "A2A",
+            "AAA"
+          ],
+          [
+            "A1A",
+            "C A",
+            "AAA"
+          ],
+          [
+            "AAA",
+            "A0A",
+            "AAA"
+          ]
+        ],
+        "mapping": {
+          "0": "gtceu:coke_oven_hatch[facing=down]",
+          "1": "gtceu:coke_oven_hatch[facing=west]",
+          "2": "gtceu:coke_oven_hatch[facing=up]",
+          "A": "gtceu:coke_oven_bricks",
+          "C": "gtceu:coke_oven[facing=north]"
+        }
+      },
+      "text": "Пример коксовой печи с тремя люками, подходящими для ввода предметов, вывода предметов и вывода жидкости.",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Советы по коксовой печи",
+      "text": "$(li)В коксовых печах может быть до 4 люков, заменяющих любой кирпич коксовой печи.$(li)Коксовые печи должны быть полыми внутри.$(li)Входной люк коксовой печи может забиваться выходными предметами. Чтобы этого избежать, установите трубу для предметов, направленную на входной люк, и установите направление потока. Вы можете использовать воронку или желоб для загрузки в эту трубу.$(li)Ящики могут хранить брёвна, в отличие от сундуков.$(li)Сохраняйте весь креозот!"
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/pit_kiln",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/charcoal_forge",
+        "tfg:craftsmanship/crucible",
+        "tfg:craftsmanship/blast_furnace",
+        "tfg:craftsmanship/bloomery",
+        "tfg:craftsmanship/anvils",
+        "tfg:craftsmanship/glassworking"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 5,
+  "extra_recipe_mappings": {
+    "gtceu:coke_oven_hatch": 7,
+    "gtceu:coke_oven_bricks": 7,
+    "gtceu:coke_oven": 7
+  }
+}

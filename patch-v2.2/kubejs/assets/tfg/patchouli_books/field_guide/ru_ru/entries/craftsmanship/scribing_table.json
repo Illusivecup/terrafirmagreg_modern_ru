@@ -1,0 +1,55 @@
+{
+  "name": "Стол для гравировки",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:wood/scribing_table/oak",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Стол для нанесения надписей$() используется для переименования предметов. Для переименования предметов требуется $(thing)чёрный краситель$(), который можно подать в виде предмета красителя или в виде ведра с жидким красителем."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "#tfc:scribing_tables"
+        }
+      },
+      "name": "",
+      "text": "Стол для гравировки.",
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/gui/scribing.png"
+      ],
+      "text": "На экране письма текст вводится сверху, слева находится вход, в центре — краситель. Результат извлекается из правого слота.",
+      "border": false
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/anvils",
+        "tfg:craftsmanship/barrels",
+        "tfg:craftsmanship/quern",
+        "tfg:craftsmanship/sewing_table",
+        "tfg:agriculture/papermaking"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 18,
+  "extra_recipe_mappings": {
+    "tag:tfc:scribing_tables": 0
+  }
+}

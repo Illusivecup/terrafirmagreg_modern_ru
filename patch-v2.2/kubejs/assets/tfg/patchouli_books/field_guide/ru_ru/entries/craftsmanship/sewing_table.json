@@ -1,0 +1,74 @@
+{
+  "name": "Стол для шитья",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:wood/sewing_table/oak",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Стол для шитья$() используется для производства узоров для знамён, шаблонов для кузнечного дела и других тканых предметов. Требуются $(t:#tfc:sewing_light_cloth)$(6)лёгкая ткань$(), $(t:#tfc:sewing_dark_cloth)$(6)тёмная ткань$(), $(t:#forge:string)$(6)нитка$() и $(item)игла$().$(br)Иглу для шитья можно сделать из кости. Неуничтожимую иглу можно сделать позже из нержавеющей стали."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Инвентарь швейного стола похож на инвентарь верстака. Если вы допустили ошибку, можно просто выйти из инвентаря, и ваши предметы вернутся к вам. В графическом интерфейсе доступна книга рецептов. При выборе книги открывается меню, где можно выбрать рецепт. Это размещает небольшие индикаторы выполняемых шагов на рабочей поверхности."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Экран шитья",
+      "anchor": "sewing_screen",
+      "width": 1024,
+      "texture_width": 1024,
+      "height": 1024,
+      "texture_height": 1024,
+      "images": [
+        "tfg:textures/gui/field_guide/sewing_preview.png",
+        "tfg:textures/gui/field_guide/sewing_table.png"
+      ],
+      "text": "Предпросмотр рецепта и заполненный рецепт.",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Слоты слева предназначены для нитки и иглы. Два нижних слота могут содержать любую комбинацию темной и светлой ткани. В правом слоте будет отображаться результат, когда он будет готов к извлечению. Извлечение результата из слота завершает крафт и использует предметы."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Каждый текстильный предмет позволяет разместить 8 квадратов этого материала на швейной поверхности. Аналогично, каждый предмет с нитью позволяет разместить 16 стежков. Когда вы выбрали рецепт, просто используйте кнопки в правом верхнем углу экрана, чтобы размещать квадраты и сшивать их вместе, как показано в руководстве. Нужно удалить стежки? Используйте красную кнопку 'X', чтобы убрать квадраты."
+    },
+    {
+      "type": "patchouli:crafting",
+      "anchor": "banner_loom",
+      "title": "Ткацкий станок для гербовых знамён",
+      "recipe": "tfc:crafting/vanilla/loom",
+      "text": "Ткацкий станок для создания вещей с узорами на баннерах можно создать для работы с узорами на баннерах."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tag:minecraft:trim_templates",
+      "anchor": "armor_trim",
+      "title": "Кайма брони",
+      "text": "Узоры для брони можно наносить на любую $(t:#minecraft:trimmable_armor)$(6)Триммируемую Броню$() с помощью $(item)Кузнечного Шаблона$(). Сочетайте его с $(t:#minecraft:trim_materials)$(6)Тримовым Материалом$() (например, $(thing)Изысканными Камнями$() или $(thing)Ювелирным Металлом$()) и броней на $(item)Кузнечном Верстаке$()."
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/anvils",
+        "tfg:craftsmanship/barrels",
+        "tfg:craftsmanship/quern",
+        "tfg:craftsmanship/scribing_table",
+        "tfg:agriculture/weaving"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 19,
+  "extra_recipe_mappings": {
+    "tag:tfc:sewing_tables": 0,
+    "tag:tfc:sewing_needles": 0,
+    "minecraft:loom": 5,
+    "tag:minecraft:trim_templates": 6,
+    "tag:minecraft:trimmable_armor": 6,
+    "tag:minecraft:trim_materials": 6
+  }
+}

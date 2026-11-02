@@ -1,0 +1,228 @@
+{
+	"name": "Биомы Луны",
+	"category": "tfg:the_moon",
+	"icon": "tfg:textures/block/lunar_roots.png",
+	"read_by_default": true,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "$(thing)The Moon$() — довольно скалистое место куда бы вы ни пошли, но у него всё ещё есть несколько разных биомов для исследования, которые могут вас заинтересовать.$(br2)Ищете что-то конкретное? Некоторые биомы могут появляться только рядом друг с другом, с $(l:the_moon/moon_biomes#sands)Lunar Sands$() и $(l:the_moon/moon_biomes#plains)Lunar Plains$() в качестве своего рода \"нейтральной территории\" между ними."
+		},
+		{
+			"type": "patchouli:text",
+			"anchor": "index",
+			"title": "Contents",
+			"text": "$(li)$(bold)Биомы$()$(li2)$(l:the_moon/moon_biomes#plains)Лунные равнины$()$(li2)$(l:the_moon/moon_biomes#sands)Лунные пески$()$(li2)$(l:the_moon/moon_biomes#asurine)Поля Асурина$()$(li2)$(l:the_moon/moon_biomes#certus)Поля Цертуса$()$(li2)$(l:the_moon/moon_biomes#forest)Хорусовый лес$()$(li2)$(l:the_moon/moon_biomes#thicket)Хорусовый кустарник$()$(li2)$(l:the_moon/moon_biomes#maria)Лунные моря$()$(li2)$(l:the_moon/moon_biomes#reef)Лунный риф$()$(li2)$(l:the_moon/moon_biomes#scrubland)Кустарник Светоцвета$()$(li2)$(l:the_moon/moon_biomes#stargazers)Звёздолюбы Светоцвета$()$(li)$(bold)$(l:the_moon/moon_biomes#harvester)Сборщик лунной пыли$()$(li2)$(l:the_moon/moon_biomes#regolith)Список реголита$()"
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Лунные равнины",
+			"anchor": "plains",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/plains.png"
+			],
+			"text": "$(thing)Лунные равнины$() не особо интересны, но это хорошее нейтральное место для базы."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Лунные пески",
+			"anchor": "sands",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/sands.png"
+			],
+			"text": "$(thing)Лунные пески$() — альтернативная версия Лунных равнин с меньшим количеством растительности, но с большим количеством песка."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Азуриновые поля",
+			"anchor": "asurine",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/asurine.png"
+			],
+			"text": "$(thing)Азуриновые поля$() часто содержат залежи $(item)Азурина$(). Не могут появляться рядом с биомами $(l:the_moon/moon_biomes#forest)Хоруса$()."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Цертусовые поля",
+			"anchor": "certus",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/certus.png"
+			],
+			"text": "$(thing)Цертусовые поля$() — крупные залежи $(item)Азурина$(), которые также содержат большое количество $(item)Цертусового кварца$()."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Лес Хоруса",
+			"anchor": "forest",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/forest.png"
+			],
+			"text": "$(thing)Лес Хоруса$() — единственное место, где можно найти $(l:the_moon/moon_crops)Плоды Хоруса$(). Не может появляться рядом с биомами $(l:the_moon/moon_biomes#asurine)Азурина$()."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Заросли Хоруса",
+			"anchor": "thicket",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/thicket.png"
+			],
+			"text": "$(thing)Заросли Хоруса$() — густонаселённая область с $(l:the_moon/moon_crops)Плодами Хоруса$(). Это опасный биом с враждебными $(l:the_moon/moon_fauna#endermen)эндерменами$()."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Лунные моря",
+			"anchor": "maria",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/maria.png"
+			],
+			"text": "$(thing)Лунные моря$() содержат немного $(item)мертвых кораллов$() и песка. Не могут появляться рядом с биомами $(l:the_moon/moon_biomes#lightbloom)Светоцвета$()."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Лунный риф",
+			"anchor": "reef",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/reef.png"
+			],
+			"text": "$(thing)Лунный риф$() имеет много крупных залежей мёртвых кораллов. У Луны когда-то были океаны в далёком прошлом?"
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Кустарниковые Светоцвета",
+			"anchor": "scrubland",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/scrubland.png"
+			],
+			"text": "$(thing)Кустарниковые Светоцвета$() имеют разреженные заросли $(item)Светоцветов$(). Не могут появляться рядом с биомами $(l:the_moon/moon_biomes#maria)Коралла$()."
+		},
+		{
+			"type": "patchouli:image",
+			"border": true,
+			"title": "Светоцветы Звёздные",
+			"anchor": "stargazers",
+			"images": [
+				"tfg:textures/gui/field_guide/moon/stargazers.png"
+			],
+			"text": "Здесь растёт много $(item)Светоцветов$(). $(bold)Совет:$() Этот биом выглядит красиво ночью с шейдерами!"
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "gtceu:moon_dust_harvester",
+			"anchor": "harvester",
+			"text": "$(item)Сборщик лунной пыли$() — это опциональный мультиблок, который собирает $(thing)лунный реголит$(). Этот реголит затем можно обработать в $(thing)бесконечные источники определённых руд$()!$(br)Минус? Существует четыре типа реголита, и каждый можно собирать только в определённом биоме, поэтому, если вы хотите собрать их все, придётся построить какую-то $(l:logistics/trains)инфраструктуру$()."
+		},
+		{
+			"type": "patchouli:multiblock",
+			"title": " ",
+			"text": "Улучшение $(item)катушек$() снизит энергопотребление. $(l:logistics/trains#cargo)Аккумуляторы$() можно использовать для транспортировки энергии.",
+			"multiblock": {
+				"pattern": [
+					[
+						" AAA ",
+						" BFB ",
+						" BFB ",
+						" BFB ",
+						" BFB ",
+						" BFB ",
+						" AAA "
+					],
+					[
+						"AA1AA",
+						"BB BB",
+						"A   A",
+						"A   A",
+						"A   A",
+						"BB BB",
+						"AABAA"
+					],
+					[
+						"A234A",
+						"B   B",
+						"D   D",
+						"D   D",
+						"D   D",
+						"B   B",
+						"ABXBA"
+					],
+					[
+						"AAAAA",
+						"BBBBB",
+						"ADDDA",
+						"ADDDA",
+						"ADDDA",
+						"BBBBB",
+						"AAAAA"
+					],
+					[
+						"A   A",
+						"     ",
+						"     ",
+						"  0  ",
+						"     ",
+						"     ",
+						"A   A"
+					]
+				],
+				"mapping": {
+					"0": "minecraft:air",
+					"X": "gtceu:moon_dust_harvester[facing=east]",
+					"A": "tfg:casings/machine_casing_iron_desh",
+					"B": "gtceu:nonconducting_casing",
+					"D": "tfg:casings/machine_casing_vacuum_engine_intake",
+					"F": "gtceu:cupronickel_coil_block",
+					"1": "gtceu:maintenance_hatch[facing=west]",
+					"2": "gtceu:hv_energy_input_hatch[facing=west]",
+					"3": "gtceu:ulv_input_bus[facing=west]",
+					"4": "gtceu:ulv_output_bus[facing=west]"
+				}
+			},
+			"enable_visualize": false
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tfg:certus_regolith_dust",
+			"anchor": "regolith",
+			"text": "$(item)Реголитовая пыль Цертуса$() можно добывать только в биоме $(l:the_moon/moon_biomes#certus)Цертусовые поля$().$(br2)Её можно переработать в $(item)Цертусовый кварц$() и $(item)Цинк$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tfg:cassiterite_regolith_dust",
+			"text": "$(item)Реголитовая пыль Касситерита$() требуется для биома $(l:the_moon/moon_biomes#stargazers)Светоцветы Звёздные$().$(br2)Это источник $(item)Олова$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tfg:goethe_regolith_dust",
+			"text": "$(item)Реголитовая пыль Гёте$() добывается в биоме $(l:the_moon/moon_biomes#thicket)Заросли Хоруса$().$(br2)Её можно переработать в $(item)Медь$() и $(item)Железо$()."
+		},
+		{
+			"type": "patchouli:spotlight",
+			"item": "tfg:bright_regolith_dust",
+			"text": "$(item)Реголитовая пыль Светлая$() из биома $(l:the_moon/moon_biomes#reef)Лунный риф$().$(br2)Это источник $(item)Алмазов$() и $(item)Золота$()."
+		},
+		{
+			"type": "patchouli:text",
+			"text": "В процессе обработки все эти $(thing)Пылевые реголиты$() превращаются в $(item)Пыльные руды$(). В настоящее время их можно центрифугировать только для извлечения ресурсов — дальнейшая переработка потребует некоторой поздней стадии обогащения руд на $(l:venus)Венере$().$(br2)Убедитесь, что используете $(item)Большой химический реактор$() для получения идеального разгона для этих рецептов! Если вы хотите настроить более пассивную автоматизацию для $(thing)компонентов AE2$() или $(l:logistics/railgun)боеприпасов для рельсотрона$(), эти сборщики реголита обязательны!"
+		},
+		{
+			"type": "patchouli:relations",
+			"title": "Читать далее",
+			"anchor": "relations",
+			"entries": [
+				"tfg:the_moon/the_moon",
+				"tfg:the_moon/moon_fauna",
+				"tfg:the_moon/moon_crops",
+				"tfg:logistics/railgun",
+				"tfg:logistics/trains"
+			]
+		}
+	]
+}

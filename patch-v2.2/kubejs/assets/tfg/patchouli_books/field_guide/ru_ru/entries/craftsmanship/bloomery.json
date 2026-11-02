@@ -1,0 +1,273 @@
+{
+  "name": "Bloomery",
+  "category": "tfg:craftsmanship",
+  "icon": "tfc:bloomery",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Bloomery$() — это устройство, используемое для плавки $(thing)Iron Ore$() в $(thing)Iron Blooms$(), которые можно обработать в $(thing)Wrought Iron$(). Некоторые распространённые железные руды — $(item)Hematite$(), $(item)Limonite$() и $(item)Magnetite$(). Эти руды плавятся в $(thing)Cast Iron$(), а не в $(thing)Wrought Iron$(). Все железосодержащие предметы плавятся в чугун. Чтобы превратить их в пригодное железо, нужна сыродутная печь. Любой железный предмет можно использовать в сыродутной печи, включая железные инструменты и чугунные слитки!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tfc:crafting/bloomery",
+      "text": "Сыродутная печь делается из 8 $(thing)Bronze Double Plates$(), что в общей сложности составляет 32 бронзовых слитка.$(br)Сыродутной печи также потребуется $(t:#tfc:bloomery_insulation)$(6)22 каменных блока$(), such as stone bricks."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            " A ",
+            "A A",
+            " A "
+          ],
+          [
+            " A ",
+            "A A",
+            " A "
+          ],
+          [
+            " A ",
+            "A A",
+            " A "
+          ],
+          [
+            "AA ",
+            "B0A",
+            "AA "
+          ],
+          [
+            " A ",
+            "AAA",
+            " A "
+          ]
+        ],
+        "mapping": {
+          "B": "tfc:bloomery[facing=north]",
+          "A": "tfc:rock/smooth/dacite"
+        }
+      },
+      "name": "Структура сыродутного горна",
+      "text": "Полноразмерный сыродутный горн. Блок сыродутного горна будет открываться и закрываться с помощью $(item)$(k:key.use)$().",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "В сыродутной печи может содержаться максимум 48 $(thing)Inputs$(), по 16 предметов на слой дымохода; 8 угля и 8 предметов, содержащих железо.$(br2)Чтобы добавить предметы в сыродутную печь, залезьте на верх и бросьте предметы внутрь с помощью $(item)$(k:key.drop)$(). Должна образоваться башня из серой руды.$(br2)В качестве топлива для сыродутной печи можно использовать только $(item)Charcoal$()."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "tfc:textures/gui/book/tutorial/bloomery_hole.png"
+      ],
+      "text": "Горну требуется $(thing)1 Древесный уголь$(), и $(thing)144 мБ (mB) Железной руды$() чтобы создать одну $(thing)Крицу$().",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Большинство железной пыли содержит 129mB железа, поэтому, если вы не используете чистые чугунные слитки, мы рекомендуем $(item)25 metal ore dusts$() и $(item)22 charcoal$() для полной сыродутной печи. Это приведёт к потере 57mB железа.$(br)После заполнения сыродутной печи комбинацией $(thing)Fuel$() и $(thing)Ore$(), зажгите двери сыродутной печи и подождите $(t:12.5 min)$(6)15 игровых часов$(), пока сыродутная печь плавит. Когда сыродутная печь выключится, она оставит после себя блок $(thing)Bloom$(). Он содержит горячие $(thing)Raw Iron Blooms$(), которые можно получить, многократно добывая $(thing)Bloom$() киркой."
+    },
+    {
+      "type": "tfg:table",
+      "anchor": "ratio_table",
+      "strings": [
+        {
+          "text": "Тип железа",
+          "bold": true
+        },
+        {
+          "text": "Iron",
+          "bold": true
+        },
+        {
+          "text": "Fuel",
+          "bold": true
+        },
+        {
+          "text": "Slots",
+          "bold": true
+        },
+        {
+          "text": "Blooms",
+          "bold": true
+        },
+        {
+          "text": "Waste",
+          "bold": true
+        },
+        {
+          "text": "Чугунные слитки"
+        },
+        {
+          "text": "24"
+        },
+        {
+          "text": "24"
+        },
+        {
+          "text": "48/48"
+        },
+        {
+          "text": "24"
+        },
+        {
+          "text": "0мБ"
+        },
+        {
+          "text": "129mB пыли руды"
+        },
+        {
+          "text": "25"
+        },
+        {
+          "text": "22"
+        },
+        {
+          "text": "47/48"
+        },
+        {
+          "text": "22"
+        },
+        {
+          "text": "57mB"
+        },
+        {
+          "text": "129mB пыли руды"
+        },
+        {
+          "text": "19"
+        },
+        {
+          "text": "17"
+        },
+        {
+          "text": "36/48"
+        },
+        {
+          "text": "17"
+        },
+        {
+          "text": "3мБ"
+        }
+      ],
+      "text": "Помните, что небольшое количество железного лома не стоит вашего времени и беспокойства!",
+      "title": "Соотношения для сыродутного горна",
+      "legend": [],
+      "columns": 5,
+      "first_column_width": 70,
+      "column_width": 32,
+      "row_height": 20,
+      "left_buffer": 2,
+      "top_buffer": 12,
+      "draw_background": false
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "tfc:bloom[layers=8]"
+        }
+      },
+      "name": "Блок крицы",
+      "text": "Здоровенная $(thing)Крица$().",
+      "enable_visualize": false
+    },
+    {
+      "type": "tfg:anvil_recipe",
+      "recipe": "tfc:anvil/refined_iron_bloom",
+      "text": "$(thing)Raw Iron Bloom$() необходимо обработать на $(l:craftsmanship/anvils)Anvil$() для получения $(thing)Refined Iron Bloom$(). А затем этот продукт необходимо снова обработать в $(thing)Wrought Iron Ingots$().$(br)Рекомендуется использовать $(l:craftsmanship/anvils#helve_hammer)Helve Hammers$() для автоматизации этапов обработки."
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "tips",
+      "text": "$(li)Если сыродутная печь содержит больше предметов, чем она может обработать, она попытается выплюнуть их спереди.$(li)Чтобы получить свои предметы из сыродутной печи, которая не зажжена, сломайте блок сыродутной печи.$(li)Blooms расплавятся только в чугун, а не в кованое железо. Их необходимо обработать!",
+      "title": "Советы по сыродутному горну"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "anchor": "steam_bloomery",
+      "title": "Паровая сыродутная печь",
+      "item": "tfg:steam_bloomery",
+      "text": "Создание $(item)Black Steel$() открывает доступ к $(thing)Steam Bloomery$(). Эта конструкция способна автоматически производить крицы, кроме того, она быстрее и эффективнее традиционной сыродутной печи за счёт использования высоконапорного пара."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            " A ",
+            "A A",
+            " A "
+          ],
+          [
+            " A ",
+            "O A",
+            " A "
+          ],
+          [
+            " A ",
+            "I A",
+            " A "
+          ],
+          [
+            "AA ",
+            "B0A",
+            "AA "
+          ],
+          [
+            " F ",
+            "SAF",
+            " F "
+          ]
+        ],
+        "mapping": {
+          "B": "tfg:steam_bloomery[facing=north]",
+          "A": "tfc:rock/smooth/dacite",
+          "F": "gtceu:bronze_firebox_casing",
+          "S": "gtceu:steam_input_hatch[facing=north]",
+          "I": "gtceu:steam_input_bus[facing=north]",
+          "O": "gtceu:steam_output_bus[facing=north]"
+        }
+      },
+      "name": "Structure",
+      "text": "Паровая сыродутная печь требует автобазы для ввода и вывода предметов, паровой люк для ввода и три бронзовых кожуха топки.",
+      "enable_visualize": true
+    },
+    {
+      "type": "patchouli:relations",
+      "title": "Читать далее",
+      "anchor": "relations",
+      "entries": [
+        "tfg:craftsmanship/pottery",
+        "tfg:craftsmanship/metallurgy",
+        "tfg:craftsmanship/charcoal_forge",
+        "tfg:craftsmanship/crucible",
+        "tfg:craftsmanship/charcoal_pit",
+        "tfg:craftsmanship/blast_furnace",
+        "tfg:craftsmanship/anvils",
+        "tfg:game_mechanics/heating"
+      ]
+    }
+  ],
+  "read_by_default": true,
+  "sortnum": 9,
+  "extra_recipe_mappings": {
+    "tfc:bloom": 10,
+    "tfc:raw_iron_bloom": 10,
+    "tfc:refined_iron_bloom": 10,
+    "tfc:bloomery": 1,
+    "tfg:steam_bloomery": 12
+  }
+}
