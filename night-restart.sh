@@ -29,3 +29,4 @@ sleep 30
 
 systemctl restart tfg-server
 echo "Ночной рестарт выполнен ($(date '+%F %T'))"
+df -h / | awk 'NR==2 {print "Диск: занято "$3" из "$2" ("$5") — запас на бэкапы смотри: df -h /opt/tfg-backups"}'

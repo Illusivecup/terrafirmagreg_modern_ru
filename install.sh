@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ###############################################################################
 # TerraFirmaGreg Modern 0.13.17 — автоустановка сервера на чистый Ubuntu VPS
-# Подходит для любого KVM-VPS: Beget, Timeweb Cloud, Selectel, Aeza, Yandex Cloud и др.
+# Подходит для любого KVM-VPS: Timeweb Cloud, Aeza, Selectel, Yandex Cloud и др.
 # ОС: Ubuntu 22.04/24.04 или Debian 12.
 #
 # Запуск от root (находясь в каталоге с этим скриптом):
@@ -164,6 +164,7 @@ echo " Перезапустить:         systemctl restart tfg-server"
 echo " Сменить память:        правь Environment=RAM=... в /etc/systemd/system/tfg-server.service, затем systemctl daemon-reload && systemctl restart tfg-server"
 echo " Бэкап вручную:         sudo -u ${RUN_USER} ${INSTALL_DIR}/backup.sh"
 echo " Восстановить мир:      bash ${INSTALL_DIR}/restore-world.sh latest   (список: без аргументов)"
+echo " Мир от друга (zip):    залей архив в /opt/tfg-backups/ и выполни: bash ${INSTALL_DIR}/restore-world.sh /opt/tfg-backups/ИМЯ.zip"
 if [ "${NIGHT_HOUR}" = "off" ]; then
     echo " Ночной рестарт:        отключён (NIGHT_HOUR=off). Крон: /etc/cron.d/tfg-night-restart"
 else
