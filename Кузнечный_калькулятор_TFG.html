@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кузнечный калькулятор — наковальня TFC / TerraFirmaGreg Modern</title>
+<style>
+  :root{
+    --bg:#141417; --panel:#1e1e24; --panel2:#26262e; --line:#3a3a46;
+    --tx:#e8e4da; --dim:#9a97a8; --acc:#e08a2e; --ok:#46c46a; --bad:#e04545;
+    --green:#3ddc63; --red:#ff3b30;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Roboto,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:1000px;margin:0 auto;padding:18px 16px 60px}
+  header{background:linear-gradient(180deg,#2a1c10,#1a130c);border-bottom:2px solid var(--acc);padding:20px 16px;text-align:center}
+  header h1{margin:0;font-size:26px;color:#ffd28a;letter-spacing:.5px}
+  header p{margin:6px 0 0;color:var(--dim);font-size:14px}
+  h2{color:#ffd28a;font-size:20px;margin:26px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+  .how{display:flex;gap:10px;flex-wrap:wrap}
+  .how .card{flex:1 1 260px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px}
+  .dot{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+  /* Шкала */
+  .barwrap{position:relative;height:86px;background:#101014;border:1px solid var(--line);border-radius:8px;margin:8px 0 4px;overflow:hidden}
+  .barwave{position:absolute;left:0;right:0;bottom:0;height:44px;
+    background:repeating-linear-gradient(90deg,#2b2b33 0 6px,#232329 6px 12px);}
+  .tick{position:absolute;top:40px;width:1px;height:34px;background:#4a4a58}
+  .ticklabel{position:absolute;top:8px;transform:translateX(-50%);font-size:11px;color:var(--dim)}
+  .redarrow{position:absolute;top:34px;transform:translateX(-50%);width:0;height:0;
+    border-left:8px solid transparent;border-right:8px solid transparent;border-top:12px solid var(--red);
+    filter:drop-shadow(0 0 4px rgba(255,59,48,.8));transition:left .15s}
+  .greenmark{position:absolute;top:52px;transform:translateX(-50%);width:14px;height:14px;background:var(--green);
+    border:2px solid #0d5c22;border-radius:3px;box-shadow:0 0 6px rgba(61,220,99,.7);transition:left .15s}
+  .barvalues{display:flex;justify-content:space-between;font-size:13px;color:var(--dim);margin-bottom:10px}
+  .barvalues b{color:var(--tx);font-size:15px}
+  /* Вводы */
+  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:8px 0}
+  .row label{font-size:14px;color:var(--dim);min-width:170px}
+  .row input[type=number]{width:84px;background:#101014;color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:16px}
+  .row input[type=range]{flex:1;min-width:160px;accent-color:var(--acc)}
+  select{background:#101014;color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:14px}
+  button{cursor:pointer;border:none;border-radius:8px;font-size:15px;padding:10px 16px;color:#fff;font-family:inherit}
+  button:active{transform:translateY(1px)}
+  .btn-acc{background:var(--acc);color:#241503;font-weight:600}
+  .btn-dim{background:#3a3a46}
+  .btn-bad{background:#8f2f2f}
+  /* Кнопки ходов */
+  .moves{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:10px;margin-top:6px}
+  @media(max-width:640px){.moves{grid-template-columns:repeat(2,1fr)}}
+  .mv{border-radius:10px;padding:12px 8px;text-align:center;border:2px solid rgba(0,0,0,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+  .mv .nm{font-size:13px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+  .mv .vl{font-size:22px;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+  .mv small{display:block;font-size:11px;opacity:.85;margin-top:2px}
+  /* История */
+  .hist{display:flex;gap:8px;flex-wrap:wrap;align-items:center;min-height:40px;margin-top:10px}
+  .hist .chip{padding:5px 10px;border-radius:7px;font-size:13px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8);border:1px solid rgba(0,0,0,.5)}
+  .hist .tag{font-size:10px;display:block;opacity:.9;font-weight:700}
+  .hist .none{color:var(--dim);font-size:13px}
+  /* Баннер */
+  .banner{display:none;padding:12px 14px;border-radius:8px;font-weight:700;margin:10px 0;font-size:15px}
+  .banner.ok{display:block;background:rgba(70,196,106,.15);border:1px solid var(--ok);color:#9df0b4}
+  .banner.bad{display:block;background:rgba(224,69,69,.15);border:1px solid var(--bad);color:#ffb3b3}
+  .banner.warn{display:block;background:rgba(224,138,46,.15);border:1px solid var(--acc);color:#ffd9a8}
+  /* Решения */
+  .sol{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+  .sol h4{margin:0 0 8px;font-size:14px;color:#ffd28a}
+  .sol .seq{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .sol .seq .chip{padding:4px 9px;border-radius:6px;font-size:12.5px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8)}
+  .sol .seq .arr{color:var(--dim);font-size:12px}
+  .sol .pos{font-size:12.5px;color:var(--dim);margin-top:6px;font-family:Consolas,monospace}
+  /* Таблица значений */
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+  th{background:var(--panel2);color:#ffd28a}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:7px;border:1px solid rgba(0,0,0,.5)}
+  .tips li{margin:6px 0}
+  .muted{color:var(--dim);font-size:13px}
+  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+  .rules .rc{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+  .rules .rc b{display:block;font-size:13px;color:#ffd28a;margin-bottom:5px}
+  footer{color:var(--dim);font-size:12.5px;text-align:center;margin-top:26px}
+</style>
+</head>
+<body>
+<header>
+  <h1>&#128295; Кузнечный калькулятор — наковальня</h1>
+  <p>TerraFirmaCraft 3.2.28 / TerraFirmaGreg Modern 0.13.17 (Minecraft 1.20.1) &middot; работает офлайн</p>
+</header>
+<div class="wrap">
+
+  <h2>Как читать наковальню</h2>
+  <div class="how">
+    <div class="card"><span class="dot" style="background:var(--green)"></span><b>Зелёный квадрат</b> — твой текущий прогресс (сейчас ты здесь). Каждый удар сдвигает его.</div>
+    <div class="card"><span class="dot" style="background:var(--red)"></span><b>Красный треугольник</b> — цель. Задача: поставить зелёный <b>ровно под красный</b> последним ударом.</div>
+    <div class="card"><span class="dot" style="background:var(--acc)"></span><b>Правила (план)</b> — иконки сверху интерфейса: какое движение должно быть последним, предпоследним и т.д. Загораются зелёным, когда выполнены. Выбери план кнопкой со свитком!</div>
+  </div>
+  <div class="panel" style="margin-top:12px">
+    <b>Важно:</b> если зелёный выйдет за края шкалы (меньше 0 или больше 145) — слиток испорчен и исчезнет. Значения кнопок всегда одинаковые: &#8722;3, &#8722;6, &#8722;9, &#8722;15 и +2, +7, +13, +16.
+  </div>
+
+  <h2>Симулятор + калькулятор</h2>
+  <div class="panel">
+    <div class="barwrap" id="barwrap">
+      <div class="barwave"></div>
+      <div id="ticks"></div>
+      <div class="redarrow" id="redarrow"></div>
+      <div class="greenmark" id="greenmark"></div>
+    </div>
+    <div class="barvalues">
+      <span>Красная цель: <b id="v-target">70</b></span>
+      <span>Зелёный прогресс: <b id="v-work">0</b></span>
+      <span>Осталось набрать: <b id="v-diff">70</b></span>
+    </div>
+
+    <div class="row">
+      <label>Цель (красная стрелка)</label>
+      <input type="number" id="in-target" min="0" max="145" value="70">
+      <input type="range" id="rg-target" min="0" max="145" value="70">
+    </div>
+    <div class="row">
+      <label>Старт зелёного (обычно 0)</label>
+      <input type="number" id="in-start" min="0" max="145" value="0">
+      <input type="range" id="rg-start" min="0" max="145" value="0">
+    </div>
+
+    <div class="rules" style="margin:12px 0">
+      <div class="rc"><b>Последний удар</b><select id="r-last"></select></div>
+      <div class="rc"><b>Предпоследний удар</b><select id="r-2"></select></div>
+      <div class="rc"><b>Третий с конца</b><select id="r-3"></select></div>
+      <div class="rc"><b>НЕ должен быть последним</b><select id="r-notlast"></select></div>
+    </div>
+
+    <div class="moves" id="moves"></div>
+
+    <div class="hist" id="hist"><span class="none">Ударов пока нет. Нажимай кнопки выше — как в игре.</span></div>
+
+    <div class="banner" id="banner"></div>
+
+    <div class="row" style="margin-top:12px">
+      <button class="btn-acc" id="btn-solve">&#128293; Решить за меня</button>
+      <button class="btn-dim" id="btn-undo">&#8592; Отменить удар</button>
+      <button class="btn-bad" id="btn-reset">Сброс</button>
+      <button class="btn-dim" id="btn-example">Пример с твоего скриншота (цель 70)</button>
+    </div>
+    <div id="solutions"></div>
+  </div>
+
+  <h2>Шпаргалка: сколько даёт каждая кнопка</h2>
+  <div class="panel">
+    <table>
+      <tr><th>Кнопка (цвет в игре)</th><th>Движение</th><th>Изменение</th><th>Англ.</th></tr>
+      <tr><td><span class="sw" style="background:#4fc3d9"></span>голубая</td><td>Лёгкий удар</td><td><b>&#8722;3</b></td><td>Hit Light</td></tr>
+      <tr><td><span class="sw" style="background:#3f6fb5"></span>синяя</td><td>Средний удар</td><td><b>&#8722;6</b></td><td>Hit Medium</td></tr>
+      <tr><td><span class="sw" style="background:#2b4a9b"></span>тёмно-синяя</td><td>Тяжёлый удар</td><td><b>&#8722;9</b></td><td>Hit Hard</td></tr>
+      <tr><td><span class="sw" style="background:#7a2bd8"></span>фиолетовая</td><td>Вытянуть</td><td><b>&#8722;15</b></td><td>Draw</td></tr>
+      <tr><td><span class="sw" style="background:#43a047"></span>зелёная</td><td>Пробить</td><td><b>+2</b></td><td>Punch</td></tr>
+      <tr><td><span class="sw" style="background:#d4b92a"></span>жёлтая</td><td>Изогнуть</td><td><b>+7</b></td><td>Bend</td></tr>
+      <tr><td><span class="sw" style="background:#c87a2b"></span>оранжевая</td><td>Осадить</td><td><b>+13</b></td><td>Upset</td></tr>
+      <tr><td><span class="sw" style="background:#c83a3a"></span>красная</td><td>Сжать</td><td><b>+16</b></td><td>Shrink</td></tr>
+    </table>
+    <ul class="tips" style="margin:12px 0 0">
+      <li>Из положительных (+2, +7, +13, +16) можно сложить почти любое число: например до 70 с нуля — <b>Сжать ×3 + Осадить + Изогнуть + Пробить</b> (48+13+7+2 = 70).</li>
+      <li>Перелетел цель? Не страшно — добей отрицательными ударами, главное не выйти за 0 и за 145.</li>
+      <li>Правила из плана важнее краткости: решатель сам вставит нужные движения в конец.</li>
+    </ul>
+  </div>
+
+  <h2>Советы по ковке в TFG</h2>
+  <div class="panel">
+    <ul class="tips">
+      <li><b>Температура.</b> Работать можно только раскалённой заготовкой (в подсказке «Можно ковать»). Остыла — согрей в горне/угольном костре снова.</li>
+      <li><b>Молоток.</b> Должен лежать в слоте наковальни справа (или быть в главной руке) — он тратит прочность.</li>
+      <li><b>План.</b> Кнопка со свитком (справа сверху в интерфейсе) — выбери, что куёшь: появятся правила и подсказки. Без плана предмет не завершится, даже если стрелки совпали.</li>
+      <li><b>Перегруз шкалы = потеря слитка.</b> Следи, чтобы зелёный не улетел за 0 или 145 — решатель всегда держится внутри.</li>
+      <li><b>Сварка.</b> Две раскалённые детали в верхние слоты + флюс в свой слот → кнопка Weld. Тоже нужна рука с молотом.</li>
+      <li><b>Умение кузнеца</b> растёт от ковки — выше уровень, лучше ковка.</li>
+    </ul>
+  </div>
+
+  <footer>Значения шагов взяты из исходников TerraFirmaCraft (ForgeStep.java, ветка 1.20.x): HIT_LIGHT &#8722;3, HIT_MEDIUM &#8722;6, HIT_HARD &#8722;9, DRAW &#8722;15, PUNCH +2, BEND +7, UPSET +13, SHRINK +16; шкала работы 0–145. Подходит для TerraFirmaGreg Modern 0.13.17.</footer>
+</div>
+
+<script>
+(function(){
+'use strict';
+var LIMIT = 145;
+var STEPS = [
+  {id:'HIT_LIGHT',  name:'Лёгкий удар',  v:-3,  color:'#4fc3d9', en:'Hit Light'},
+  {id:'HIT_MEDIUM', name:'Средний удар', v:-6,  color:'#3f6fb5', en:'Hit Medium'},
+  {id:'HIT_HARD',   name:'Тяжёлый удар', v:-9,  color:'#2b4a9b', en:'Hit Hard'},
+  {id:'DRAW',       name:'Вытянуть',     v:-15, color:'#7a2bd8', en:'Draw'},
+  {id:'PUNCH',      name:'Пробить',      v:2,   color:'#43a047', en:'Punch'},
+  {id:'BEND',       name:'Изогнуть',     v:7,   color:'#d4b92a', en:'Bend'},
+  {id:'UPSET',      name:'Осадить',      v:13,  color:'#c87a2b', en:'Upset'},
+  {id:'SHRINK',     name:'Сжать',        v:16,  color:'#c83a3a', en:'Shrink'}
+];
+var BYID = {};
+STEPS.forEach(function(s){ BYID[s.id] = s; });
+
+var target = 70, start = 0, work = 0, history = [], finished = false;
+
+/* ---------- шкала ---------- */
+var ticksEl = document.getElementById('ticks');
+(function(){
+  var html = '';
+  for (var t = 0; t <= 140; t += 20){
+    var x = (t / LIMIT) * 100;
+    html += '<div class="tick" style="left:' + x + '%"></div>' +
+            '<div class="ticklabel" style="left:' + x + '%">' + t + '</div>';
+  }
+  ticksEl.innerHTML = html;
+})();
+
+function clampW(w){ return Math.max(0, Math.min(LIMIT, w)); }
+function render(){
+  document.getElementById('redarrow').style.left   = (target / LIMIT * 100) + '%';
+  document.getElementById('greenmark').style.left  = (work   / LIMIT * 100) + '%';
+  document.getElementById('v-target').textContent = target;
+  document.getElementById('v-work').textContent = work;
+  document.getElementById('v-diff').textContent = target - work;
+  renderHist();
+}
+function renderHist(){
+  var el = document.getElementById('hist');
+  if (!history.length){
+    el.innerHTML = '<span class="none">Ударов пока нет. Нажимай кнопки выше — как в игре.</span>';
+    return;
+  }
+  var html = '';
+  for (var i = 0; i < history.length; i++){
+    var s = BYID[history[i]];
+    var n = history.length - i;             // 1 = последний
+    var tag = n === 1 ? 'последний' : n === 2 ? 'предпоследний' : n === 3 ? '3-й с конца' : '';
+    html += '<span class="chip" style="background:' + s.color + '">' + s.name + ' ' +
+            (s.v > 0 ? '+' : '') + s.v + (tag ? '<span class="tag">' + tag + '</span>' : '') + '</span>';
+  }
+  el.innerHTML = html;
+}
+
+/* ---------- правила: селекты ---------- */
+function fillSelect(id, withNone){
+  var sel = document.getElementById(id);
+  var o = '';
+  if (withNone !== false) o += '<option value="">— нет правила —</option>';
+  STEPS.forEach(function(s){
+    o += '<option value="' + s.id + '">' + s.name + ' (' + (s.v > 0 ? '+' : '') + s.v + ')</option>';
+  });
+  sel.innerHTML = o;
+}
+fillSelect('r-last'); fillSelect('r-2'); fillSelect('r-3'); fillSelect('r-notlast');
+
+function getRules(){
+  return {
+    last:    document.getElementById('r-last').value,
+    second:  document.getElementById('r-2').value,
+    third:   document.getElementById('r-3').value,
+    notLast: document.getElementById('r-notlast').value
+  };
+}
+function rulesOk(seq, rules){
+  var n = seq.length;
+  if (rules.last && (n < 1 || seq[n-1] !== rules.last)) return false;
+  if (rules.second && (n < 2 || seq[n-2] !== rules.second)) return false;
+  if (rules.third && (n < 3 || seq[n-3] !== rules.third)) return false;
+  if (rules.notLast && n >= 1 && seq[n-1] === rules.notLast) return false;
+  return true;
+}
+
+/* ---------- кнопки ходов ---------- */
+var movesEl = document.getElementById('moves');
+STEPS.forEach(function(s){
+  var b = document.createElement('button');
+  b.className = 'mv';
+  b.style.background = s.color;
+  b.innerHTML = '<span class="nm">' + s.name + '</span><span class="vl">' +
+                (s.v > 0 ? '+' : '') + s.v + '</span><small>' + s.en + '</small>';
+  b.onclick = function(){ doStep(s); };
+  movesEl.appendChild(b);
+});
+
+function banner(cls, text){
+  var b = document.getElementById('banner');
+  b.className = 'banner ' + cls;
+  b.innerHTML = text;
+}
+function hideBanner(){ document.getElementById('banner').className = 'banner'; }
+
+function doStep(s){
+  if (finished) return;
+  var w2 = work + s.v;
+  if (w2 < 0 || w2 > LIMIT){
+    banner('bad', '&#9888; Слиток испорчен! Зелёный вышел за шкалу (' + w2 + '). Нажми «Сброс».');
+    finished = true;
+    return;
+  }
+  work = w2;
+  history.push(s.id);
+  var rules = getRules();
+  if (work === target && rulesOk(history, rules)){
+    finished = true;
+    banner('ok', '&#10004; ГОТОВО! Зелёный встал ровно под красный (' + work + '), правила выполнены. Забирай деталь!');
+  } else if (work === target && !rulesOk(history, rules)){
+    banner('warn', '&#9888; Стрелки совпали, но правила плана не выполнены (или план не выбран). Проверь иконки сверху / добавь удары.');
+  }
+  render();
+}
+
+/* ---------- отмена / сброс ---------- */
+document.getElementById('btn-undo').onclick = function(){
+  if (!history.length || finished) return;
+  work -= BYID[history.pop()].v;
+  hideBanner(); render();
+};
+document.getElementById('btn-reset').onclick = function(){
+  work = start; history = []; finished = false;
+  hideBanner(); render();
+};
+
+/* ---------- ввод цели/старта ---------- */
+function bindPair(numId, rgId, setter){
+  var n = document.getElementById(numId), r = document.getElementById(rgId);
+  function apply(v){
+    v = Math.max(0, Math.min(LIMIT, parseInt(v, 10) || 0));
+    setter(v); n.value = v; r.value = v; render();
+  }
+  n.oninput  = function(){ apply(n.value); };
+  r.oninput  = function(){ apply(r.value); };
+}
+bindPair('in-target', 'rg-target', function(v){ target = v; });
+bindPair('in-start',  'rg-start',  function(v){ start = v; work = Math.min(work, v); });
+
+/* ---------- решатель (BFS) ---------- */
+function solve(){
+  var rules = getRules();
+  var sols = [];
+  if (work === target && rulesOk(history, rules)){
+    return [{path: [], work: work}];
+  }
+  if (start > work){
+    /* если зелёный почему-то выше старта — это нормально, просто решаем от текущей позиции */
+  }
+  var startState = { w: work, tail: history.slice(-3), path: [] };
+  var seen = {};
+  var queue = [startState];
+  var depth = 0, layer = 1, nextLayer = 0, maxDepth = 26, nodes = 0;
+  while (queue.length && sols.length < 4 && depth <= maxDepth && nodes < 500000){
+    var st = queue.shift(); layer--; nodes++;
+    for (var i = 0; i < STEPS.length; i++){
+      var s = STEPS[i];
+      var w2 = st.w + s.v;
+      if (w2 < 0 || w2 > LIMIT) continue;
+      var tail2 = st.tail.concat([s.id]).slice(-3);
+      var path2 = st.path.concat([s.id]);
+      var key = w2 + '|' + tail2.join(',');
+      if (seen[key]) continue;
+      seen[key] = 1;
+      nextLayer++;
+      var fullSeq = history.concat(path2);
+      if (w2 === target && rulesOk(fullSeq, rules)){
+        sols.push({path: path2, work: w2});
+        if (sols.length >= 4) break;
+      } else {
+        queue.push({w: w2, tail: tail2, path: path2});
+      }
+    }
+    if (layer === 0){ depth++; layer = nextLayer; nextLayer = 0; }
+  }
+  return sols;
+}
+
+document.getElementById('btn-solve').onclick = function(){
+  var box = document.getElementById('solutions');
+  hideBanner();
+  var sols = solve();
+  if (!sols.length){
+    box.innerHTML = '<div class="banner warn" style="display:block">Решение не найдено: с такими правилами и целью не попасть (проверь значения и правила).</div>';
+    return;
+  }
+  var html = '';
+  sols.forEach(function(sol, idx){
+    var seq = '', pos = [], w = work;
+    sol.path.forEach(function(id){
+      var s = BYID[id];
+      w += s.v;
+      seq += '<span class="chip" style="background:' + s.color + '">' + s.name + ' ' +
+             (s.v > 0 ? '+' : '') + s.v + '</span><span class="arr">&#8594;</span>';
+      pos.push(w);
+    });
+    if (seq === '') seq = '<span class="arr">уже на цели — просто забери деталь</span>';
+    html += '<div class="sol"><h4>Вариант ' + (idx + 1) + ' — ударов: ' + sol.path.length + '</h4>' +
+            '<div class="seq">' + seq + '</div>' +
+            '<div class="pos">' + work + ' &#8594; ' + pos.join(' &#8594; ') + ' &#10003;</div></div>';
+  });
+  box.innerHTML = '<div class="banner ok" style="display:block">Нашёл ' + sols.length +
+                  ' вариант(ов). Клацай в игре по порядку — зелёный встанет под красным.</div>' + html;
+};
+
+/* ---------- пример со скриншота ---------- */
+document.getElementById('btn-example').onclick = function(){
+  target = 70; start = 0; work = 0; history = []; finished = false;
+  document.getElementById('in-target').value = 70; document.getElementById('rg-target').value = 70;
+  document.getElementById('in-start').value = 0;   document.getElementById('rg-start').value = 0;
+  document.getElementById('r-last').value = ''; document.getElementById('r-2').value = '';
+  document.getElementById('r-3').value = ''; document.getElementById('r-notlast').value = '';
+  hideBanner(); render();
+};
+
+render();
+})();
+</script>
+</body>
+</html>
