@@ -9,7 +9,9 @@ set -uo pipefail
 SERVER_DIR="$(cd "$(dirname "$0")" && pwd)"
 WARN_MIN="${WARN_MIN:-5}"
 
-up() { screen -ls 2>/dev/null | grep -q '\.tfg[[:space:]]'; }
+# Проверка "сервер жив": сессия screen принадлежит пользователю minecraft,
+# поэтому под root screen -ls её НЕ видит — смотрим systemd-юнит, так надёжнее.
+up() { systemctl is-active --quiet tfg-server; }
 say() { "${SERVER_DIR}/cmd.sh" "$1" >/dev/null 2>&1 || true; }
 
 if ! up; then
