@@ -4,8 +4,8 @@
 #
 #   bash restore-world.sh                          — показать список бэкапов и архивов
 #   bash restore-world.sh latest                   — восстановить самый свежий бэкап (tfg-*.tar.gz)
-#   bash restore-world.sh /путь/к/архиву.zip       — развернуть мир из zip / tar.gz / tar
-#                                                    (например: /opt/tfg-backups/mir-ot-druga.zip)
+#   bash restore-world.sh /путь/к/архиву         — развернуть мир из zip / tar.gz / tar / rar
+#                                                    (например: /opt/tfg-backups/mir.zip или mir.rar)
 #
 # Как работает:
 #   • в архиве автоматически находится папка мира (по файлу level.dat);
@@ -26,7 +26,7 @@ case "${1:-}" in
         ls -lht "${BACKUP_DIR}"/tfg-*.tar.gz 2>/dev/null | head -n 15 || echo "  (пусто)"
         echo
         echo "Другие архивы в ${BACKUP_DIR} (например, мир от друга):"
-        ls -lht "${BACKUP_DIR}" 2>/dev/null | awk 'NR>1 && $NF !~ /^tfg-/ && $NF ~ /\.(zip|tar|tar\.gz|tgz)$/' | head -n 15 || true
+        ls -lht "${BACKUP_DIR}" 2>/dev/null | awk 'NR>1 && $NF !~ /^tfg-/ && $NF ~ /\.(zip|tar|tar\.gz|tgz|rar)$/' | head -n 15 || true
         echo
         echo "Использование: bash $0 latest  |  bash $0 /путь/к/архиву.zip"
         exit 0 ;;
@@ -72,7 +72,14 @@ case "$(basename "${FILE}")" in
             *.zip)          unzip -qo "${FILE}" -d "${TMP}" ;;
             *.tar.gz|*.tgz) tar -xzf "${FILE}" -C "${TMP}" ;;
             *.tar)          tar -xf  "${FILE}" -C "${TMP}" ;;
-            *) echo "Не знаю такой формат. Поддерживаются: .zip, .tar.gz, .tgz, .tar"; rm -rf "${TMP}"; exit 1 ;;
+            *.rar)
+                if ! command -v unar >/dev/null 2>&1; then
+                    echo "==> Ставлю unar (поддержка rar)..."
+                    apt-get update -qq >/dev/null 2>&1 || true
+                    apt-get install -y -qq unar >/dev/null 2>&1 || { echo "Не удалось поставить unar. Попроси друга прислать zip."; rm -rf "${TMP}"; exit 1; }
+                fi
+                unar -q -f -o "${TMP}" "${FILE}" ;;
+            *) echo "Не знаю такой формат. Поддерживаются: .zip, .tar.gz, .tgz, .tar, .rar"; rm -rf "${TMP}"; exit 1 ;;
         esac
         mapfile -t CANDIDATES < <(find "${TMP}" -type f -name 'level.dat' -printf '%h\n' | sort -u)
         if [ "${#CANDIDATES[@]}" -eq 0 ]; then
