@@ -89,7 +89,8 @@ EOF
 sed -i 's/^max-players=.*/max-players=10/'        "${INSTALL_DIR}/server.properties" || true
 sed -i 's/^simulation-distance=.*/simulation-distance=6/' "${INSTALL_DIR}/server.properties" || true
 sed -i 's/^keepInventory=.*/keepInventory=true/'  "${INSTALL_DIR}/server.properties" || true   # вещи после смерти сохраняются
-sed -i 's/^motd=.*/motd=[TFG RU] TerraFirmaGreg Modern 0.13.17/' "${INSTALL_DIR}/server.properties" || true
+grep -q '^keepInventory=' "${INSTALL_DIR}/server.properties" || echo 'keepInventory=true' >> "${INSTALL_DIR}/server.properties"
+sed -i 's/^motd=.*/motd=[TFG RU v2] TerraFirmaGreg Modern 0.13.17/' "${INSTALL_DIR}/server.properties" || true
 
 # Режим входа: MODE=offline (по умолчанию — TLauncher и оффлайн-ники)
 # или MODE=licensed (только лицензия). В offline вайтлист включается принудительно!

@@ -3,6 +3,7 @@
 # Запуск: sudo -u minecraft /opt/tfg/backup.sh   (или через cron — уже настроен)
 set -euo pipefail
 SERVER_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "${SERVER_DIR}"   # чтобы скрипт работал из любого текущего каталога (sudo из /root и т.п.)
 BACKUP_DIR="${BACKUP_DIR:-/opt/tfg-backups}"
 KEEP_DAYS=7
 STAMP="$(date +%Y-%m-%d_%H-%M)"
